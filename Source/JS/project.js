@@ -15,9 +15,12 @@ const Format = Object.freeze({
 
 const Tag = Object.freeze({
     THREE_D: "3D",
+    TWO_D: "2D",
     PLATFORMER: "Platformer",
     RPG: "RPG",
+    DUNGEON_CRAWLER: "Dungeon Crawler",
     NARRATIVE: "Narrative",
+    APPLICATION: "Application"
 });
 
 const Skill = Object.freeze({
@@ -42,10 +45,12 @@ const Skill = Object.freeze({
     LEVEL_DESIGN: "Level Design",
     SOUND_DESIGN: "Sound Design",
     MODELLING: "3D Modelling",
+    SPRITEWORK: "Spritework",
     PHOTOSHOP: "Photoshop",
     PREMIERE_PRO: "Premiere Pro",
     VIDEO_EDITING: "Video Editing",
     MUSIC_PRODUCTION: "Music Production",
+    TESTING: "Testing",
     WRITING: "Writing",
     ANALYSIS: "Analysis"
 });
@@ -93,6 +98,7 @@ function Inspiration(
  * @param {string} description 
  * @param {ImageReference[]} images 
  * @param {Inspiration[]} inspirations
+ * @param {string} role
  * @param {string} link 
  * @param {number} grade 
  */
@@ -106,6 +112,7 @@ function Project(
     description,
     images,
     inspirations,
+    role,
     link = null,
     grade = null
 ) {
@@ -117,6 +124,8 @@ function Project(
     this.skills = skills;
     this.description = description;
     this.images = images;
+    this.inspirations = inspirations;
+    this.role = role
     this.link = link;
     this.grade = grade; 
 }

@@ -33,6 +33,10 @@ function ProjectButton(project) {
     tags.classList.add("project-tags");
     tags.innerHTML = project.tags.join(", ");
 
+    const role = document.createElement("label");
+    role.classList.add("project-role");
+    role.innerHTML = project.role; 
+
     const breakElement = () => document.createElement("br");
 
     this.button.appendChild(image);
@@ -44,6 +48,8 @@ function ProjectButton(project) {
     this.button.appendChild(status); 
     this.button.appendChild(breakElement());
     this.button.appendChild(tags); 
+    this.button.appendChild(breakElement());
+    this.button.appendChild(role); 
 }
 
 for (let p of projects) {
