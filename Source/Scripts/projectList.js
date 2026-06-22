@@ -14,27 +14,21 @@ function ProjectButton(project) {
     image.alt = project.images[0].alt;
 
     const name = document.createElement("label");
-    name.classList.add("project-name");
     name.innerHTML = project.name;
 
     const date = document.createElement("label");
-    date.classList.add("project-date");
     date.innerHTML = `\t(${project.year})`;
 
     const format = document.createElement("label");
-    format.classList.add("project-format");
     format.innerHTML = project.format;
 
     const status = document.createElement("label");
-    status.classList.add("project-status");
     status.innerHTML = `\t|\t${project.status}`;
 
     const tags = document.createElement("label");
-    tags.classList.add("project-tags");
     tags.innerHTML = project.tags.join(", ");
 
     const role = document.createElement("label");
-    role.classList.add("project-role");
     role.innerHTML = project.role; 
 
     const breakElement = () => document.createElement("br");
