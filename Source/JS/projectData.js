@@ -24,7 +24,20 @@ let projectFecklessFox = new Project(
         Skill.UX,
     ],
     "Classically-inspired 3D platformer developed for a Unity interactive environment module.",
-    [],
+    [
+        new ImageReference(
+            "FecklessFox/image-00.png",
+            "Screenshot of the fox atop a building, before a trail of coins."
+        ),
+        new ImageReference(
+            "FecklessFox/image-01.png",
+            "Screenshot of the fox scaling a building."
+        ),
+        new ImageReference(
+            "FecklessFox/image-02.png",
+            "Screenshot of the fox scaling some platforms, illuminated by a street light."
+        ),
+    ],
     [
         new Inspiration(
             "Rayman 2: The Great Escape",

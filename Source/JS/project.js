@@ -52,6 +52,19 @@ const Skill = Object.freeze({
 
 /**
  * 
+ * @param {string} link 
+ * @param {string} alt 
+ */
+function ImageReference(
+    link,
+    alt
+) {
+    this.link = link;
+    this.alt = alt;
+}
+
+/**
+ * 
  * @param {string} name 
  * @param {string} author 
  * @param {number} year 
@@ -78,7 +91,7 @@ function Inspiration(
  * @param {Tag[]} tags 
  * @param {Skill[]} skills 
  * @param {string} description 
- * @param {string[]} images 
+ * @param {ImageReference[]} images 
  * @param {Inspiration[]} inspirations
  * @param {string} link 
  * @param {number} grade 
