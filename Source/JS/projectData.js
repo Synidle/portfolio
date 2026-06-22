@@ -1,4 +1,6 @@
+/** @type {Project[]} */
 let projects = [];
+/** @type {ProjectPage[]} */
 let projectPages = [];
 
 let projectFecklessFox = new Project(
@@ -69,4 +71,8 @@ let projectFecklessFox = new Project(
     ],
     "https://synidle.itch.io/feckless-fox-demo",
     91
-)
+);
+
+projects = [
+    projectFecklessFox,
+];
