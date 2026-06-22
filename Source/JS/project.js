@@ -52,14 +52,14 @@ const Skill = Object.freeze({
 
 /**
  * 
- * @param {string} link 
+ * @param {string} source 
  * @param {string} alt 
  */
 function ImageReference(
-    link,
+    source,
     alt
 ) {
-    this.link = link;
+    this.source = source;
     this.alt = alt;
 }
 
