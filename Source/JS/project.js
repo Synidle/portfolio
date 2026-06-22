@@ -13,7 +13,12 @@ const Format = Object.freeze({
     ESSAY: "Essay",
 });
 
-const Tag = Object.freeze({});
+const Tag = Object.freeze({
+    THREE_D: "3D",
+    PLATFORMER: "Platformer",
+    RPG: "RPG",
+    NARRATIVE: "Narrative",
+});
 
 const Skill = Object.freeze({
     PLANNING: "Project Planning",
@@ -48,29 +53,59 @@ const Skill = Object.freeze({
 /**
  * 
  * @param {string} name 
- * @param {Date} date 
+ * @param {string} author 
+ * @param {number} year 
+ * @param {string} description 
+ */
+function Inspiration(
+    name,
+    author,
+    year,
+    description
+) {
+    this.name = name;
+    this.author = author;
+    this.year = year;
+    this.description = description;
+}
+
+/**
+ * 
+ * @param {string} name 
+ * @param {number} year 
  * @param {Status} status 
  * @param {Format} format 
  * @param {Tag[]} tags 
  * @param {Skill[]} skills 
  * @param {string} description 
  * @param {string[]} images 
+ * @param {Inspiration[]} inspirations
  * @param {string} link 
  * @param {number} grade 
  */
 function Project(
     name,
-    date,
+    year,
     status,
     format,
     tags,
     skills,
     description,
     images,
+    inspirations,
     link = null,
     grade = null
 ) {
-
+    this.name = name;
+    this.year = year; 
+    this.status = status;
+    this.format = format;
+    this.tags = tags;
+    this.skills = skills;
+    this.description = description;
+    this.images = images;
+    this.link = link;
+    this.grade = grade; 
 }
 
 /**
@@ -84,5 +119,7 @@ function ProjectPage(
     content,
     style
 ) {
-
+    this.project = project;
+    this.content = content;
+    this.style = style;
 }
