@@ -9,16 +9,41 @@ function ProjectButton(project) {
     this.button = document.createElement("button");
     this.button.classList.add("project-button");
 
-    this.image = document.createElement("img");
-    this.image.src = `Source/ProjectData/${project.images[0].source}`;
-    this.image.alt = project.images[0].alt;
+    const image = document.createElement("img");
+    image.src = `Source/ProjectData/${project.images[0].source}`;
+    image.alt = project.images[0].alt;
 
-    this.name = document.createElement("label");
-    this.name.classList.add("project-name");
-    this.name.innerHTML = project.name;
+    const name = document.createElement("label");
+    name.classList.add("project-name");
+    name.innerHTML = project.name;
 
-    this.button.appendChild(this.image);
-    this.button.appendChild(this.name);
+    const date = document.createElement("label");
+    date.classList.add("project-date");
+    date.innerHTML = `\t(${project.year})`;
+
+    const format = document.createElement("label");
+    format.classList.add("project-format");
+    format.innerHTML = project.format;
+
+    const status = document.createElement("label");
+    status.classList.add("project-status");
+    status.innerHTML = `\t|\t${project.status}`;
+
+    const tags = document.createElement("label");
+    tags.classList.add("project-tags");
+    tags.innerHTML = project.tags.join(", ");
+
+    const breakElement = () => document.createElement("br");
+
+    this.button.appendChild(image);
+    this.button.appendChild(breakElement());
+    this.button.appendChild(name);
+    this.button.appendChild(date);
+    this.button.appendChild(breakElement());
+    this.button.appendChild(format);
+    this.button.appendChild(status); 
+    this.button.appendChild(breakElement());
+    this.button.appendChild(tags); 
 }
 
 for (let p of projects) {
