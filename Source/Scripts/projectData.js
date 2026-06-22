@@ -319,7 +319,7 @@ let projectPhraseDex = new Project(
             "Screenshot of application, showing a foreign phrase appropriate to hot weather, with a dialogue window giving options for saving the phrase and changing the language."
         ),
         new ImageReference(
-            "PhraseDex/imge-03.jpg",
+            "PhraseDex/image-03.jpg",
             "Screenshot of application, showing a list of contextually generated phrases on the left, the current translation in the middle, and a dropdown for changing the language in the top right."
         ),
     ],

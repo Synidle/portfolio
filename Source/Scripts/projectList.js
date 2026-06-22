@@ -9,6 +9,8 @@ function ProjectButton(project) {
     this.button = document.createElement("button");
     this.button.classList.add("project-button");
 
+    let displayingImageIndex = 0; 
+
     const image = document.createElement("img");
     image.src = `Source/ProjectData/${project.images[0].source}`;
     image.alt = project.images[0].alt;
@@ -44,6 +46,13 @@ function ProjectButton(project) {
     this.button.appendChild(tags); 
     this.button.appendChild(breakElement());
     this.button.appendChild(role); 
+
+    this.button.addEventListener("mouseenter", () => {
+        displayingImageIndex ++;
+        if (displayingImageIndex >= project.images.length)
+            displayingImageIndex = 0;
+        image.src = `Source/ProjectData/${project.images[displayingImageIndex].source}`;
+    });
 }
 
 for (let p of projects) {
