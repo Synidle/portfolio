@@ -98,10 +98,11 @@ let projectTheTower = new Project(
     Status.DEMO,
     Format.VIDEOGAME,
     [
-        Tag.RPG,
-        Tag.NARRATIVE,
         Tag.THREE_D,
-        Tag.DUNGEON_CRAWLER
+        Tag.NARRATIVE,
+        Tag.ACTION,
+        Tag.RPG,
+        Tag.DUNGEON_CRAWLER,
     ],
     [
         Skill.ANALYSIS,
@@ -336,8 +337,9 @@ let projectUnboundedFault = new Project(
     Format.VIDEOGAME,
     [
         Tag.TWO_D,
+        Tag.ACTION,
         Tag.RPG,
-        Tag.DUNGEON_CRAWLER
+        Tag.DUNGEON_CRAWLER,
     ],
     [
         Skill.ACCESSIBILITY,
@@ -387,10 +389,60 @@ let projectUnboundedFault = new Project(
 );
 //#endregion
 
+//#region Sky City VR
+projectSkyCityVR = new Project(
+    "Sky City VR",
+    2026,
+    Status.PROTOTYPE,
+    Format.VIDEOGAME,
+    [
+        Tag.THREE_D,
+        Tag.VR,
+        Tag.ACTION,
+    ],
+    [
+        Skill.ACCESSIBILITY,
+        Skill.CS,
+        Skill.GAME_DESIGN,
+        Skill.LEVEL_DESIGN,
+        Skill.PROGRAMMING,
+        Skill.PROTOTYPING,
+        Skill.SOUND_DESIGN,
+        Skill.TESTING,
+        Skill.UNITY,
+        Skill.UX,
+        Skill.VR_DESIGN
+    ],
+    "VR action game aiming at satisfying VR-oriented movement through combat.",
+    [
+        new ImageReference(
+            "",
+            ""
+        ),
+    ],
+    [
+        new Inspiration(
+            "Superhot VR",
+            "Superhot Team",
+            2016,
+            "Gameplay"
+        ),
+        new Inspiration(
+            "Mario 64",
+            "Nintendo",
+            1996,
+            "Level design & structure"
+        )
+    ],
+    "Sole designer & developer",
+);
+//#endregion
+
 projects = [
     projectFecklessFox,
     projectTheTower,
     projectDigitalGhostGate,
     projectPhraseDex,
-    projectUnboundedFault
+    projectUnboundedFault,
+    projectSkyCityVR,
 ];

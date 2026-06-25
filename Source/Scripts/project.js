@@ -19,8 +19,10 @@ const Tag = Object.freeze({
     PLATFORMER: "Platformer",
     RPG: "RPG",
     DUNGEON_CRAWLER: "Dungeon Crawler",
+    ACTION: "Action",
     NARRATIVE: "Narrative",
-    APPLICATION: "Application"
+    APPLICATION: "Application",
+    VR: "Virtual Reality"
 });
 
 const Skill = Object.freeze({
@@ -40,6 +42,7 @@ const Skill = Object.freeze({
     UNITY: "Unity",
     ANDROID_STUDIO: "Android Studio",
     GODOT: "Godot Engine",
+    VR_DESIGN: "Design for VR",
     GAME_DESIGN: "Game Design",
     NARRATIVE_DESIGN: "Narrative Design",
     LEVEL_DESIGN: "Level Design",
