@@ -51,6 +51,7 @@ const Skill = Object.freeze({
     SPRITEWORK: "Spritework",
     PHOTOSHOP: "Photoshop",
     PREMIERE_PRO: "Premiere Pro",
+    AFTER_EFFECTS: "After Effects",
     VIDEO_EDITING: "Video Editing",
     MUSIC_PRODUCTION: "Music Production",
     TESTING: "Testing",

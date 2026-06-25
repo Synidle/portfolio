@@ -493,6 +493,83 @@ let projectWorkingTitle = new Project(
 );
 //#endregion
 
+//#region Sprite Shop
+let projectSpriteShop = new Project(
+    "sprite-shop",
+    "Sprite Shop",
+    2025,
+    Status.COMPLETE,
+    Format.WEBSITE,
+    [
+
+    ],
+    [
+        Skill.ACCESSIBILITY,
+        Skill.ANALYSIS,
+        Skill.CSS,
+        Skill.GAME_DESIGN,
+        Skill.HTML,
+        Skill.JAVASCRIPT,
+        Skill.PROGRAMMING,
+        Skill.SPRITEWORK,
+        Skill.TESTING,
+        Skill.UX,
+    ],
+    "A website in which you make money through purchasing businesses and playing cards, with which you can purchase clothes to customise a sprite.",
+    [
+        new ImageReference(
+            "",
+            ""
+        ),
+    ],
+    [
+
+    ],
+    "Sole designer & developer",
+    "https://synidle.github.io/sprite-shop/"
+);
+//#endregion
+
+//#region Metamorphosis
+let projectMetamorphosis = new Project(
+    "metamorphosis",
+    "Metamorphosis",
+    2025,
+    Status.PROTOTYPE,
+    Format.FILM,
+    [],
+    [
+        Skill.AFTER_EFFECTS,
+        Skill.NARRATIVE_DESIGN,
+        Skill.PREMIERE_PRO,
+        Skill.SOUND_DESIGN,
+        Skill.VIDEO_EDITING,
+    ],
+    "A short film using merely sound effects to tell a story inspired by the theme of 'Metamorphosis'.",
+    [
+        new ImageReference(
+            "Metamorphosis/image-00.png",
+            "Distorted VHS capturing of an alien stood at the side of the road."
+        ),
+    ],
+    [
+        new Inspiration(
+            "Silent Hill 2",
+            "Team Silent",
+            2001,
+            "Theme, visuals, sound design"
+        ),
+        new Inspiration(
+            "OK Computer",
+            "Radiohead",
+            1997,
+            "Theme & sound design"
+        ),
+    ],
+    "Sole designer & creator"
+);
+//#endregion
+
 projects = [
     projectFecklessFox,
     projectTheTower,
@@ -501,6 +578,8 @@ projects = [
     projectUnboundedFault,
     projectSkyCityVR,
     projectWorkingTitle,
+    projectSpriteShop,
+    projectMetamorphosis,
 ];
 
 for (let p of projects) {
