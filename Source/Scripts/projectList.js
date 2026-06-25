@@ -53,6 +53,11 @@ function ProjectButton(project) {
             displayingImageIndex = 0;
         image.src = `Source/ProjectData/${project.images[displayingImageIndex].source}`;
     });
+
+    this.button.addEventListener("click", () => {
+        sessionStorage.setItem(KEY_SELECTED_PROJECT, this.project.id);
+        open("project.html", "_self");
+    });
 }
 
 for (let p of projects) {

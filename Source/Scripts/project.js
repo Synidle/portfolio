@@ -92,6 +92,7 @@ function Inspiration(
 
 /**
  * 
+ * @param {string} id
  * @param {string} name 
  * @param {number} year 
  * @param {Status} status 
@@ -106,6 +107,7 @@ function Inspiration(
  * @param {number} grade 
  */
 function Project(
+    id,
     name,
     year,
     status,
@@ -119,6 +121,7 @@ function Project(
     link = null,
     grade = null
 ) {
+    this.id = id;
     this.name = name;
     this.year = year; 
     this.status = status;
@@ -135,15 +138,18 @@ function Project(
 
 /**
  * 
+ * @param {string} projectID
  * @param {Project} project 
  * @param {string} content 
  * @param {string} style 
  */
 function ProjectPage(
+    projectID,
     project,
     content,
     style
 ) {
+    this.projectID = projectID;
     this.project = project;
     this.content = content;
     this.style = style;

@@ -1,11 +1,21 @@
 /** @type {Project[]} */
 let projects = [];
+/** @type {Map<string, Project>} */
+let projectsLookup = new Map();
 /** @type {ProjectPage[]} */
 let projectPages = [];
+
+const ID_FECKLESS_FOX = "feckless_fox";
+const ID_THE_TOWER = "the-tower";
+const ID_DIGITAL_GHOST_GATE = "digital-ghost-gate";
+const ID_PHRASE_DEX = "phrase-dex";
+const ID_UNBOUNDED_FAULT = "unbounded-fault";
+const ID_SKY_CITY_VR = "sky-city";
 
 //#region Feckless Fox
 
 let projectFecklessFox = new Project(
+    ID_FECKLESS_FOX,
     "Feckless Fox",
     2024,
     Status.DEMO,
@@ -93,6 +103,7 @@ let projectFecklessFox = new Project(
 
 //#region The Tower
 let projectTheTower = new Project(
+    ID_THE_TOWER,
     "The Tower",
     2026,
     Status.DEMO,
@@ -236,6 +247,7 @@ let projectTheTower = new Project(
 
 //#region Digital Ghost Gate
 let projectDigitalGhostGate = new Project(
+    ID_DIGITAL_GHOST_GATE,
     "Digital Ghost Gate",
     2024,
     Status.DEMO,
@@ -290,6 +302,7 @@ let projectDigitalGhostGate = new Project(
 
 //#region PhraseDex
 let projectPhraseDex = new Project(
+    ID_PHRASE_DEX,
     "PhraseDex",
     2025,
     Status.DEMO,
@@ -331,6 +344,7 @@ let projectPhraseDex = new Project(
 
 //#region Unbounded Fault
 let projectUnboundedFault = new Project(
+    ID_UNBOUNDED_FAULT,
     "Unbounded Fault",
     2025,
     Status.DEMO,
@@ -391,6 +405,7 @@ let projectUnboundedFault = new Project(
 
 //#region Sky City VR
 projectSkyCityVR = new Project(
+    ID_SKY_CITY_VR,
     "Sky City VR",
     2026,
     Status.PROTOTYPE,
@@ -446,3 +461,7 @@ projects = [
     projectUnboundedFault,
     projectSkyCityVR,
 ];
+
+for (let p of projects) {
+    projectsLookup.set(p.id, p); 
+}
