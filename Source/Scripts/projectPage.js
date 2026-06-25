@@ -1,4 +1,5 @@
-const projectID = sessionStorage.getItem(KEY_SELECTED_PROJECT);
+const params = new URLSearchParams(location.search); 
+const projectID = params.get("project");
 const project = projectsLookup.get(projectID); 
 
 document.querySelector("title").innerHTML = `Ben Lockyer | ${project.name}`;

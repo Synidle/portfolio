@@ -6,7 +6,7 @@ let projectListElement = document.querySelector("#project-list");
 function ProjectButton(project) {
     this.project = project;
 
-    this.button = document.createElement("button");
+    this.button = document.createElement("a");
     this.button.classList.add("project-button");
 
     let displayingImageIndex = 0; 
@@ -56,8 +56,9 @@ function ProjectButton(project) {
 
     this.button.addEventListener("click", () => {
         sessionStorage.setItem(KEY_SELECTED_PROJECT, this.project.id);
-        open("project.html", "_self");
     });
+
+    this.button.href = `project.html?project=${this.project.id}`;
 }
 
 for (let p of projects) {
