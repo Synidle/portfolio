@@ -453,6 +453,46 @@ projectSkyCityVR = new Project(
 );
 //#endregion
 
+//#region Working Title
+let projectWorkingTitle = new Project(
+    "working-title",
+    "[Working Title]",
+    2021,
+    Status.PROTOTYPE,
+    Format.VIDEOGAME,
+    [
+        Tag.TWO_D,
+        Tag.ACTION,
+        Tag.DUNGEON_CRAWLER,
+    ],
+    [
+        Skill.ANALYSIS,
+        Skill.CS,
+        Skill.GAME_DESIGN,
+        Skill.NARRATIVE_DESIGN,
+        Skill.PLANNING,
+        Skill.PROGRAMMING,
+        Skill.PROTOTYPING,
+        Skill.SPRITEWORK,
+        Skill.TESTING,
+        Skill.UNITY,
+        Skill.UX,
+    ],
+    "A horror game with dungeon-crawler elements, made as A-level coursework.",
+    [
+        new ImageReference(
+            "",
+            ""
+        ),
+    ],
+    [
+
+    ],
+    "Sole designer & developer",
+    "https://synidle.itch.io/working-title",
+);
+//#endregion
+
 projects = [
     projectFecklessFox,
     projectTheTower,
@@ -460,6 +500,7 @@ projects = [
     projectPhraseDex,
     projectUnboundedFault,
     projectSkyCityVR,
+    projectWorkingTitle,
 ];
 
 for (let p of projects) {
