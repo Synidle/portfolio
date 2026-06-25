@@ -6,6 +6,7 @@ document.getElementById("project-title").innerHTML = project.name;
 document.getElementById("project-role").innerHTML = project.role;
 document.getElementById("project-description").innerHTML = project.description;
 document.getElementById("project-link").innerHTML = project.link;
+document.getElementById("project-link").href = project.link;
 document.getElementById("project-year").innerHTML = project.year;
 document.getElementById("project-status").innerHTML = project.status;
 document.getElementById("project-format").innerHTML = project.format;
