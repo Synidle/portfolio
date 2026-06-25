@@ -2,6 +2,11 @@ const params = new URLSearchParams(location.search);
 const projectID = params.get("project");
 const project = projectsLookup.get(projectID); 
 
+if (project == null) {
+    alert("No project found.");
+    open("index.html", "_self");
+}
+
 document.querySelector("title").innerHTML = `Ben Lockyer | ${project.name}`;
 document.getElementById("project-title").innerHTML = project.name;
 document.getElementById("project-role").innerHTML = project.role;
