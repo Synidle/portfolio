@@ -135,12 +135,24 @@ let projectTheTower = new Project(
     "An open-world action-RPG attempting to realise a sensation of the sublime.",
     [
         new ImageReference(
-            "TheTower/image-00.jpg",
-            "A screenshot of a town and an immense tower at sunset, visible across planes and a long bridge."
+            "TheTower/image-02.png",
+            "A screenshot from the top of a tower, facing an enemy guard holding a crossbow, overlooking planes, a huge tower, and distant mountains."
         ),
+        // new ImageReference(
+        //     "TheTower/image-00.jpg",
+        //     "A screenshot of a town and an immense tower at sunset, visible across planes and a long bridge."
+        // ),
         new ImageReference(
             "TheTower/image-01.jpg",
             "A screenshot from within a dungeon, of a dragon breathing fire."
+        ),
+        new ImageReference(
+            "TheTower/image-01.png",
+            "A screenshot of a ruined church upon a hill."
+        ),
+        new ImageReference(
+            "TheTower/image-15.png",
+            "A screenshot inside a comfortable inn, with drinks on tables and a blazing fireplace."
         ),
     ],
     [
@@ -375,8 +387,16 @@ let projectUnboundedFault = new Project(
     "A retro dungeon-crawler rogue-like with arcade-oriented design and minor elements of randomisation.",
     [
         new ImageReference(
-            "",
-            ""
+            "UnboundedFault/image-05.png",
+            "Screenshot of the player in a maze, with items and enemies."
+        ),
+        new ImageReference(
+            "UnboundedFault/image-09.png",
+            "Screenshot of a powerful enemy and a powerful weapon."
+        ),
+        new ImageReference(
+            "UnboundedFault/image-10.png",
+            "Screenshot of a bossfight against a spider."
         ),
     ],
     [
@@ -481,8 +501,20 @@ let projectWorkingTitle = new Project(
     "A horror game with dungeon-crawler elements, made as A-level coursework.",
     [
         new ImageReference(
-            "",
-            ""
+            "WorkingTitle/img-00.png",
+            "Screenshot of the player fighting an enemy."
+        ),
+        new ImageReference(
+            "WorkingTitle/img-01.png",
+            "Screenshot of the player in a dark hallway, with their inventory open, displaying the description for a projector slide item."
+        ),
+        new ImageReference(
+            "WorkingTitle/img-02.png",
+            "Screenshot of the player defending against an enemy emerging from a chest."
+        ),
+        new ImageReference(
+            "WorkingTitle/img-03.png",
+            "Screenshot of an old television on a table in the middle of an otherwise empty, dark room."
         ),
     ],
     [
