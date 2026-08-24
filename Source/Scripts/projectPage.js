@@ -10,8 +10,7 @@ if (project == null) {
 document.querySelector("title").innerHTML = `Ben Lockyer | ${project.name}`;
 document.getElementById("project-title").innerHTML = project.name;
 document.getElementById("project-role").innerHTML = project.role;
-document.getElementById("project-description").innerHTML = project.description;
-document.getElementById("project-link").innerHTML = project.link;
+document.getElementById("project-description").innerHTML = project.description; 
 document.getElementById("project-link").href = project.link;
 document.getElementById("project-year").innerHTML = project.year;
 document.getElementById("project-status").innerHTML = project.status;
@@ -19,6 +18,18 @@ document.getElementById("project-format").innerHTML = project.format;
 document.getElementById("project-tags").innerHTML = getListItemsFrom(project.tags);
 document.getElementById("project-skills").innerHTML = getListItemsFrom(project.skills);
 document.getElementById("project-inspirations").innerHTML = getListItemsFrom(project.inspirations, formatInspiration);
+
+if (project.format == Format.ESSAY) {
+    document.getElementById("project-body").innerHTML = 
+        `<embed
+            src="Source/ProjectData/Essays/${project.id}.pdf"
+            type="application/pdf"
+            width="100%"
+            height="800px">`;
+}
+else {
+    document.getElementById("project-link").innerHTML = project.link;
+}
 
 /**
  * 
