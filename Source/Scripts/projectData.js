@@ -14,7 +14,11 @@ const ID_SKY_CITY_VR = "sky-city";
 const ID_WORKING_TITLE = "working-title";
 const ID_SPRITE_SHOP = "sprite-shop";
 const ID_METAMORPHOSIS = "metamorphosis";
-const ID_ESSAY_LATIN = "essay-latin"
+const ID_ESSAY_REMAKES = "essay-remakes";
+const ID_ESSAY_EAST_WEST = "essay-east-west";
+const ID_ESSAY_LATIN = "essay-latin";
+const ID_ESSAY_FAN_CREATIONS = "essay-fan-creations";
+const ID_ESSAY_AUTHENTICITY = "essay-authenticity";
 
 //#region Feckless Fox
 
@@ -606,6 +610,42 @@ let projectMetamorphosis = new Project(
 );
 //#endregion
 
+let essayRemakes = new Project(
+    ID_ESSAY_REMAKES,
+    "An Analysis of Demon's Souls and Remake Culture in the Context of a Digital Society",
+    2025,
+    Status.COMPLETE,
+    Format.ESSAY,
+    [],
+    [
+        Skill.ANALYSIS,
+        Skill.GAME_DESIGN,
+        Skill.WRITING
+    ],
+    "A critical and nuanced analysis of the value of remakes through a critique of Bluepoint's 2020 Demon's Souls, arguing that remakes are a product of the ideology of contemporary digital society.",
+    [],
+    [],
+    "Author"
+);
+
+let essayEastWest = new Project(
+    ID_ESSAY_EAST_WEST,
+    "The Ideological Difference Between Eastern & Western Videogames and Its Consequences",
+    2026,
+    Status.COMPLETE,
+    Format.ESSAY,
+    [],
+    [
+        Skill.ANALYSIS,
+        Skill.GAME_DESIGN,
+        Skill.WRITING
+    ],
+    "A rebuke of existing literature suggesting Eastern and Western games vary for socioeconomic happenstance, rather arguing that the differences are deeply ideological, exposing a need for the preservation of differences rather than the erasure of cultural artefacts.",
+    [],
+    [],
+    "Author"
+);
+
 let essayLatin = new Project(
     ID_ESSAY_LATIN,
     "Contrasting Impacts of Vernacular and Context Upon Latin in Medieval England (c. 11th-15th centuries)",
@@ -620,8 +660,43 @@ let essayLatin = new Project(
     "An analysis of the various evolutions of Latin throughout England's medieval period, with argument that the contexts of Latin's use in England were the main reason for divergence from Classical form.",
     [],
     [],
-    ""
-    );
+    "Author"
+);
+
+let essayFanCreations = new Project(
+    ID_ESSAY_FAN_CREATIONS,
+    "The Impact of Fan Creations in the Video Game Industry",
+    2024,
+    Status.COMPLETE,
+    Format.ESSAY,
+    [],
+    [
+        Skill.ANALYSIS,
+        Skill.GAME_DESIGN,
+        Skill.WRITING
+    ],
+    "An analysis of the dialectic between professionally-made videogames and derivative fan creations, and the extent to which this has both transferred power from game companies to audiences and simultaneously enabled the companies to benefit.",
+    [],
+    [],
+    "Author"
+);
+
+let essayAuthenticity = new Project(
+    ID_ESSAY_AUTHENTICITY,
+    "The Compatability of Determinism With the Existentialist 'Authentic Life'",
+    2021,
+    Status.COMPLETE,
+    Format.ESSAY,
+    [],
+    [
+        Skill.ANALYSIS,
+        Skill.WRITING
+    ],
+    "An attempt to resolve the apparent conflict between a Determinist view of human action and an Existentialist view of living authentically, with a view to gaining a practical understanding of freedom.",
+    [],
+    [],
+    "Author"
+);
 
 projects = [
     projectFecklessFox,
@@ -633,7 +708,11 @@ projects = [
     projectWorkingTitle,
     projectSpriteShop,
     projectMetamorphosis,
-    essayLatin
+    essayRemakes,
+    essayEastWest,
+    essayLatin,
+    essayFanCreations,
+    essayAuthenticity
 ];
 
 for (let p of projects) {
