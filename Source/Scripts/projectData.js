@@ -11,6 +11,10 @@ const ID_DIGITAL_GHOST_GATE = "digital-ghost-gate";
 const ID_PHRASE_DEX = "phrase-dex";
 const ID_UNBOUNDED_FAULT = "unbounded-fault";
 const ID_SKY_CITY_VR = "sky-city";
+const ID_WORKING_TITLE = "working-title";
+const ID_SPRITE_SHOP = "sprite-shop";
+const ID_METAMORPHOSIS = "metamorphosis";
+const ID_ESSAY_LATIN = "essay-latin"
 
 //#region Feckless Fox
 
@@ -527,7 +531,7 @@ let projectWorkingTitle = new Project(
 
 //#region Sprite Shop
 let projectSpriteShop = new Project(
-    "sprite-shop",
+    ID_SPRITE_SHOP,
     "Sprite Shop",
     2025,
     Status.COMPLETE,
@@ -564,7 +568,7 @@ let projectSpriteShop = new Project(
 
 //#region Metamorphosis
 let projectMetamorphosis = new Project(
-    "metamorphosis",
+    ID_METAMORPHOSIS,
     "Metamorphosis",
     2025,
     Status.PROTOTYPE,
@@ -602,6 +606,23 @@ let projectMetamorphosis = new Project(
 );
 //#endregion
 
+let essayLatin = new Project(
+    ID_ESSAY_LATIN,
+    "Contrasting Impacts of Vernacular and Context Upon Latin in Medieval England (c. 11th-15th centuries)",
+    2025,
+    Status.COMPLETE,
+    Format.ESSAY,
+    [],
+    [
+        Skill.ANALYSIS,
+        Skill.WRITING
+    ],
+    "An analysis of the various evolutions of Latin throughout England's medieval period, with argument that the contexts of Latin's use in England were the main reason for divergence from Classical form.",
+    [],
+    [],
+    ""
+    );
+
 projects = [
     projectFecklessFox,
     projectTheTower,
@@ -612,6 +633,7 @@ projects = [
     projectWorkingTitle,
     projectSpriteShop,
     projectMetamorphosis,
+    essayLatin
 ];
 
 for (let p of projects) {
