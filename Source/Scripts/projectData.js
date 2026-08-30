@@ -43,7 +43,7 @@ let projectFecklessFox = new Project(
         Skill.UNITY,
         Skill.UX,
     ],
-    "Classically-inspired 3D platformer developed for a Unity interactive environment module.",
+    "A classically-inspired 3D platformer developed for a Unity interactive environment module. It exemplifies how a well-designed level can enhance atmosphere, mechanics, and replayability.",
     [
         new ImageReference(
             "FecklessFox/image-00.png",
@@ -140,7 +140,7 @@ let projectTheTower = new Project(
         Skill.UX,
         Skill.WRITING
     ],
-    "An open-world action-RPG attempting to realise a sensation of the sublime.",
+    "An open-world action-RPG attempting to realise a sensation of the sublime. The project demonstrates a consideration for all aspects of design for thematic congruity towards the realisation of a single aim, as well as a careful balance of mystery and transparency to make the game feel vast. The design was revised consistently throughout development through reflection upon a variety of user tests that targeted the effectiveness of every aspect of the game towards realising its underlying philosophy. Moreover, it demonstrates a congregation of my skills from narrative design and programming to dialogue-writing and music-production -- all of which are informed by the game's underlying themes.",
     [
         new ImageReference(
             "TheTower/image-02.png",
@@ -392,7 +392,7 @@ let projectUnboundedFault = new Project(
         Skill.TESTING,
         Skill.UX
     ],
-    "A retro dungeon-crawler rogue-like with arcade-oriented design and minor elements of randomisation.",
+    "A retro dungeon-crawler rogue-like with arcade-oriented design and minor elements of randomisation. As the project leader I had to plan the agile development cycle and manage a small team, assigning tasks and roles. I also contributed significantly to the central design concepts, narrative background, mechanics programming, and quality assurance.",
     [
         new ImageReference(
             "UnboundedFault/image-05.png",
