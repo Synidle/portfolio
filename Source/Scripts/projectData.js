@@ -5,7 +5,7 @@ let projectsLookup = new Map();
 /** @type {ProjectPage[]} */
 let projectPages = [];
 
-const ID_FECKLESS_FOX = "feckless_fox";
+const ID_FECKLESS_FOX = "feckless-fox";
 const ID_THE_TOWER = "the-tower";
 const ID_DIGITAL_GHOST_GATE = "digital-ghost-gate";
 const ID_PHRASE_DEX = "phrase-dex";
