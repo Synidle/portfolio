@@ -1,7 +1,7 @@
 /**
  * @param {Project} project 
  */
-function ProjectButton(project) {
+function ProjectButton(project, showFormat=true, showTags=true, showRole=true, showDescription=false) {
     this.project = project;
 
     this.button = document.createElement("a");
@@ -33,7 +33,10 @@ function ProjectButton(project) {
     tags.innerHTML = project.tags.join(", ");
 
     const role = document.createElement("label");
-    role.innerHTML = project.role; 
+    role.innerHTML = project.role;
+
+    const description = document.createElement("label");
+    description.innerHTML = project.description;
 
     const breakElement = () => document.createElement("br");
 
@@ -42,13 +45,23 @@ function ProjectButton(project) {
     this.button.appendChild(breakElement());
     this.button.appendChild(name);
     this.button.appendChild(date);
-    this.button.appendChild(breakElement());
-    this.button.appendChild(format);
-    this.button.appendChild(status); 
-    this.button.appendChild(breakElement());
-    this.button.appendChild(tags); 
-    this.button.appendChild(breakElement());
-    this.button.appendChild(role); 
+    if (showFormat) {
+        this.button.appendChild(breakElement());
+        this.button.appendChild(format);
+        this.button.appendChild(status); 
+    }
+    if (showTags) {
+        this.button.appendChild(breakElement());
+        this.button.appendChild(tags); 
+    }
+    if (showRole) {
+        this.button.appendChild(breakElement()); 
+        this.button.appendChild(role); 
+    }
+    if (showDescription) {
+        this.button.appendChild(breakElement()); 
+        this.button.appendChild(description); 
+    }
 
     this.button.addEventListener("mouseenter", () => {
         displayingImageIndex ++;
