@@ -19,6 +19,7 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
 
     const name = document.createElement("label");
     name.innerHTML = project.name;
+    name.id = "project-button-name";
 
     const date = document.createElement("label");
     date.innerHTML = `\t(${project.year})`;

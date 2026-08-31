@@ -12,6 +12,10 @@
     object-fit:contain;
 }
 
+.project-button #project-button-name {
+  font-weight: bold;
+}
+
 /* Very wide screens */
 @media (min-width:1200) {
 
