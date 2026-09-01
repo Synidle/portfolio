@@ -19,9 +19,10 @@ function createFilterElement(parentElement, parameters) {
         select.appendChild(option); 
         
         for (const [key, value] of Object.entries(parameter)) {
+            const option = document.createElement("option");
             option.value = value; 
             option.innerText = value;
-            select.appendChild(option); 
+            select.appendChild(option);
         }
 
         div.appendChild(label);
