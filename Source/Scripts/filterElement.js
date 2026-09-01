@@ -4,6 +4,14 @@
  * @param {Object[]} parameters 
  */
 function createFilterElement(parentElement, parameters) {
+    const outerDetails = document.createElement("details");
+    const outerSummary = document.createElement("summary");
+    
+    outerSummary.innerHTML = "Filter";
+    
+    outerDetails.appendChild(outerSummary);
+    parentElement.appendChild(outerDetails);
+
     for (const parameter of parameters) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
@@ -29,7 +37,7 @@ function createFilterElement(parentElement, parameters) {
             details.appendChild(label);
         }
         
-        parentElement.appendChild(details);
+        outerDetails.appendChild(details);
     }
 
     const details = document.createElement("details");
@@ -52,5 +60,5 @@ function createFilterElement(parentElement, parameters) {
         if (!checked) {input.checked = true; checked = true;}
     }
 
-    parentElement.appendChild(details); 
+    outerDetails.appendChild(details); 
 }
