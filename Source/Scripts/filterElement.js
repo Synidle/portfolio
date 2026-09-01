@@ -5,28 +5,29 @@
  */
 function createFilterElement(parentElement, parameters) {
     for (const parameter of parameters) {
-        const div = document.createElement("div");
+        const fieldset = document.createElement("fieldset");
+        const legend = document.createElement("legend");
         const label = document.createElement("label");
-        const select = document.createElement("select");
-        const option = document.createElement("option");
+        const input = document.createElement("input");
 
         const ps = parameter.toString(); 
 
-        label.htmlFor = ps; label.textContent = ps;
-        select.id = ps; select.name = ps; select.multiple = true; 
-        option.value = ""; option.innerText = `Any ${ps}`;
-
-        select.appendChild(option); 
+        legend.innerHTML = ps; 
+        label.innerHTML = `Any ${ps}`;
+        input.type = "checkbox"; input.name = ps; input.value = "";
         
+        label.appendChild(input); 
+        fieldset.appendChild(label); 
+
         for (const [key, value] of Object.entries(parameter)) {
-            const option = document.createElement("option");
-            option.value = value; 
-            option.innerText = value;
-            select.appendChild(option);
+            const label = document.createElement("label");
+            const input = document.createElement("input");
+            label.innerHTML = value;
+            input.type = "checkbox"; input.name = value; input.value = value;
+            label.appendChild(input);
+            fieldset.appendChild(label);
         }
 
-        div.appendChild(label);
-        div.appendChild(select); 
-        parentElement.appendChild(div);
+        parentElement.appendChild(fieldset);
     }
 }
