@@ -12,9 +12,9 @@ function createFilterElement(parentElement, parameters) {
 
         const ps = parameter.toString(); 
 
-        label.for = ps; label.textContent = ps;
-        select.id = ps; select.name = ps;
-        option.value = "", option.innerText = `Any ${ps}`;
+        label.htmlFor = ps; label.textContent = ps;
+        select.id = ps; select.name = ps; select.multiple = true; 
+        option.value = ""; option.innerText = `Any ${ps}`;
 
         select.appendChild(option); 
         
