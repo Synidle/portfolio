@@ -1,7 +1,20 @@
 /**
  * 
+ * @param {string} name 
+ * @param {Object} object
+ */
+function FilterParameter(
+    name,
+    object
+) {
+    this.name = name;
+    this.object = object;
+}
+
+/**
+ * 
  * @param {HTMLElement} parentElement 
- * @param {Object[]} parameters 
+ * @param {FilterParameter[]} parameters 
  */
 function createFilterElement(parentElement, parameters) {
     const outerDetails = document.createElement("details");
@@ -18,17 +31,15 @@ function createFilterElement(parentElement, parameters) {
         const label = document.createElement("label");
         const input = document.createElement("input");
 
-        const ps = parameter.toString(); 
-
-        summary.innerHTML = ps; 
-        label.innerHTML = `Any ${ps}`;
-        input.type = "checkbox"; input.name = ps; input.value = "";
+        summary.innerHTML = parameter.name; 
+        label.innerHTML = `Any ${parameter.name}`;
+        input.type = "checkbox"; input.name = parameter.name; input.value = "";
         
         label.appendChild(input); 
         details.appendChild(summary); 
         details.appendChild(label); 
 
-        for (const [key, value] of Object.entries(parameter)) {
+        for (const [key, value] of Object.entries(parameter.object)) {
             const label = document.createElement("label");
             const input = document.createElement("input");
             label.innerHTML = value;

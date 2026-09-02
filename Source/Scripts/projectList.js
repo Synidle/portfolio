@@ -6,9 +6,12 @@ for (const p of projects) {
     projectListElement.appendChild(projectButton.button);
 }
 
-createFilterElement(filterParent, [
-    Status,
-    Format,
-    Tag,
-    Skill,
-]);
+createFilterElement(
+    filterParent,
+    [
+        new FilterParameter("Status", Status),
+        new FilterParameter("Format", Format),
+        new FilterParameter("Tags", Tag),
+        new FilterParameter("Skills", Skill),
+    ]
+);
