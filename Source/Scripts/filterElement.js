@@ -15,8 +15,9 @@ function FilterParameter(
  * 
  * @param {HTMLElement} parentElement 
  * @param {FilterParameter[]} parameters 
+ * @param {function} onApply
  */
-function createFilterElement(parentElement, parameters) {
+function createFilterElement(parentElement, parameters, onApply) {
     const outerDetails = document.createElement("details");
     const outerSummary = document.createElement("summary");
     
@@ -43,7 +44,7 @@ function createFilterElement(parentElement, parameters) {
             const label = document.createElement("label");
             const input = document.createElement("input");
             label.innerHTML = value;
-            input.type = "checkbox"; input.name = value; input.value = value;
+            input.type = "checkbox"; input.name = parameter.name; input.value = value;
             label.appendChild(input);
             details.appendChild(label);
         }
@@ -80,4 +81,19 @@ function createFilterElement(parentElement, parameters) {
 
     outerDetails.appendChild(reset);
     outerDetails.appendChild(submit);
+
+    parentElement.addEventListener("submit", (event) => {
+        const formData = new FormData(parentElement);
+        const filters = {};
+        
+        event.preventDefault();
+
+        for (const parameter of parameters) {
+            filters[parameter.name] = formData.getAll(parameter.name);
+        }
+
+        filters.include = formData.get("include");
+
+        onApply(filters);
+    });       
 }
