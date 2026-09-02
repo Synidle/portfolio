@@ -72,4 +72,12 @@ function createFilterElement(parentElement, parameters) {
     }
 
     outerDetails.appendChild(details); 
+
+    const reset = document.createElement("button");
+    const submit = document.createElement("button");
+    reset.type = "reset"; reset.innerHTML = "Reset";
+    submit.type = "submit"; submit.innerHTML = "Apply Filters";
+
+    outerDetails.appendChild(reset);
+    outerDetails.appendChild(submit);
 }
