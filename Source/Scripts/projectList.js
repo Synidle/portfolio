@@ -42,13 +42,18 @@ function filterProject(project, filters, requiresAll) {
     let i = 0; 
 
     console.log(`\nCheck Project: ${project.name}`);
+    // console.log("entries:");
+    // console.log(entries);
     while (passes && !(!requiresAll && passesAny) && (i < entries.length)) {
-        const f = entries[i];
-        console.log(`f: ${f}`);
-        const passesParameter = checkParameter(f[0], f[1], project, requiresAll);
-        if (requiresAll && !passesParameter) passes = false; 
-        else if (passesParameter) passesAny = true; 
+        const e = entries[i];
+        // console.log(`entry: ${e}`);
+        if (e[1].length > 0) {
+            const passesParameter = checkParameter(e[0], e[1], project, requiresAll);
+            if (requiresAll && !passesParameter) passes = false; 
+            else if (passesParameter) passesAny = true; 
+        }
         i ++; 
+        console.log(`Passes: ${passes}; passes any: ${passesAny}`);
     }
     console.log(`RESULT: passes = ${passes}`);
     return passes; 
