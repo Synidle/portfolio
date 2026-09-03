@@ -55,6 +55,7 @@ function filterProject(project, filters, requiresAll) {
         i ++; 
         console.log(`Passes: ${passes}; passes any: ${passesAny}`);
     }
+    if (!passesAny) passes = false;
     console.log(`RESULT: passes = ${passes}`);
     return passes; 
 }
@@ -68,21 +69,22 @@ function filterProject(project, filters, requiresAll) {
  * @returns {boolean} passes
  */
 function checkParameter(parameter, values, project, requiresAll) {
-    console.log(`Check parameter ${parameter} with values ${values}`);
+    // console.log(`Check parameter ${parameter} with values ${values}`);
     if (values.length == 0) return true; 
 
     let passes = true;
     let passesAny = false;
     let i = 0; 
-    console.log(`Check parameter ${parameter} of project ${project.name}`);
-    while (passes && !(requiresAll && passesAny) && (i < values.length)) {
+    // console.log(`Check parameter ${parameter} of project ${project.name}`);
+    while (passes && !(!requiresAll && passesAny) && (i < values.length)) {
         const value = values[i];
-        const passesValue = project[parameter] == value; 
-        console.log(`Check value ${value} from filter against ${project[parameter]} from project.`);
+        const passesValue = project[parameter.toLowerCase()] == value; 
+        console.log(`Check value ${value} from filter against ${project[parameter.toLowerCase()]} from project.`);
         if (requiresAll && !passesValue) passes = false;
         else if (passesValue) passesAny = true; 
         i ++; 
     }
+    if (!passesAny) passes = false;
     console.log(`Pass: ${passes}`);
     return passes; 
 }
