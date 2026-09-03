@@ -20,7 +20,7 @@ function applyFilters(filters) {
 
     // Show passing projects
     for (const p of projects) {
-        const showProject = filterProject(p);
+        const showProject = filterProject(p, filters, requireAll);
         if (showProject) 
             createProjectButton(p); 
     }
@@ -63,9 +63,11 @@ function checkParameter(parameter, values, project, requiresAll) {
     let passes = true;
     let passesAny = false;
     let i = 0; 
+    // console.log(`Check parameter ${parameter} of project ${project.name}`);
     while (passes && !(requiresAll && passesAny) && (i < values.length)) {
         const value = values[i];
         const passesValue = project[parameter] == value; 
+        // console.log(`Check value ${value} from filter against ${project[parameter]} from project.`);
         if (requiresAll && !passesValue) passes = false;
         else if (passesValue) passesAny = true; 
         i ++; 
