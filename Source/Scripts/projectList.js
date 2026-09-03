@@ -34,6 +34,8 @@ function applyFilters(filters) {
  * @returns {boolean} passes
  */
 function filterProject(project, filters, requiresAll) {
+    if (filters == null) return true; 
+
     let passes = true; 
     let passesAny = false; 
     const entries = Object.entries(filters);
