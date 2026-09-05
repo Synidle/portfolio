@@ -81,16 +81,20 @@ function checkParameter(parameter, values, project, requiresAll) {
         const projectValues = project[parameter.toLowerCase()];
         let passesValue = false;
 
-        console.log(`Check value ${value} from filter against ${projectValues} from project.`);
-        if (projectValues.length <= 1)
-            passesValue = projectValues = value;
-        else {
-            let i = 0;
-            while (!passesValue && i < projectValues.length) {
-                if (projectValues[i] == value) passesValue = true; 
-                i ++;
+        if (projectValues) {
+            console.log(`Check value ${value} from filter against ${projectValues} from project.`);
+            if (projectValues.length <= 1)
+                passesValue = projectValues = value;
+            else {
+                let i = 0;
+                while (!passesValue && i < projectValues.length) {
+                    if (projectValues[i] == value) passesValue = true; 
+                    i ++;
+                }
             }
         }
+        else passesValue = false; 
+
         if (requiresAll && !passesValue) passes = false;
         else if (passesValue) passesAny = true; 
         i ++; 
