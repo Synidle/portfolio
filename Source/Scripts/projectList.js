@@ -36,26 +36,31 @@ function applyFilters(filters) {
 function filterProject(project, filters, requiresAll) {
     if (filters == null) return true; 
 
-    let passes = true; 
-    let passesAny = false; 
+    let passes = true; // determines overall pass/fail (useful when requiresAll)
+    let passesAny = false; // records if passed any parameter
+    let failsAny = false; // records if failed any parameter (useful when parameters are blank)
     const entries = Object.entries(filters);
     let i = 0; 
 
     console.log(`\nCheck Project: ${project.name}`);
     // console.log("entries:");
     // console.log(entries);
-    while (passes && !(!requiresAll && passesAny) && (i < entries.length)) {
+    // Skip the last filter, which determines "Any" or "All"
+    while (passes && !(!requiresAll && passesAny) && (i < entries.length-1)) {
         const e = entries[i];
-        // console.log(`entry: ${e}`);
+        console.log(`entry: ${e}: ${e[1]} (length ${e[1].length})`);
         if (e[1].length > 0) {
             const passesParameter = checkParameter(e[0], e[1], project, requiresAll);
-            if (requiresAll && !passesParameter) passes = false; 
-            else if (passesParameter) passesAny = true; 
+            if (requiresAll && !passesParameter) passes = false;
+            else {
+                if (passesParameter) passesAny = true; 
+                else failsAny = true; 
+            } 
         }
         i ++; 
-        console.log(`Passes: ${passes}; passes any: ${passesAny}`);
+        console.log(`Passes: ${passes}; passes any: ${passesAny}; fails any: ${failsAny}`);
     }
-    if (!passesAny) passes = false;
+    if (failsAny) passes = false;
     console.log(`RESULT: passes = ${passes}`);
     return passes; 
 }
