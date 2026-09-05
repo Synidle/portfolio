@@ -1,5 +1,6 @@
 const filterParent = document.getElementById("project-filter");
 const projectListElement = document.getElementById("project-list");
+const warningNoProjects = document.getElementById("no-projects-warning");
 /**@type {HTMLElement[]} */
 let projectButtons = []; 
 
@@ -18,11 +19,17 @@ function applyFilters(filters) {
     }
     projectButtons = []; 
 
+    warningNoProjects.hidden = true; 
+
     // Show passing projects
     for (const p of projects) {
         const showProject = filterProject(p, filters, requireAll);
         if (showProject) 
             createProjectButton(p); 
+    }
+
+    if (projectButtons.length == 0) {
+        warningNoProjects.hidden = false; 
     }
 }
 
