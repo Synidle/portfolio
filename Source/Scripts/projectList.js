@@ -84,7 +84,7 @@ function checkParameter(parameter, values, project, requiresAll) {
         if (projectValues) {
             console.log(`Check value ${value} from filter against ${projectValues} from project.`);
             if (projectValues.length <= 1)
-                passesValue = projectValues = value;
+                passesValue = projectValues == value;
             else {
                 let i = 0;
                 while (!passesValue && i < projectValues.length) {
