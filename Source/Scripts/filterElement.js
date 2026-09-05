@@ -83,17 +83,32 @@ function createFilterElement(parentElement, parameters, onApply) {
     outerDetails.appendChild(submit);
 
     parentElement.addEventListener("submit", (event) => {
-        const formData = new FormData(parentElement);
-        const filters = {};
-        
-        event.preventDefault();
-
-        for (const parameter of parameters) {
-            filters[parameter.name] = formData.getAll(parameter.name);
-        }
-
-        filters.include = formData.get("include");
-
-        onApply(filters);
+        event.preventDefault(); 
+        submitFilters(parentElement, parameters, onApply);
     });       
+
+    parentElement.addEventListener("reset", (event) => {
+        requestAnimationFrame(() => {
+            submitFilters(parentElement, parameters, onApply);
+        });
+    });
+}
+
+/**
+ * 
+ * @param {HTMLElement} parentElement 
+ * @param {FilterParameter[]} parameters 
+ * @param {function} onApply 
+ */
+function submitFilters(parentElement, parameters, onApply) {
+    const formData = new FormData(parentElement);
+    const filters = {};
+
+    for (const parameter of parameters) {
+        filters[parameter.name] = formData.getAll(parameter.name);
+    }
+
+    filters.include = formData.get("include");
+
+    onApply(filters);
 }
