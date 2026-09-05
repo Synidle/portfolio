@@ -29,16 +29,16 @@ function createFilterElement(parentElement, parameters, onApply) {
     for (const parameter of parameters) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
-        const label = document.createElement("label");
-        const input = document.createElement("input");
+        // const label = document.createElement("label");
+        // const input = document.createElement("input");
 
         summary.innerHTML = parameter.name; 
-        label.innerHTML = `Any ${parameter.name}`;
-        input.type = "checkbox"; input.name = parameter.name; input.value = "";
+        // label.innerHTML = `Any ${parameter.name}`;
+        // input.type = "checkbox"; input.name = parameter.name; input.value = "";
         
-        label.appendChild(input); 
+        // label.appendChild(input); 
         details.appendChild(summary); 
-        details.appendChild(label); 
+        // details.appendChild(label); 
 
         for (const [key, value] of Object.entries(parameter.object)) {
             const label = document.createElement("label");
