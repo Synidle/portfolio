@@ -69,7 +69,7 @@ function createFilterElement(parentElement, parameters, onApply) {
         label.appendChild(input);
         details.appendChild(label); 
 
-        if (!checked) {input.checked = true; checked = true;}
+        if (!checked) {input.defaultChecked = true; checked = true;}
     }
 
     outerDetails.appendChild(details); 
