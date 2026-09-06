@@ -40,8 +40,8 @@
 }
 
 #project-filter > details[open] > summary {
-    background-color: var(--nav-text-colour);
-    color: var(--background-colour);
+    background-color: var(--filter-bar-bgr-clr);
+    color: black;
 }
 
 #project-filter .filter-options {
@@ -61,7 +61,7 @@
 
     padding: 0.75rem;
 
-    background-color: var(--background-colour);
+    background-color: var(--filter-drp-bgr-clr);
     color: var(--nav-text-colour);
 
     border: 1px solid var(--nav-text-colour);
