@@ -1,29 +1,40 @@
 main {
     display: grid;
     grid-template-columns: 1fr 250px;
-    gap: 3rem;
+    grid-template-areas:
+        "header information"
+        "body   inspiration";
 
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-#project-content {
-    grid-column: 1;
+#project-header {
+    grid-area: header;
 }
 
-#project-aside {
-    grid-column: 2;
+#project-information {
+    grid-area: information;
+}
+
+#project-body {
+    grid-area: body;
+}
+
+#project-inspiration {
+    grid-area: inspiration;
 }
 
 /* Narrow screens */
 @media (max-width: 900px) {
     main {
         grid-template-columns: 1fr;
-    }
-
-    #project-content,
-    #project-aside {
-        grid-column: 1;
+        grid-template-areas:
+            "header"
+            "information"
+            "body"
+            "inspiration";
     }
 }
