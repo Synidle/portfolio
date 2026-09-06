@@ -27,16 +27,19 @@ function createFilterElement(parentElement, parameters, onApply) {
     for (const parameter of parameters) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
+        const div = document.createElement("div");
         // const label = document.createElement("label");
         // const input = document.createElement("input");
 
         summary.textContent = parameter.name; 
         // label.innerHTML = `Any ${parameter.name}`;
         // input.type = "checkbox"; input.name = parameter.name; input.value = "";
-        
+        div.classList.add("filter-options");
+
         // label.appendChild(input); 
         details.appendChild(summary); 
         // details.appendChild(label); 
+        details.appendChild(div); 
 
         for (const [key, value] of Object.entries(parameter.object)) {
             const label = document.createElement("label");
@@ -44,7 +47,7 @@ function createFilterElement(parentElement, parameters, onApply) {
             label.textContent = value;
             input.type = "checkbox"; input.name = parameter.name; input.value = value;
             label.appendChild(input);
-            details.appendChild(label);
+            div.appendChild(label);
         }
         
         parentElement.appendChild(details);
@@ -52,11 +55,14 @@ function createFilterElement(parentElement, parameters, onApply) {
 
     const details = document.createElement("details");
     const summary = document.createElement("summary");
+    const div = document.createElement("div");
     const ps = "Include";
 
     summary.textContent = ps;
+    div.classList.add("filter-options");
     
     details.appendChild(summary);
+    details.appendChild(div);
 
     let checked = false; 
     for (const value of ["Any", "All"]) {
@@ -65,7 +71,7 @@ function createFilterElement(parentElement, parameters, onApply) {
         label.textContent = value;
         input.type = "radio"; input.name = "include"; input.value = value;
         label.appendChild(input);
-        details.appendChild(label); 
+        div.appendChild(label); 
 
         if (!checked) {input.defaultChecked = true; checked = true;}
     }
