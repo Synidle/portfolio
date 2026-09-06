@@ -18,13 +18,11 @@ function FilterParameter(
  * @param {function} onApply
  */
 function createFilterElement(parentElement, parameters, onApply) {
-    const outerDetails = document.createElement("details");
-    const outerSummary = document.createElement("summary");
+    const title = document.createElement("span");
     
-    outerSummary.innerHTML = "Filter";
+    title.textContent = "Filter"
     
-    outerDetails.appendChild(outerSummary);
-    parentElement.appendChild(outerDetails);
+    parentElement.appendChild(title);
 
     for (const parameter of parameters) {
         const details = document.createElement("details");
@@ -32,7 +30,7 @@ function createFilterElement(parentElement, parameters, onApply) {
         // const label = document.createElement("label");
         // const input = document.createElement("input");
 
-        summary.innerHTML = parameter.name; 
+        summary.textContent = parameter.name; 
         // label.innerHTML = `Any ${parameter.name}`;
         // input.type = "checkbox"; input.name = parameter.name; input.value = "";
         
@@ -43,20 +41,20 @@ function createFilterElement(parentElement, parameters, onApply) {
         for (const [key, value] of Object.entries(parameter.object)) {
             const label = document.createElement("label");
             const input = document.createElement("input");
-            label.innerHTML = value;
+            label.textContent = value;
             input.type = "checkbox"; input.name = parameter.name; input.value = value;
             label.appendChild(input);
             details.appendChild(label);
         }
         
-        outerDetails.appendChild(details);
+        parentElement.appendChild(details);
     }
 
     const details = document.createElement("details");
     const summary = document.createElement("summary");
     const ps = "Include";
 
-    summary.innerHTML = ps;
+    summary.textContent = ps;
     
     details.appendChild(summary);
 
@@ -64,7 +62,7 @@ function createFilterElement(parentElement, parameters, onApply) {
     for (const value of ["Any", "All"]) {
         const label = document.createElement("label");
         const input = document.createElement("input");
-        label.innerHTML = value;
+        label.textContent = value;
         input.type = "radio"; input.name = "include"; input.value = value;
         label.appendChild(input);
         details.appendChild(label); 
@@ -72,15 +70,15 @@ function createFilterElement(parentElement, parameters, onApply) {
         if (!checked) {input.defaultChecked = true; checked = true;}
     }
 
-    outerDetails.appendChild(details); 
+    parentElement.appendChild(details); 
 
     const reset = document.createElement("button");
     const submit = document.createElement("button");
-    reset.type = "reset"; reset.innerHTML = "Reset";
-    submit.type = "submit"; submit.innerHTML = "Apply Filters";
+    reset.type = "reset"; reset.textContent = "Reset";
+    submit.type = "submit"; submit.textContent = "Apply Filters";
 
-    outerDetails.appendChild(reset);
-    outerDetails.appendChild(submit);
+    parentElement.appendChild(reset);
+    parentElement.appendChild(submit);
 
     parentElement.addEventListener("submit", (event) => {
         event.preventDefault(); 
