@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 3rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#project-content {
+    grid-column: 1;
+}
+
+#project-aside {
+    grid-column: 2;
+}
+
+/* Narrow screens */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #project-content,
+    #project-aside {
+        grid-column: 1;
+    }
+}

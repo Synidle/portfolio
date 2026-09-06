@@ -7,6 +7,7 @@
         <title>Ben Lockyer | Portfolio</title>
 
         <link href="Source/Styles/baseStyle.css" type="text/css" rel="stylesheet">
+        <link href="Source/Styles/projectPage.css" type="text/css" rel="stylesheet">
 
         <script src="Source/Scripts/project.js"></script>
     </head>
@@ -16,35 +17,41 @@
             <div id="header"></div>
         </header>
         <main>
-            <section>
+            <section id="project-content">
                 <h1 id="project-title"></h1>
+
                 <p>Role: <span id="project-role"></span></p>
+
                 <article id="project-description"></article>
+
                 <a id="project-link"></a>
-            </section>
-            <section id="project-information">
-                <h2>Information</h2>
-                <ul>
-                    <li id="project-year"></li>
-                    <li id="project-status"></li>
-                    <li id="project-format"></li>
-                    <li>
-                        Tags:
-                        <ul id="project-tags"></ul>
-                    </li>
-                    <li>
-                        Skills demonstrated:
-                        <ul id="project-skills"></ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
+
                 <article id="project-body"></article>
             </section>
-            <section>
-                <h2>Inspiration</h2>
-                <ul id="project-inspirations"></ul>
-            </section>
+
+            <aside id="project-aside">
+                <section id="project-information">
+                    <h2>Information</h2>
+                    <ul>
+                        <li id="project-year"></li>
+                        <li id="project-status"></li>
+                        <li id="project-format"></li>
+                        <li>
+                            Tags:
+                            <ul id="project-tags"></ul>
+                        </li>
+                        <li>
+                            Skills demonstrated:
+                            <ul id="project-skills"></ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Inspiration</h2>
+                    <ul id="project-inspirations"></ul>
+                </section>
+            </aside>
         </main>
 
         <script src="Source/Scripts/projectData.js"></script>
