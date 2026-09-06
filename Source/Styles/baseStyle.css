@@ -23,6 +23,11 @@
     outline: solid thin var(--nav-text-colour);
 }
 
+#header nav a.selected {
+    background-color: var(--nav-btn-hover);
+    outline-color: var(--nav-btn-hover); 
+}
+
 #header nav a:hover {
     background-color: var(--nav-btn-hover);
 }

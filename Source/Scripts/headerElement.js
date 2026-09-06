@@ -18,6 +18,10 @@ for (const [id, text, page] of pages) {
     link.id = id;
     link.href = page;
     link.textContent = text;
+
+    if (page == window.location.pathname.substring(1))
+        link.classList.add("selected");
+
     navElement.appendChild(link); 
 }
 
