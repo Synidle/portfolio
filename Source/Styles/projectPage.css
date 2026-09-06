@@ -27,6 +27,15 @@ main {
     grid-area: inspiration;
 }
 
+/* Wide screens */
+@media (min-width: 901px) {
+    main {
+        width: 85%;
+        max-width: none;
+        margin: 0 auto;
+    }
+}
+
 /* Narrow screens */
 @media (max-width: 900px) {
     main {
