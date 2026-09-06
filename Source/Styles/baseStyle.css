@@ -1,6 +1,10 @@
 :root {
-    --nav-text-colour: black; 
-    --nav-btn-hover: lightgrey; 
+    --nav-txt-clr: black; 
+    --nav-btn-hvr-clr: lightgrey; 
+
+    --project-btn-bgr-clr: #eee;
+    --project-btn-out-clr: #ccc;
+    --project-btn-hvr-clr: lightgrey; 
 }
 
 /* Header */
@@ -17,17 +21,17 @@
     align-items: center;
 
     text-decoration: none; 
-    color: var(--nav-text-colour);
+    color: var(--nav-txt-clr);
     width: 100%;
     height: 3em; 
-    outline: solid thin var(--nav-text-colour);
+    outline: solid thin var(--nav-txt-clr);
 }
 
 #header nav a.selected {
-    background-color: var(--nav-btn-hover);
-    outline-color: var(--nav-btn-hover); 
+    background-color: var(--nav-btn-hvr-clr);
+    outline-color: var(--nav-btn-hvr-clr); 
 }
 
 #header nav a:hover {
-    background-color: var(--nav-btn-hover);
+    background-color: var(--nav-btn-hvr-clr);
 }

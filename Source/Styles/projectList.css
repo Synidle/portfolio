@@ -1,11 +1,15 @@
 .project-button {
   display: inline-block;
   padding: 8px 16px;
-  border: 1px solid #ccc;
-  background: #eee;
+  border: 1px solid var(--project-btn-out-clr);
+  background: var(--project-btn-bgr-clr);
   text-decoration: none;
   color: inherit;
   border-radius: 4px;
+}
+
+.project-button:hover {
+  background: var(--project-btn-hvr-clr)
 }
 
 .project-button img {
