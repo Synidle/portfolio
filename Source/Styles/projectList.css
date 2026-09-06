@@ -39,8 +39,12 @@
     z-index: 100;
 }
 
+#project-filter > details:hover {
+  background-color: var(--filter-bar-hvr-clr);
+}
+
 #project-filter > details[open] > summary {
-    background-color: var(--filter-bar-bgr-clr);
+    background-color: var(--filter-bar-hvr-clr);
     color: black;
 }
 
