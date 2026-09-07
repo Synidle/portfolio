@@ -28,7 +28,7 @@ function createFilterElement(parentElement, parameters, onApply) {
         createDropdown(
             parameter.name, 
             "filter-options",
-            Object.entries(parameter.object).values(),
+            Object.values(parameter.object),
             parentElement
         );
     }
