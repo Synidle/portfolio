@@ -35,6 +35,7 @@ function createFilterElement(parentElement, parameters, onApply) {
         // label.innerHTML = `Any ${parameter.name}`;
         // input.type = "checkbox"; input.name = parameter.name; input.value = "";
         div.classList.add("filter-options");
+        details.name = "filter-options";
 
         // label.appendChild(input); 
         details.appendChild(summary); 
