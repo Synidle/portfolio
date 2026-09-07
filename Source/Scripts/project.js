@@ -148,7 +148,7 @@ function ProjectPage(
     projectID,
     project,
     content,
-    style
+    style = null
 ) {
     this.projectID = projectID;
     this.project = project;

@@ -4,6 +4,8 @@ let projects = [];
 let projectsLookup = new Map();
 /** @type {ProjectPage[]} */
 let projectPages = [];
+/** @type {Map<string, ProjectPage>} */
+let projectPagesLookup = new Map(); 
 
 const ID_FECKLESS_FOX = "feckless-fox";
 const ID_THE_TOWER = "the-tower";
@@ -262,6 +264,12 @@ let projectTheTower = new Project(
         ),
     ],
     "Sole designer & developer"
+);
+
+let pageTheTower = new ProjectPage(
+    ID_THE_TOWER,
+    projectTheTower,
+    "Source/ProjectPages/TheTower.html"
 );
 //#endregion
 
@@ -715,6 +723,12 @@ projects = [
     essayAuthenticity
 ];
 
-for (let p of projects) {
-    projectsLookup.set(p.id, p); 
-}
+projectPages = [
+    pageTheTower,
+]
+
+for (let p of projects)
+    projectsLookup.set(p.id, p);
+
+for (let p of projectPages)
+    projectPagesLookup.set(p.projectID, p); 

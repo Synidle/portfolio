@@ -1,6 +1,7 @@
 const params = new URLSearchParams(location.search); 
 const projectID = params.get("project");
 const project = projectsLookup.get(projectID); 
+const projectPage = projectPagesLookup.get(projectID); 
 
 if (project == null) {
     alert("No project found.");
@@ -29,6 +30,18 @@ if (project.format == Format.ESSAY) {
 }
 else {
     document.getElementById("project-link").innerHTML = project.link;
+    
+    if (projectPage == undefined) {
+        console.log(projectPagesLookup);
+        throw new Error(`No project page found for ID ${projectID}`); 
+    }
+    else {
+        fetch(projectPage.content)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("project-body").innerHTML = html; 
+            });
+    }
 }
 
 /**
