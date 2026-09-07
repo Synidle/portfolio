@@ -25,59 +25,21 @@ function createFilterElement(parentElement, parameters, onApply) {
     parentElement.appendChild(title);
 
     for (const parameter of parameters) {
-        const details = document.createElement("details");
-        const summary = document.createElement("summary");
-        const div = document.createElement("div");
-        // const label = document.createElement("label");
-        // const input = document.createElement("input");
-
-        summary.textContent = parameter.name; 
-        // label.innerHTML = `Any ${parameter.name}`;
-        // input.type = "checkbox"; input.name = parameter.name; input.value = "";
-        div.classList.add("filter-options");
-        details.name = "filter-options";
-
-        // label.appendChild(input); 
-        details.appendChild(summary); 
-        // details.appendChild(label); 
-        details.appendChild(div); 
-
-        for (const [key, value] of Object.entries(parameter.object)) {
-            const label = document.createElement("label");
-            const input = document.createElement("input");
-            label.textContent = value;
-            input.type = "checkbox"; input.name = parameter.name; input.value = value;
-            label.appendChild(input);
-            div.appendChild(label);
-        }
-        
-        parentElement.appendChild(details);
+        createDropdown(
+            parameter.name, 
+            "filter-options",
+            Object.entries(parameter.object).values(),
+            parentElement
+        );
     }
 
-    const details = document.createElement("details");
-    const summary = document.createElement("summary");
-    const div = document.createElement("div");
-    const ps = "Include";
-
-    summary.textContent = ps;
-    div.classList.add("filter-options");
-    
-    details.appendChild(summary);
-    details.appendChild(div);
-
-    let checked = false; 
-    for (const value of ["Any", "All"]) {
-        const label = document.createElement("label");
-        const input = document.createElement("input");
-        label.textContent = value;
-        input.type = "radio"; input.name = "include"; input.value = value;
-        label.appendChild(input);
-        div.appendChild(label); 
-
-        if (!checked) {input.defaultChecked = true; checked = true;}
-    }
-
-    parentElement.appendChild(details); 
+    createDropdown(
+        "Include",
+        "filter-options",
+        ["Any", "All"],
+        parentElement,
+        true
+    );
 
     const reset = document.createElement("button");
     const submit = document.createElement("button");
@@ -97,6 +59,52 @@ function createFilterElement(parentElement, parameters, onApply) {
             submitFilters(parentElement, parameters, onApply);
         });
     });
+}
+
+/**
+ * 
+ * @param {string} parameterName 
+ * @param {string[]} values 
+ * @param {HTMLElement} parentElement 
+ * @param {boolean} radioButtons
+ */
+function createDropdown(
+    parameterName, 
+    className, 
+    values, 
+    parentElement,
+    radioButtons = false
+) {
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    const div = document.createElement("div");
+
+    summary.textContent = parameterName;
+    div.classList.add(className);
+    details.name = className;
+
+    details.appendChild(summary); 
+    details.appendChild(div); 
+
+    let checked = false; 
+    for (const value of values) {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        label.textContent = value; 
+        input.type = radioButtons? "radio" : "checkbox";
+        input.name = parameterName; input.value = value; 
+
+        if (radioButtons)
+            if (!checked) {
+                input.defaultChecked = true;
+                input.checked = true; 
+            }
+
+        label.appendChild(input);
+        div.appendChild(label); 
+    }
+
+    parentElement.appendChild(details); 
 }
 
 /**
