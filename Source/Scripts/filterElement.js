@@ -97,7 +97,7 @@ function createDropdown(
         if (radioButtons)
             if (!checked) {
                 input.defaultChecked = true;
-                input.checked = true; 
+                checked = true; 
             }
 
         label.appendChild(input);
@@ -121,7 +121,7 @@ function submitFilters(parentElement, parameters, onApply) {
         filters[parameter.name] = formData.getAll(parameter.name);
     }
 
-    filters.include = formData.get("include");
+    filters.include = formData.get("Include");
 
     onApply(filters);
 }
