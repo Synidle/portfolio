@@ -23,6 +23,10 @@ main {
     grid-area: body;
 }
 
+#project-body img {
+    max-width: 100%; 
+}
+
 #project-inspiration {
     grid-area: inspiration;
 }
