@@ -145,7 +145,7 @@ let projectTheTower = new Project(
     "An open-world action-RPG attempting to realise a sensation of the sublime. The project demonstrates a consideration for all aspects of design for thematic congruity towards the realisation of a single aim, as well as a careful balance of mystery and transparency to make the game feel vast. The design was revised consistently throughout development through reflection upon a variety of user tests that targeted the effectiveness of every aspect of the game towards realising its underlying philosophy. Moreover, it demonstrates a congregation of my skills from narrative design and programming to dialogue-writing and music-production -- all of which are informed by the game's underlying themes.",
     [
         new ImageReference(
-            "TheTower/image-02.png",
+            "TheTower/marksman.png",
             "A screenshot from the top of a tower, facing an enemy guard holding a crossbow, overlooking planes, a huge tower, and distant mountains."
         ),
         // new ImageReference(
@@ -153,15 +153,15 @@ let projectTheTower = new Project(
         //     "A screenshot of a town and an immense tower at sunset, visible across planes and a long bridge."
         // ),
         new ImageReference(
-            "TheTower/image-01.jpg",
+            "TheTower/dragon.jpg",
             "A screenshot from within a dungeon, of a dragon breathing fire."
         ),
         new ImageReference(
-            "TheTower/image-01.png",
+            "TheTower/church.png",
             "A screenshot of a ruined church upon a hill."
         ),
         new ImageReference(
-            "TheTower/image-15.png",
+            "TheTower/feckless-inn.png",
             "A screenshot inside a comfortable inn, with drinks on tables and a blazing fireplace."
         ),
     ],
