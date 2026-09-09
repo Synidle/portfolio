@@ -39,15 +39,28 @@ ADD IMAGE OF DESTUCTIBLE PIECE.
 <p>Unplanned mechanics were introduced as testing revealed them necessary. For example, I initiaully did not want to have a "running" movement option because I find different movement speeds are often redundant features, and I do not want the player to rush through the game; however in order to have such large environments I would need to grant the plaeyr faster movement. I did not want to just increase the base movement as this would make the player too fast in tight areas; I also did not want to introduce additional input complexity with a new feature so I linked the run with the existing dash mechanic. There was then the issue of how running should affect stamina. Given running existed to allow the player to efficiently cross large environments, a draining stamina gauge should not inhibit this, but also an increase of speed should not be free. I like the systems of <i>The Elder Scrolls III: Morrowind</i> (Bethesda Game Studios, 2002) and <i>Elden Ring</i> where running is free in the environment alone but has a penalty in combat. These systems however are unimmersive: it is not intuitive for running to drain stamina yet continue to function without stamina in <i>The Elder Scrolls III: Morrowind</i>, and <i>Elden Ring</i>'s system of only draining stamina in combat feels ad hoc. My system is better: there is a fixed stamina cost in the initial dash, and running after that does not drain stamina but nor does it regenerate while the player continues to run. This makes running costless while exploring but costly in combat — and without inbuilt inconsistency in the mechanic.</p>
 </div>
 
+<p>An issue with the game succeeding <i>The Elder Scrolls III: Morrowind</i> is the use of quest-markers and too explicit directions, which dissolves the uncertainty of ways in which to progress a quest, and also discouraging interaction with the world in favour of directly pursuing the quest-marker. Quests in The Tower are therefore made navigable using diegetic information and player intuition alone. But acknowledging that a degree of obscurity is necessary for a sublime game, some quests are made harder to navigate than those common in <i>The Elder Scrolls III: Morrowind</i>. For instance, there are no explicit directions in the quest related to the Dragon, and no indication that the Dragon Covenant Claw is the key to unlock the Dragon Gaol except for the subtle environment hint of the markings on the pedestal also appearing on the claw. A necessary consequence is that the player might chase red herrings: by following their own intuition the player is likely to suspect the existence of quests or paths that do not exist. However the possibility of this is necessary in the sublime experience, even if an undesirable consequence.</p>
+
+<p>Another invaluable element to sublime quest design is invisible choices, those being consequential actions that are not explicitly presented to the player as such, which are explained by <a href="https://www.youtube.com/watch?v=6HZuSzlN2eI&t=2s&pp=ygUkZ2FtZSBtYWtlciB0b29sa2l0IGludmlzaWJsZSBjaG9pY2Vz">Game Maker's Toolkit (2022)</a>. The clearest invisible choice is freeing the Dragon. This is not an option explicitly presented to the player, but one that requires a particular activity and prior preparation to be completed, with many individual "invisible" factors: first finding the Dragon, of whom little is mentioned in-game, and acquiring the key to activate the door; then finding a weapon capable of cutting the chain; and finally the outcome is determined by the player's dialogue with the Dragon and certain attribute values, and whether the player possesses the Dragon Covenant Claw that enables allyship with the Dragon. But beyond this, there are even more invisible choices in hte game, which have consequences far more difficult to place.</p>
+
+<p>Moreover, situations that inconvenience the player are deliberately formed, as they invoke the player to consider there being a more efficient solution. For example, the Moonstone Scythe is required to break the Dragon's chains —this weapon requires two hands to wield and so the player must forgo their torch in this area of pitch-darkness; also within the Prison however, a hood granting illuminated vision can be acquired from a mage, and this can be known to the player as the mage's line of vision is clearly illuminated. This mindset of their being more advantageous strategies will then persist outside of these inconveniences to all gameplay moments: so the player becomes sublimely aware that their current experience is not summative of the game's possibilities.</p>
+
 <div class="project planning">
 <h3>Planning</h3>
 
 <p>The game's world, story, unique mechanics, and so forth, were all carefully considered with the purpose of achieving the sublime. These were implemented in rudimentary form, tested independently, then tested again in carefully designed user tests, to evaluate efficacy and inform the next development sprint within an agile methodology.</p>
 
-<p>A Minimal Viable Product was defined at an early stage, prior to development beginning. </p>
-</div> 
+<p>The initial planning approach was the early definition of a Minimum Viable Product (MVP) to establish the ideas in a small project, with a Gantt chart  used to project and maintain progress. However I found it useful to adopt a more agile and iterative approach, whereby I defined successive intermediate versions spaced one or two weeks apart, each having its own design goal, implementing features in a basic manner, being evaluated upon, sometimes wiht the assitance of other users, then informing the plan for the next intermediate version. The aim was to ensure both consistent progress, and that all progress was made with the fianl goal in mind. Each intermediate version as far as the MVP was outlined first before starting development, with flexibility permitted. The Gantt chart continued to be used as an overarching monitor of progress.</p>
+<img src="Source/ProjectData/TheTower/intermediate-version.png" />
 
+<p>In conjunction with development, a Task Tracker was used to formalise individual tasks, permitting also notes on bugs and opportunities for improvement and extension.</p>
+<img src="Source/ProjectData/TheTower/task-tracker.png" />
+</div>
+
+<div class="godot-engine c-sharp">
+<h3>Development</h3>
 <p>The game was developed in the Godot Engine using the C# programming language EXPLAIN WHY</p>
+</div>
 
 <p>EXPLAIN THE REST OF THE SOFTWARE TOO & SHOW EVIDENCE OF USE.</p>
 
@@ -64,6 +77,16 @@ ADD IMAGE OF DESTUCTIBLE PIECE.
 
 <img src="Source/ProjectData/TheTower/prison-design-doc.png" />
 <img src="Source/ProjectData/TheTower/moodboards.png" />
+</div>
+
+<div class="3d-modelling">
+<h3>Modelling</h3>
+
+<p>The game employs a retro early-3D aesthetic for numerous reasons. The association with classic RPGs implicitly conjures expectations of less "hand-holding". Furthermore, given the game's scale, lower-fidelity assets both permits production of more assets within a shorter time and the presence of more assets for less computational power. Finally, lower-quality assets more disconncted from realistic representation greater ignite the player's imagination; for this reason a low resolution is also used for a "grainy" effect that disguises model and textural imperfections — this is used in conjunction with a subtle noise filter. It is great that the player can observe distant locations and be able to wonder what they are, rather than instantly being able to make out details.</p>
+
+<p>The choice to use a retro 4:3 aspect ratio does more than just provide authenticity to the style: it should improve the gameplay experience. The visual display is the primary means of communication from the game world to the player, particularly regarding world and level design; hence the player's subjectivity of the game is informed by the organisation of assets within the immediate display. A widescreen display is appropriate for most open-world or action games — particularly those that are in third-person —as it shows those features <i>around</i> the player horizontally; but in the case of The Tower, there is a very central focus, that being a vertical tower: an aspect ratio narrower than that of our eyes forces more focus on what is above and below the player, implicitly supporting vertical level design. A widescreen aspect ratio would encourage a more traditional open world game akin to <i>The Elder Scrolls IV: Oblivion</i> rather than encouraging a focussed, vertical, indistinct level design akin to <i>Dark Souls</i>.</p>
+
+<p>Furthermore the game targets 30 frames per second rather than the standard 60 or higher in order to reinforce an aversion to strict combat execution challenge. I want the game to be more conceptually and intellectually challenging, and high skill requirements are another cause for the player to seek external help through guides in order to find manageable routes to overcome the challenge, causing a dissolution of the sublime by making explicit game information.</p>
 </div>
 
 <p>DEVELOPMENT PROCESS</p>
