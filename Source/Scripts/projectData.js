@@ -108,6 +108,11 @@ let projectFecklessFox = new Project(
     "https://synidle.itch.io/feckless-fox-demo",
     91
 );
+let pageFecklessFox = new ProjectPage(
+    ID_FECKLESS_FOX,
+    projectFecklessFox,
+    "Source/ProjectPages/FecklessFox.html"
+);
 
 //#endregion 
 
@@ -725,6 +730,7 @@ projects = [
 
 projectPages = [
     pageTheTower,
+    pageFecklessFox,
 ]
 
 for (let p of projects)
