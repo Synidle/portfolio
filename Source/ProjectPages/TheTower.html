@@ -59,7 +59,15 @@ ADD IMAGE OF DESTUCTIBLE PIECE.
 
 <div class="godot-engine c-sharp">
 <h3>Development</h3>
-<p>The game was developed in the Godot Engine using the C# programming language EXPLAIN WHY</p>
+
+<p>The game was developed in the Godot Engine using the C# programming language. While Godot encourages the use of its bespoke GDScript, I chose C# as my scripting language as it is strongly typed, faster, and more universal.</p>
+
+<p>A notable reason for choosing Godot is that its Node system stimulates compositional practices. Furthermore, my scripting approach favoured composition over inheritance, which affords a greater flexibility perfect for a sublime game that resists formulae or simple, intuitable structures. Specifically, an entity within the game can comprise as many of the implemented mechanics as I wish, rather than those mechanics being restricted by its class. This reflects that same quality of the game's lack of a build system.</p>
+
+<p>For example, having Door and Lock as separate classes, both of which reference but do not inherit the Interactable class, enables more possibilities regarding what can be locked and how they can be nlocked. This inables the disconnect between the door leading to the Dragon Gaol and its activator that requires a key, with the activator subtly hinting the requirement of the Covenant Claw: the door itself gives no suggestion of requiring a special keya nd so would leave the player confused, especially considering how many keys are in the game. The fact that the clase is not a conventional key means it will not unlock a conventional door, so the astute player will think of this activator.</p>
+
+<p>When facing the issue of how to allow the player to save their progress at the start of the Prison while not having that Fountain checkpoint offer transportation out of the Prison at this stage, but allowing it later for the benefit of returning for quests, I made use of this mechanic again in another context: having the transportation capabilities of the fontain "locked" until external activation.</p>
+NEED TO SHOW EXAMPLES AS PROOF
 </div>
 
 <p>EXPLAIN THE REST OF THE SOFTWARE TOO & SHOW EVIDENCE OF USE.</p>
@@ -77,10 +85,14 @@ ADD IMAGE OF DESTUCTIBLE PIECE.
 
 <img src="Source/ProjectData/TheTower/prison-design-doc.png" />
 <img src="Source/ProjectData/TheTower/moodboards.png" />
+
+<p>Levels were then sketched, then roughly blocked-out using primitive 3D shapes for a sense of scale, space, and design, while being easy to reconfigure to achieve the perfect layout. When content with the layout following thorough testing, I would gradually increase the fidelity with more textures and 3D models. For example, I was able to pull out the bridge leading into the Tower, making the outline of the town more interesting. Such a change was easy given the town was in the early stages of blocking-out, but would have been difficult were the town already high-fidelity. Moreover, I was able to easily introduce new interconnexions of paths in the Prison. </p>
 </div>
 
 <div class="3d-modelling">
 <h3>Modelling</h3>
+
+<p>Blender 4.3 was used for modelling and animation, and Aseprite, Krita, and Paint.NET for textures.</p>
 
 <p>The game employs a retro early-3D aesthetic for numerous reasons. The association with classic RPGs implicitly conjures expectations of less "hand-holding". Furthermore, given the game's scale, lower-fidelity assets both permits production of more assets within a shorter time and the presence of more assets for less computational power. Finally, lower-quality assets more disconncted from realistic representation greater ignite the player's imagination; for this reason a low resolution is also used for a "grainy" effect that disguises model and textural imperfections — this is used in conjunction with a subtle noise filter. It is great that the player can observe distant locations and be able to wonder what they are, rather than instantly being able to make out details.</p>
 
