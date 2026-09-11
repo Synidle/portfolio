@@ -725,7 +725,7 @@ projects = [
     essayEastWest,
     essayLatin,
     essayFanCreations,
-    essayAuthenticity
+    // essayAuthenticity
 ];
 
 projectPages = [
