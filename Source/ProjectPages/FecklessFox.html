@@ -31,6 +31,12 @@
 
 <img src="Source/ProjectData/FecklessFox/building-climb.png" />
 
+<p>The goal was to make organic use of environmental elements. For example, platforming inside and outside houses and around towers.</p>
+<img src="Source/ProjectData/FecklessFox/street-birdseye.png" />
+
+<p>Positioning of items, points of interest, and objects to allow for directional light and shadow, indicate where to go. I considered what the player's view should be during all sections of the level, particularly the light from the moon and the height variation of buildings.</p>
+<img src="Source/ProjectData/FecklessFox/buildings-moon.png" />
+
 <h3>Walkthrough</h3>
 
 <p>Following are some excerpts of the full annotated walkthrough I compiled for the project's report, explaining every design decision as it appears, moment-to-moment.</p>
@@ -52,6 +58,23 @@
 
 </div>
 
+<h3>Implementation</h3>
+
+<p>Spot-lights are positioned to produce shadows for visual effect. Lighting colour, position, direction, intensity, all contribute to an aesthetic.</p>
+<img src="Source/ProjectData/FecklessFox/spotlight.png" />
+<img src="Source/ProjectData/FecklessFox/walkthrough-timbers.png" />
+
+<p>A flickering fire was made by having the light-source and fire image vary in intensity according to Perlin noise. The sound was that of a shower, reduced in pitch, through a low-pass filter.</p>
+
+<p>3D sound effects are used to invoke feelings, such as trepidation through the wind sound when upon the walls, and increased proximituy to the source escalates the feeling. I made all sound effects by recording household items and editing the recording, or by producing a sound using a MIDI editor and filters.</p>
+<img src="Source/ProjectData/FecklessFox/three-d-sound.png" />
+
+<p>I enhanced performance by using simplified meshes for the collision part of level geometry.</p>
+<img src="Source/ProjectData/FecklessFox/pipe-blender.png" />
+
+<p>Particles emphasise effect and dynamics, particularly where there is a hazard. Here large particules rise and change from white to green and fade to transparent, imitating the effect of a waterfall.</p>
+<img src="Source/ProjectData/FecklessFox/waterfall-particles.png" />
+
 <div class="c-sharp">
 <h3>Gameplay</h3>
 
@@ -62,7 +85,25 @@
 
 <h3>Challenges Overcome</h3>
 
-<p>When having a friend test the level, he climbed up the fallen lamppost at the start — which I had not foreseen — so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
+<p>When having a friend test the level, he climbed up the fallen lamppost at the start ï¿½ which I had not foreseen ï¿½ so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
 <img src="Source/ProjectData/FecklessFox/start.png" />
 
+<p>The dark atmosphere created a challenge of how to illustrate the path. I had to make best use of everything at my disposal. In the screenshot below, the next platform is illuminated, and the shadow aligns with the succeeding platform. Contrasting materials also highlighted platforms.</p>
+<img src="Source/ProjectData/FecklessFox/highlight-platform.png" />
+
+<p>There were some challenges faced in programming. For example, how to handle enemy behaviour within my state machine system, given enemies are motivate by AI rather than player input. I considered moving action code ï¿½ such as executing movement ï¿½ into State classes so that state and behaviour become entwined, but doing such would mean my classes were no longer limited to exact purposes. Instead, I used my existing code but with two state machines for enemies: the action state machine is the same as that of the player ï¿½ what the enemy is <i>doing</i>; the behaviour state machine is for AI specifically ï¿½ what the enemy is <i>intending</i>. Enemies simultaneously have an action state and a behaviour state.</p>
+<img src="Source/ProjectData/FecklessFox/rat-heirarchy.png" />
+<img src="Source/ProjectData/FecklessFox/chase-behaviour-state.png" />
+
+<p>Another programming issue was how to handle interaction with moving platforms, given the simple and traditional method of reparenting the player to the platform on contact worked inconsistently, and changing the player object's position in the scene heirarchy is undesirable and has the potential to cause future problems. I therefore implemented a system whereby I can assign the player a "virtual parent", namely a variable used in position calculations to achieve the effect of reparenting the player without needing to do so.</p>
+<img src="Source/ProjectData/FecklessFox/virtual-parent.png" />
+
 <h3>Reflection</h3>
+
+<p>I believe that the experience is aesthetically strong, the level design is captivating, and the gameplay is intuitive and enjoyable. Particularly the first town section feels very authentic and ambient, and I enjoy the distinct areas and challenges within.</p>
+<p>The greatest problem for me is the lack of background detail. After the first town section, the level feels less like a real town, and more like platforms floating in space. I would like to populare background areas with terrain, buildings, and interesting features.</p>
+<p>The town is also lacking interesting details; only the same assets are used. There should be more signs of life, particularly inside the buildings. Also, there should be more visible evidence of the ruin brought by the rats. More diegetic platforms, such as scaffolding or debris, might replace existing ones.</p>
+<p>I would reorganise the level to strengthen the feeling of being within a city. The set-pieces should be more closely packed, creating an enclosed level rather than a stretched one. Beneficially, this enables additional creative use of the spin-jump.</p>
+<p>I would like to enhance the game with a flying enemy with a projectile attack, adding variety to platforming via a mobile obstacle.</p>
+<p>Moreover, shaders might be used to add texture to the liquids.</p>
+<p>Finally, I would consider adding music, becaues I do not like the moments of silence; but the music must be appropriate and not detract from the ambience. It must therefore be tailor-made, not added for the sake of having music.</p>
