@@ -48,15 +48,15 @@ let projectFecklessFox = new Project(
     "A classically-inspired 3D platformer developed for a Unity interactive environment module. It exemplifies how a well-designed level can enhance atmosphere, mechanics, and replayability.",
     [
         new ImageReference(
-            "FecklessFox/image-00.png",
+            "FecklessFox/building-top.png",
             "Screenshot of the fox atop a building, before a trail of coins."
         ),
         new ImageReference(
-            "FecklessFox/image-01.png",
+            "FecklessFox/building-climb.png",
             "Screenshot of the fox scaling a building."
         ),
         new ImageReference(
-            "FecklessFox/image-02.png",
+            "FecklessFox/start.png",
             "Screenshot of the fox scaling some platforms, illuminated by a street light."
         ),
     ],
