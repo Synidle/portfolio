@@ -442,6 +442,12 @@ let projectUnboundedFault = new Project(
     ],
     "Project leader, design assistant, mechanics programmer",
 );
+
+let pageUnboundedFault = new ProjectPage(
+    ID_UNBOUNDED_FAULT,
+    projectUnboundedFault,
+    "Source/ProjectPages/UnboundedFault.html"
+);
 //#endregion
 
 //#region Sky City VR
@@ -731,6 +737,7 @@ projects = [
 projectPages = [
     pageTheTower,
     pageFecklessFox,
+    pageUnboundedFault,
 ]
 
 for (let p of projects)
