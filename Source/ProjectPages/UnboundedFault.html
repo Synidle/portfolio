@@ -1,4 +1,4 @@
-<p><i>Unbounded Fault</i> was a game made as a group of four for a university  project, with myself as Project Manager, and also taking some design and programming responsibilities. I received a grade of 89 for this project.</p>
+<p><i>Unbounded Fault</i> was a game made as a group of four for a university  project, with myself as Project Manager, and also taking some design and programming responsibilities. I received a grade of 89 for this project, which stood out for its <i>"scale and varying experience"</i>. Especially, the number and quality of individual aspects, and how they interacted to complete the experience, were commended, affirming my success in conducting the team.</p>
 
 <p>As a result of this project, I became more comfortable working within Unity, and importantly also creating "complete" experiences. Previous projects of mine had felt more like early prototypes, but here I had been forced to schedule development towards a coherent product.</p>
 
@@ -35,17 +35,55 @@
 
 <p>Together, at a very early stage, we divised a code of conduct for professionalism and efficiency, and I held all members to this code of conduct fiercely, noting when work was not completed on time or to quality, or when members did not follow their responsibilities.</p>
 
+<h3>Design</h3>
+
+<p>Under my guidance the team established basic cornerstones for our design:</p>
+<ul>
+<li>Simple mechanics & gameplay loop; easy to pick up and enjoy.</li>
+<li>Replayable.</li>
+</ul>
+
+<p>The basis from which our design stemmed came from two other members: one who suggested a focus on gameplay over impressive graphics or narrative, and another who suggested a move to simplicity and fun from the contemporary prevelence of over-complexity. From this basis we also adopted the association with retro-games: artefacts of a simpler time when games were easy to pick up and play.</p>
+
+<img src="Source/ProjectData/UnboundedFault/controls.png" />
+<p>To ensure the game was easy to pick up, I recommended commitment to a restricted control scheme mirroring the controls offered by the classic Nintendo Entertainment System controller. The intention is that the game can be played with a retro controller or on an arcade machine, with the player learning the controls simply by pressing all of the buttons. For the benefit of accessibility, there are two methods of keyboard input, so suiting both right- and left-handed players.</p>
+
+<img src="Source/ProjectData/UnboundedFault/moodboard.png" />
+<p>As a means of capturing and cultivating design ideas towards a complete picture, I had all team members research games they thought could provide inspiration, and also construct a moodboard each to aid us with theme and aesthetics.</p>
+
+<img src="Source/ProjectData/UnboundedFault/cobwebs.png" />
+<p>Collectively, within the design we endeavoured to ensure that, as far as possible, game mechanics could be understood organically, rather than being told explicitly in text. One of my implementations towards this was an ambush of spiders after the player picks up the Curved Sword. The player will instinctively swing the sword to kill the spiders, and in doing so realise the sword can cut the cobwebs that had been slowing the player's movement up to this point.</p>
+
+<p>My contribution to the replayability aspect was my idea to successfuly pair the strategy required in challenging games with strong, intentional level design with the adaptability required in games with random elements. While the structure of the dungeon remains constant, select enemy encounters, in addition to dungeon loot, are randomised, so preventing the formulation of an ensured strategy, rather always requiring some adaptability on the part of the player. Another effect of this is encouraging the player to explore new routes or use new items if their hitherto strategy had failed. This was made possible through weapons with different abilities, enemies that require distinct approaches to defeat, and different paths offering different challenges.</p>
+
+<p>An example of this, is that the Mimic enemies in the first half of the level have a small chance of dropping the Curved Sword, otherwise located down a specific in the second half; so in the second half of the level wherein the Curved Sword is incredibly useful, players fortunate enough to already have found it in the first half will be motivated to explore other paths.</p>
+
+<p>I also assisted in devising a narrative that echoed the "replayability" focus and the randomisation aspect: the player character is a scientist trapped in a series of parallel universes of his own unfortunate creation, with each death transporting him to another alternate world where things are slightly different.</p>
+
 <h3>Development</h3>
 
 <p>Given the small size of our group it was expected that all of us be able to pitch in within any area of development or documentation. I clarified that the Lead Designer and Lead Developer would manage the design and development sides respectively, sometimes having another member work under them in this regard, relieving me of having to manage everything and so allowing me to focus on scheduling and final quality assurance. This would also ensure that I would not need to minutely inspect all work, assuming it had already been inspected by the relevant leader in that area. When working remotely, the Design and Development leads would facilitate means of uploading work, collaborating, and checking work.</p>
 
+<p>Meetings were held bi-weekly: mid-sprint and at the culmination of each sprint. The objecties were to check progress and allocate tasks, and for members to raise concerns, or suggestions for how to progress in the next sprint. At the start of every meeting, and whenever I observed the project, I ensured that the project is satisfactory according tothe design brief and consistent with the timetable; if dissatisfactory I discussed the issue with the whole team and revised members' tasks and priorities to revitalise momentum; following repeated issues I would speak to the member individually and then the project supervisor if the issue persisted. However, it was established I would only be the last point of quality assurance, with one member tasked with particularly rigorous testing of all newly-implemented features, and with each member also expected to thoroughly test each of their additions themselves.</p>
+
+<p>Meetings were sometimes an opportunity for the entire group to play through the game together and discuss its state, and how it might be improved in the next sprint. Meetings also enabled reflection on the group's methodology, discussion of challenges faced by any members, and the addressing of these challenges or motivation to work harder.</p>
+
 <p>The Lead Designer fulfilled his responsibility well, especially when it came to other members producing assets and implementing the level based on his designs, which he could check remotely through images and video. Giving him the ability to allocate tasks allowed us to achieve a much richer and more professional game with more and higher-quality assets than if he had been required to complete all this alone.</p>
+
+<p>For the programming part, I required designs be made for different components and their relationships before them being programmed, so having modular code that could be easily repurposed, and having minimal impact on the functionality of other code, so improving development efficiency. The production of UML diagrams to outline a careful and in tentional modular design also enabled collaboration between members.</p>
+
+<p>To ensure scalability, efficiency, and collaboration, I required adoption of aspects of Extreme Programming methodology. First, collective ownership of code and assets, with improvements being made as soon as a problem was identified. Many scripts were rewritten to improve functionality, or in pursuit of the second Extreme Programming value: focus on modularity and refactoring. This improved long-term programming efficiency and scalability.</p>
+
+<img src="Source/ProjectData/UnboundedFault/random-spawner.png" />
+<p>One of my many contributions to the code was the randomisation system. I wrote a Randomisation singleton with public methods providing randomisation to diverse aspects of the game. Randomised enemy encounters were made possible through a RandomSpawner script providing an interface through which one can form different encounters, with each being given a chance value of occurring as a decimal from 0 (impossible)to 1 (certain). Thus, it was easy for other members to create random encounters, so allowing programming and level implementation to be separate activities completed by different members.</p>
 
 <h3>Challenges</h3>
 
 <p>Sometimes meeting discussions were less than constructive, focussing excessively on a single issue; sometimes the Lead Developer would try to use the meetings to start doing work, or ask me to walk him through exactly how to do something. This would require me to move everyone on to the next item and reiterate the purpose of the meeting and each individual's responibilities, sometimes recommending further discussion after the meeting. It was crucial that all items on the agenda were addressed, so while there was room for discussion, it was important to keep focussed.</p>
 
-<p>At first it was difficult to assign tasks to one member who did not claim to have any particular strengths. At first I had him work on research and writing tasks for our design documentation and reports, at which he was not gerat; then I found he was very competent at testing, taking minutes, and finding or producing assets, so made these his primary responsibilities.</p>
+<p>At first it was difficult to assign tasks to one member who did not claim to have any particular strengths. At first I had him work on research and writing tasks for our design documentation and reports, at which he was not great; then I found he was very competent at testing, taking minutes, and finding or producing assets, so made these his primary responsibilities.</p>
+
+<p>In regards to game features, I found that the "dash" mechanic alone was insufficient to avoid damage, so I implemented it that if the player dashed within a short time-frame after taking damage, they would regain the health lost. This was possible owing to the early output of the MVP and consistent output of a viable product after every subsequent sprint under my guidance.</p>
 
 <h3>Evaluation</h3>
 
@@ -59,4 +97,4 @@
 
 <p>I now have better understanding of how to manage a team. If I am to manage again, I will more strictly enforce deadlines and quality-control. I believe my scheduling for the project was good, as we were able to produce a lengthy, complete experience with numerous features and mechanics and without having greater work-burden towards the end of the project. However, ultimately the group fell quite behind the envisoned schedule, resulting in a poorer product than I would have liked.</p>
 
-<p>The occasional missed deadline was expected and factored into flexible scheduling. However, I should have been stricted when missed deadlines and poor-quality work became a common issue. This would have involved immediate discussion of grade distribution and conversations with the supervisor — both of which happened too infrequently or too late to be of difference. I believe that had the other members been more motivated, we would have a much higher-quality and feature-rich product. Reprimanding failures would also have been easier if there were clearer documentation of missed deadlines and incomplete work.</p>
+<p>The occasional missed deadline was expected and factored into flexible scheduling. However, I should have been stricted when missed deadlines and poor-quality work became a common issue. This would have involved immediate discussion of grade distribution and conversations with the supervisor ï¿½ both of which happened too infrequently or too late to be of difference. I believe that had the other members been more motivated, we would have a much higher-quality and feature-rich product. Reprimanding failures would also have been easier if there were clearer documentation of missed deadlines and incomplete work.</p>
