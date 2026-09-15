@@ -1,0 +1,16 @@
+<p><i>Digital Ghost Gate</i> was made as my assessment submission for a JavaScript module in university, in which I had to create a 2D RPG-style game using the P5.js library. My game achieved a grade of 92, being recognised for its <i>"highly complex item trading quest and battle system, in addition to a variety of maps and dialogue".</i> Development took about a month, and I made every part of the game myself.</p>
+
+<h3>Design</h3>
+
+<p>My aim was to create a game that encouraged exploration and engagement through its features and mechanics, despite only encapsulating a small world.</p>
+
+<p>Gameplay is explorative, involving completion of quests, engagement with characters, and the recruitment of "ghosts" are the proxies used for battle in this game.</p>
+
+<p>Ghosts offer complexity to combat, having different spells that can inflict different beneficial or harmful effects upon targets. Moreover, ghosts can have affinities or weaknesses to different elements or damage types. The ghost system was heavily inspired by the persona system in, e.g., <i>Persona 3</i> (Atlus, 2006), but with the difference of the ghosts being real characters in the world who can be friend or foe and conversed with — so making the world more interesting for exploration.</p>
+
+<p>The most interesting feature is the negotiation mechanic in combat, which allows for multiple solutions to encounters, and encourages exploration and interaction.</p>
+
+<h3>Implementation</h3>
+
+<p>That the game was developed entirely in JavaScript, without use of a game engine, offered particular challenges.</p>
+<p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even.</p>

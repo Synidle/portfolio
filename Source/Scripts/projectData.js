@@ -331,6 +331,12 @@ let projectDigitalGhostGate = new Project(
     "https://synidle.itch.io/digital-ghost-gate",
     92
 );
+
+let pageDigitalGhostGate = new ProjectPage(
+    ID_DIGITAL_GHOST_GATE,
+    projectDigitalGhostGate,
+    "Source/ProjectPages/DigitalGhostGate.html"
+);
 //#endregion
 
 //#region PhraseDex
@@ -720,9 +726,9 @@ let essayAuthenticity = new Project(
 projects = [
     projectFecklessFox,
     projectTheTower,
+    projectUnboundedFault,
     projectDigitalGhostGate,
     projectPhraseDex,
-    projectUnboundedFault,
     projectSkyCityVR,
     projectWorkingTitle,
     projectSpriteShop,
@@ -738,6 +744,7 @@ projectPages = [
     pageTheTower,
     pageFecklessFox,
     pageUnboundedFault,
+    pageDigitalGhostGate
 ]
 
 for (let p of projects)
