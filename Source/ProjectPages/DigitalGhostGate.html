@@ -10,7 +10,21 @@
 
 <p>The most interesting feature is the negotiation mechanic in combat, which allows for multiple solutions to encounters, and encourages exploration and interaction.</p>
 
+<img src="Source/ProjectData/DigitalGhostGate/dialogue-diagram.png" />
+<p>A complex conditional dialogue system was also designed to facilitate quests and enrich interactions with characters within the world.</p>
+
 <h3>Implementation</h3>
 
 <p>That the game was developed entirely in JavaScript, without use of a game engine, offered particular challenges.</p>
-<p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/tilemap.png" />
+<p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even. Then functionally, tiles are represented as 0 for floor, 1 for walls.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/scene.png" />
+<p>Maps are lodaed via a Scene, which also holds GameObjects and connexions between scenes.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/dialogue-class.png" />
+<p>The implementation of the conditional dialogue system was a challenge. My Dialogue class contains an array of text that displays under a condition (a function returning a Boolean value) and can execute a function on completion and can link to another Dialogue object.</p>
+<img src="Source/ProjectData/DigitalGhostGate/dialogue-choice.png" />
+<p>The DialogueChoice class inherits from Dialogue, and as such can be used in place of standard Dialogue lines, but facilitates a binary option within dialogue. It could be rewritten to use array parameters in order to offer an indeterminate number of choices, but the retro aesthetic of the game imposes limitations upon the AI and as such I limit dialogue choices to usually just "yes" and "no", with additional decisions made through the player's actions in the game.</p>
+
