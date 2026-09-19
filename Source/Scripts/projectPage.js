@@ -42,7 +42,26 @@ else {
         fetch(projectPage.content)
             .then(response => response.text())
             .then(html => {
+                const parser = new DOMParser(); 
+                const projectPageDocument = parser.parseFromString(html, "text/html");
+                const projectHeadings = projectPageDocument.getElementsByTagName("h3");
+
                 document.getElementById("project-body").innerHTML = html; 
+
+                // Populate contents
+                const contentsList = document.getElementById("project-contents-list");
+                for (let heading of projectHeadings) {
+                    if (heading.hasAttribute("id")) {
+                        const listItem = document.createElement("li");
+                        const anchor = document.createElement("a");
+
+                        anchor.textContent = heading.textContent;
+                        anchor.href = `#${heading.id}`;
+
+                        listItem.appendChild(anchor);
+                        contentsList.appendChild(listItem);
+                    }
+                }
             });
     }
 }
