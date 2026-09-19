@@ -6,6 +6,8 @@
 
 <p>Gameplay is explorative, involving completion of quests, engagement with characters, and the recruitment of "ghosts" are the proxies used for battle in this game.</p>
 
+
+<img src="Source/ProjectData/DigitalGhostGate/battle-system.png" />
 <p>Ghosts offer complexity to combat, having different spells that can inflict different beneficial or harmful effects upon targets. Moreover, ghosts can have affinities or weaknesses to different elements or damage types. The ghost system was heavily inspired by the persona system in, e.g., <i>Persona 3</i> (Atlus, 2006), but with the difference of the ghosts being real characters in the world who can be friend or foe and conversed with — so making the world more interesting for exploration.</p>
 
 <p>The most interesting feature is the negotiation mechanic in combat, which allows for multiple solutions to encounters, and encourages exploration and interaction.</p>
@@ -21,10 +23,33 @@
 <p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even. Then functionally, tiles are represented as 0 for floor, 1 for walls.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/scene.png" />
-<p>Maps are lodaed via a Scene, which also holds GameObjects and connexions between scenes.</p>
+<p>Maps are lodaed via a Scene, which also holds GameObjects and connexions between scenes. Battles are types of Scene, containing arrays for player and opponent ghosts in the battle.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/dialogue-class.png" />
 <p>The implementation of the conditional dialogue system was a challenge. My Dialogue class contains an array of text that displays under a condition (a function returning a Boolean value) and can execute a function on completion and can link to another Dialogue object.</p>
 <img src="Source/ProjectData/DigitalGhostGate/dialogue-choice.png" />
 <p>The DialogueChoice class inherits from Dialogue, and as such can be used in place of standard Dialogue lines, but facilitates a binary option within dialogue. It could be rewritten to use array parameters in order to offer an indeterminate number of choices, but the retro aesthetic of the game imposes limitations upon the AI and as such I limit dialogue choices to usually just "yes" and "no", with additional decisions made through the player's actions in the game.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/battle-cancel.png" />
+<p>Battles utilise a state machine, with the state determining the outcome whenever the player inputs.</p>
+<img src="Source/ProjectData/DigitalGhostGate/battle-display-list.png" />
+<p>Selecting options is facilitated by the callback of my custmo UI classes.</p>
+<img src="Source/ProjectData/DigitalGhostGate/select-action.png" />
+<p>The Battle scene delivers the functions of all actions.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/send-spell.png" />
+<p>The effect and impact of spells is determined by both the caster and recipients of the spell. First, the damage to be dealt is determined by the caster's stats.</p>
+<img src="Source/ProjectData/DigitalGhostGate/receive-spell.png" />
+<p>Then, the actual effect is determined by the recipient according to their affinities.</p>
+<img src="Source/ProjectData/DigitalGhostGate/receive-se.png" />
+<p>Whether a consequential status effect of a spell is received depends upon stats and randomness.</p>
+<img src="Source/ProjectData/DigitalGhostGate/evade.png" />
+<p>Whether an attack is evaded altogether is determined by attack's accuracy and a degree of randomness.</p>
+<p>But it is ensured spells cast to allies will always be received, and so their effects; a spell that must land can be given an accuracy of 101.</p>
+<p>Status effects simply use the existing spell system, but are applied as unavoidable spells once effective.</p>
+
+<p>Stats are receptive to temporary modification by spells; having a separate map for a stat's value to return to allows modifying a value in the stats map.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/apply-status-effects-ghost.png" />
+<p>All of a ghost's status effects are applied recursively using i as the index of the ghost and j as the index of the effect. Recursion was used rather than a for loop because dialogue appears as indication of every effect applied, and dialogue awaits input before progressing.</p>
 
