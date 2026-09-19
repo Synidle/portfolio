@@ -5,8 +5,7 @@
 
 <p><i>Feckless Fox</i> is inspired by 3D platformers of the '90s and early '00s, such as <i>Mario 64</i> (Nintendo, 1996), <i>Sonic Adventure</i> (Sonic Team, 1998), and <i>Rayman 2</i> (Ubi Pictures, 1999), aspiring to achieve the same timelessness achieved by an aesthetic appealing to children and adults alike, and accommodation of all skill levels.</p>
 
-<div class="level-design">
-<h3>Level Design</h3>
+<h3 id="pp-level-design">Level Design</h3>
 
 <p>My level's design had the following objectives:</p>
 <ul>
@@ -39,7 +38,7 @@
 <p>Positioning of items, points of interest, and objects to allow for directional light and shadow, indicate where to go. I considered what the player's view should be during all sections of the level, particularly the light from the moon and the height variation of buildings.</p>
 <img src="Source/ProjectData/FecklessFox/buildings-moon.png" />
 
-<h3>Walkthrough</h3>
+<h3 id="pp-walkthrough">Walkthrough</h3>
 
 <p>Following are some excerpts of the full annotated walkthrough I compiled for the project's report, explaining every design decision as it appears, moment-to-moment.</p>
 
@@ -58,9 +57,7 @@
 <img src="Source/ProjectData/FecklessFox/walkthrough-secret-path.png" />
 <img src="Source/ProjectData/FecklessFox/walkthrough-tower-climb.png" />
 
-</div>
-
-<h3>Implementation</h3>
+<h3 id="pp-implementation">Implementation</h3>
 
 <p>Spot-lights are positioned to produce shadows for visual effect. Lighting colour, position, direction, intensity, all contribute to an aesthetic.</p>
 <img src="Source/ProjectData/FecklessFox/spotlight.png" />
@@ -77,15 +74,12 @@
 <p>Particles emphasise effect and dynamics, particularly where there is a hazard. Here large particules rise and change from white to green and fade to transparent, imitating the effect of a waterfall.</p>
 <img src="Source/ProjectData/FecklessFox/waterfall-particles.png" />
 
-<div class="c-sharp">
-<h3>Gameplay</h3>
+<h3 id="pp-gameplay">Gameplay</h3>
 
 <p>While the game is best played with a controller, I ensured that it can also be played with a keyboard, to increase its accessibility.</p>
 <img src="Source/ProjectData/FecklessFox/controls.png" />
 
-</div>
-
-<h3>Challenges Overcome</h3>
+<h3 id="pp-challenges">Challenges Overcome</h3>
 
 <p>When having a friend test the level, he climbed up the fallen lamppost at the start � which I had not foreseen � so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
 <img src="Source/ProjectData/FecklessFox/start.png" />
@@ -100,7 +94,7 @@
 <p>Another programming issue was how to handle interaction with moving platforms, given the simple and traditional method of reparenting the player to the platform on contact worked inconsistently, and changing the player object's position in the scene heirarchy is undesirable and has the potential to cause future problems. I therefore implemented a system whereby I can assign the player a "virtual parent", namely a variable used in position calculations to achieve the effect of reparenting the player without needing to do so.</p>
 <img src="Source/ProjectData/FecklessFox/virtual-parent.png" />
 
-<h3>Reflection</h3>
+<h3 id="pp-reflection">Reflection</h3>
 
 <p>I believe that the experience is aesthetically strong, the level design is captivating, and the gameplay is intuitive and enjoyable. Particularly the first town section feels very authentic and ambient, and I enjoy the distinct areas and challenges within.</p>
 <p>The greatest problem for me is the lack of background detail. After the first town section, the level feels less like a real town, and more like platforms floating in space. I would like to populare background areas with terrain, buildings, and interesting features.</p>
