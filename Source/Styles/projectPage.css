@@ -2,8 +2,9 @@ main {
     display: grid;
     grid-template-columns: 1fr 250px;
     grid-template-areas:
-        "header information"
-        "body   inspiration";
+        "header     information"
+        "contents   inspiration"
+        "body      inspiration";
 
     gap: 3rem;
     max-width: 1200px;
@@ -29,6 +30,12 @@ main {
 
 #project-inspiration {
     grid-area: inspiration;
+}
+
+#project-contents {
+    grid-area: contents;
+
+    position: sticky;
 }
 
 /* Wide screens */
