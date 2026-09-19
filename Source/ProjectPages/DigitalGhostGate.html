@@ -53,3 +53,19 @@
 <img src="Source/ProjectData/DigitalGhostGate/apply-status-effects-ghost.png" />
 <p>All of a ghost's status effects are applied recursively using i as the index of the ghost and j as the index of the effect. Recursion was used rather than a for loop because dialogue appears as indication of every effect applied, and dialogue awaits input before progressing.</p>
 
+<h3>Reflection</h3>
+
+<p>Most features of the game were implemented, although not perfectly. Nevertheless, the desired aesthetic and experience have been achieved. The quest featured is completable. The code is largely efficient and modulear, allowing me to quite easily create new characters, maps, etc. — but improvements can be made.</p>
+
+<p>I learned a lot regarding programming complex gameplay systems, which I drew upon and improved in future projects, such as <i><a href="project.html?project=the-tower">The Tower</a></i>.</p>
+
+<p>I was also challenged to implement systems that are usually within an engine from scratch, such as tilemaps and animations. This strengthened my ability to write optimised and useable code, and gave me the experience to work with these same systems in game engines more efficiently in future.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/overlapping-wall.png" />
+<p>There are some small bugs in the game. So that the player can navigate through 1-tile-wide spaces, I made his hitbox smaller than his sprite; but since the sprite is drawn from the corner of the hitbox, the player can appear to overlap walls. By separating the player's sprite and hitbox I can fix this error.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/incorrect-draw-order.png" />
+<p>The order in which sprites are drawn is constant, so sometimes sprites are drawn over others when they should not. This can be amended by drawing sprites in order of y position.</p>
+
+<img src="Source/ProjectData/DigitalGhostGate/resisted-attack.png" />
+<p>Currently there is no dialogue difference between evading and resisting attack, leaving the player confused.</p>
