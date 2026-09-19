@@ -80,6 +80,7 @@ main {
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
+            "contents"
             "information"
             "body"
             "inspiration";
