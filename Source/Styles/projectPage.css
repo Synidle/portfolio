@@ -32,12 +32,22 @@ main {
 }
 
 /* Wide screens */
-@media (min-width: 901px) {
+@media (min-width: 1201px) {
     main {
         width: 85%;
         max-width: none;
         margin: 0 auto;
         column-gap: 15rem; 
+    }
+}
+
+/* Moderately narrow screens */
+@media (max-width: 1200px) {
+    main {
+        width: 95%;
+        max-width: none;
+        margin: 0 auto;
+        column-gap: 3rem; 
     }
 }
 
