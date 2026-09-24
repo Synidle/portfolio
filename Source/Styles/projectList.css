@@ -130,21 +130,24 @@
 }
 
 /* Wide screens */
-@media (min-width:901px) {
+@media (min-width:1201px) {
   .project-button-image {
-    width:20vw;
-    height:20vw;
+    width:360px;
+    height:360px;
   }
   .project-button-labels {
-    width: 20vw;
+    width: 360px;
   }
 }
 
 /* Narrow screens */
-@media (max-width:900px) {
+@media (max-width:1200px) {
   .project-button-image {
-    width:40vw;
-    height:40vw;
+    width: 240px;
+    height: 240px;
+  }
+  .project-button-labels {
+    width: 240px;
   }
 }
 
