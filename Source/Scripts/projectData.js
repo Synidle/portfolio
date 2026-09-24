@@ -82,6 +82,12 @@ let projectFecklessFox = new Project(
             "Aesthetic & level design"
         ),
         new Inspiration(
+            "Sonic the Hedgehog",
+            "Sonic Team",
+            2006,
+            "Aesthetic & level design"
+        ),
+        new Inspiration(
             "Demon's Souls",
             "FromSoftware",
             2009,
@@ -104,6 +110,12 @@ let projectFecklessFox = new Project(
             "Nintendo",
             1996,
             "Progression"
+        ),
+        new Inspiration(
+            "Ico",
+            "Sony Computer Entertainment Japan",
+            2001,
+            "Aesthetic & level design"
         )
     ],
     "Sole designer & developer",
