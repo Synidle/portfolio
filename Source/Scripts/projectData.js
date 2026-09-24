@@ -10,9 +10,11 @@ let projectPagesLookup = new Map();
 const ID_FECKLESS_FOX = "feckless-fox";
 const ID_THE_TOWER = "the-tower";
 const ID_DIGITAL_GHOST_GATE = "digital-ghost-gate";
-const ID_PHRASE_DEX = "phrase-dex";
 const ID_UNBOUNDED_FAULT = "unbounded-fault";
 const ID_SKY_CITY_VR = "sky-city";
+const ID_BARLEY_HALL = "barley-hall";
+const ID_FPS_RPG = "fps-rpg";
+const ID_PHRASE_DEX = "phrase-dex";
 const ID_WORKING_TITLE = "working-title";
 const ID_SPRITE_SHOP = "sprite-shop";
 const ID_METAMORPHOSIS = "metamorphosis";
@@ -506,9 +508,102 @@ projectSkyCityVR = new Project(
 );
 //#endregion
 
+//#region Barley Hall
+let projectBarleyHall = new Project(
+    ID_BARLEY_HALL,
+    "Barley Hall Immersive Experience",
+    2024,
+    Status.PROTOTYPE,
+    Format.VIDEOGAME,
+    [
+        Tag.THREE_D
+    ],
+    [
+        Skill.ACCESSIBILITY,
+        Skill.ANALYSIS,
+        Skill.CS,
+        Skill.GAME_DESIGN,
+        Skill.PLANNING,
+        Skill.PROGRAMMING,
+        Skill.PROTOTYPING,
+        Skill.SOUND_DESIGN,
+        Skill.TESTING,
+        Skill.UNITY,
+        Skill.UX
+    ],
+    "A 3D, immersive, interactive representation of Barley Hall, for learning & training use, developed for a user experience design module.",
+    [
+        new ImageReference("", "")
+    ],
+    [
+
+    ],
+    "Sole designer & developer"
+);
+//#endregion
+
+//#region FPS RPG
+let projectFPSRPG = new Project(
+    ID_FPS_RPG,
+    "Shooter Prototype",
+    2024,
+    Status.PROTOTYPE,
+    Format.VIDEOGAME,
+    [
+        Tag.ACTION,
+        Tag.THREE_D
+    ],
+    [
+        Skill.CS,
+        Skill.GAME_DESIGN,
+        Skill.GODOT,
+        Skill.PLANNING,
+        Skill.PRESENTATION,
+        Skill.PROGRAMMING,
+        Skill.PROTOTYPING,
+        Skill.TESTING
+    ],
+    "A design for a game with a blend of FPS and RPG mechanics, with a prototype featuring basic gameplay.",
+    [new ImageReference("", "")],
+    [
+        new Inspiration(
+            "Call of Duty",
+            "Infinity Ward",
+            2003,
+            "Level design & gameplay"
+        ),
+        new Inspiration(
+            "The Elder Scrolls III: Morrowind",
+            "Bethesda Game Studios",
+            2002,
+            "World & gameplay"
+        ),
+        new Inspiration(
+            "GoldenEye 007",
+            "Rare",
+            1997,
+            "Level design & gameplay"
+        ),
+        new Inspiration(
+            "Medal of Honor: Pacific Assault",
+            "EA Los Angeles",
+            2004,
+            "Gameplay"
+        ),
+        new Inspiration(
+            "Return to Castle Wolfenstein",
+            "Gray Matter Studios",
+            2001,
+            "Level design & gameplay"
+        )
+    ],
+    "Sole designer and developer"
+);
+//#endregion
+
 //#region Working Title
 let projectWorkingTitle = new Project(
-    "working-title",
+    ID_WORKING_TITLE,
     "[Working Title]",
     2021,
     Status.PROTOTYPE,
@@ -730,6 +825,8 @@ projects = [
     projectDigitalGhostGate,
     projectPhraseDex,
     projectSkyCityVR,
+    projectBarleyHall,
+    projectFPSRPG,
     projectWorkingTitle,
     projectSpriteShop,
     projectMetamorphosis,
