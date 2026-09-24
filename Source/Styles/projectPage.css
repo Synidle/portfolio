@@ -43,7 +43,7 @@ main {
 #project-contents-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: .5em 2em;
     list-style: none;
     padding: 1rem;
     margin: 0;
