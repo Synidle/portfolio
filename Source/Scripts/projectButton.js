@@ -7,6 +7,13 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
     this.button = document.createElement("a");
     this.button.classList.add("project-button");
 
+    const content = document.createElement("div");
+    content.classList.add("project-button-content");
+    const imgDiv = document.createElement("div");
+    imgDiv.classList.add("project-button-image");
+    const labelsDiv = document.createElement("div");
+    labelsDiv.classList.add("project-button-labels");
+
     let displayingImageIndex = 0; 
     let image; 
 
@@ -42,28 +49,32 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
     const breakElement = () => document.createElement("br");
 
     if (image != null)
-        this.button.appendChild(image);
-    this.button.appendChild(breakElement());
-    this.button.appendChild(name);
-    this.button.appendChild(date);
+        imgDiv.appendChild(image);
+    
+    labelsDiv.appendChild(name);
+    labelsDiv.appendChild(date);
     if (showFormat) {
-        this.button.appendChild(breakElement());
-        this.button.appendChild(format);
-        this.button.appendChild(status); 
+        labelsDiv.appendChild(breakElement());
+        labelsDiv.appendChild(format);
+        labelsDiv.appendChild(status); 
     }
     if (showTags) {
-        this.button.appendChild(breakElement());
-        this.button.appendChild(tags); 
+        labelsDiv.appendChild(breakElement());
+        labelsDiv.appendChild(tags); 
     }
     if (showRole) {
-        this.button.appendChild(breakElement()); 
-        this.button.appendChild(role); 
+        labelsDiv.appendChild(breakElement()); 
+        labelsDiv.appendChild(role); 
     }
     if (showDescription) {
-        this.button.appendChild(breakElement()); 
-        this.button.appendChild(description); 
+        labelsDiv.appendChild(breakElement()); 
+        labelsDiv.appendChild(description); 
     }
 
+    content.appendChild(imgDiv);
+    content.appendChild(labelsDiv); 
+    this.button.appendChild(content);
+    
     this.button.addEventListener("mouseenter", () => {
         displayingImageIndex ++;
         if (displayingImageIndex >= project.images.length)
