@@ -10,6 +10,20 @@
     --project-btn-hvr-clr: lightgrey; 
 }
 
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto; 
+    padding: 2rem; 
+    min-width: 0;
+}
+
+main > * {
+    min-width: 0;
+}
+
 /* Header */
 
 #header nav {
@@ -37,4 +51,18 @@
 
 #header nav a:hover {
     background-color: var(--nav-btn-hvr-clr);
+}
+
+/* Wide screens */
+@media (min-width: 1201px) {
+    main {
+        width: 85%; 
+    }
+}
+
+/* Moderately narrow screens */
+@media (max-width: 1200px) {
+    main {
+        width: 95%;
+    }
 }

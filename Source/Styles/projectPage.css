@@ -4,16 +4,13 @@ html {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: minmax(0, 1fr) 250px;
     grid-template-areas:
         "header     information"
         "contents   inspiration"
         "body      inspiration";
 
     gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
 }
 
 #project-header {
@@ -45,6 +42,7 @@ main {
 
 #project-contents-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     list-style: none;
     padding: 1rem;
@@ -57,9 +55,6 @@ main {
 /* Wide screens */
 @media (min-width: 1201px) {
     main {
-        width: 85%;
-        max-width: none;
-        margin: 0 auto;
         column-gap: 15rem; 
     }
 }
@@ -67,9 +62,6 @@ main {
 /* Moderately narrow screens */
 @media (max-width: 1200px) {
     main {
-        width: 95%;
-        max-width: none;
-        margin: 0 auto;
         column-gap: 3rem; 
     }
 }

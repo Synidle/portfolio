@@ -127,11 +127,6 @@
   font-weight: bold;
 }
 
-/* Very wide screens */
-@media (min-width:1200) {
-
-}
-
 /* Wide screens */
 @media (min-width:901px) {
   .project-button img {
