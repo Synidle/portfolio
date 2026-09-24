@@ -135,6 +135,9 @@
     width:20vw;
     height:20vw;
   }
+  .project-button-labels {
+    width: 20vw;
+  }
 }
 
 /* Narrow screens */
