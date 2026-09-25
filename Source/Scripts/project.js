@@ -148,10 +148,10 @@ function ProjectPage(
     projectID,
     project,
     content,
-    style = null
+    styleSheet = null
 ) {
     this.projectID = projectID;
     this.project = project;
     this.content = content;
-    this.style = style;
+    this.styleSheet = styleSheet;
 }

@@ -288,7 +288,8 @@ let projectTheTower = new Project(
 let pageTheTower = new ProjectPage(
     ID_THE_TOWER,
     projectTheTower,
-    "Source/ProjectPages/TheTower.html"
+    "Source/ProjectPages/TheTower.html",
+    "Source/Styles/Special/theTower.css"
 );
 //#endregion
 

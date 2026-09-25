@@ -8,6 +8,16 @@ if (project == null) {
     open("index.html", "_self");
 }
 
+if (projectPage.styleSheet != null) {
+    const style = document.createElement("link");
+    
+    style.href = projectPage.styleSheet;
+    style.type = "text/css";
+    style.rel = "stylesheet";
+
+    document.head.appendChild(style); 
+}
+
 // Fill document
 document.querySelector("title").innerHTML = `Ben Lockyer | ${project.name}`;
 document.getElementById("project-title").innerHTML = project.name;
