@@ -53,6 +53,8 @@ main > * {
     background-color: var(--nav-btn-hvr-clr);
 }
 
+/* Reusable Elements */
+
 /* Wide screens */
 @media (min-width: 1201px) {
     main {

@@ -111,6 +111,7 @@
   border: 1px solid var(--project-btn-out-clr);
   background: var(--project-btn-bgr-clr);
   text-decoration: none;
+  text-align: center;
   color: inherit;
   border-radius: 4px;
 }
@@ -125,9 +126,19 @@
     height: 100%;
 }
 
-.project-button #project-button-name {
-  font-weight: bold;
+.project-button .project-button-title-line {
+  margin-bottom: .6em;
 }
+
+.project-button .project-name {
+  font-weight: bold;
+  font-size: large;
+}
+
+.project-button .project-tags, .project-role{
+  font-size: small;
+}
+
 
 /* Wide screens */
 @media (min-width:1201px) {

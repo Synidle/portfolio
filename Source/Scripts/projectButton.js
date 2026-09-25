@@ -13,6 +13,10 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
     imgDiv.classList.add("project-button-image");
     const labelsDiv = document.createElement("div");
     labelsDiv.classList.add("project-button-labels");
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("project-button-title-line");
+    const detailsDiv = document.createElement("div");
+    detailsDiv.classList.add("project-button-details");
 
     let displayingImageIndex = 0; 
     let image; 
@@ -26,10 +30,11 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
 
     const name = document.createElement("label");
     name.innerHTML = project.name;
-    name.id = "project-button-name";
+    name.classList.add("project-name");
 
     const date = document.createElement("label");
     date.innerHTML = `\t(${project.year})`;
+    date.classList.add("project-date");
 
     const format = document.createElement("label");
     format.innerHTML = project.format;
@@ -39,38 +44,42 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
 
     const tags = document.createElement("label");
     tags.innerHTML = project.tags.join(", ");
+    tags.classList.add("project-tags");
 
     const role = document.createElement("label");
     role.innerHTML = project.role;
+    role.classList.add("project-role");
 
     const description = document.createElement("label");
     description.innerHTML = project.description;
+    description.classList.add("project-description");
 
     const breakElement = () => document.createElement("br");
 
     if (image != null)
         imgDiv.appendChild(image);
     
-    labelsDiv.appendChild(name);
-    labelsDiv.appendChild(date);
+    titleDiv.appendChild(name);
+    titleDiv.appendChild(date);
     if (showFormat) {
-        labelsDiv.appendChild(breakElement());
-        labelsDiv.appendChild(format);
-        labelsDiv.appendChild(status); 
+        detailsDiv.appendChild(format);
+        detailsDiv.appendChild(status); 
     }
     if (showTags) {
-        labelsDiv.appendChild(breakElement());
-        labelsDiv.appendChild(tags); 
+        detailsDiv.appendChild(breakElement());
+        detailsDiv.appendChild(tags); 
     }
     if (showRole) {
-        labelsDiv.appendChild(breakElement()); 
-        labelsDiv.appendChild(role); 
+        detailsDiv.appendChild(breakElement()); 
+        detailsDiv.appendChild(role); 
     }
     if (showDescription) {
-        labelsDiv.appendChild(breakElement()); 
-        labelsDiv.appendChild(description); 
+        detailsDiv.appendChild(breakElement()); 
+        detailsDiv.appendChild(description); 
     }
 
+    labelsDiv.appendChild(titleDiv);
+    labelsDiv.appendChild(detailsDiv);
     content.appendChild(imgDiv);
     content.appendChild(labelsDiv); 
     this.button.appendChild(content);

@@ -1,10 +1,14 @@
+main {
+    width: 50%;
+}
+
 #hp-project-highlights > ul{
     list-style: none;
     padding: 0; 
 }
 
-main {
-    width: 50%;
+.project-button {
+    
 }
 
 @media (max-width: 1200px) {
