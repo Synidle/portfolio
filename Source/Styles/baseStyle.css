@@ -10,6 +10,23 @@
     --project-btn-hvr-clr: lightgrey; 
 }
 
+@font-face {
+    font-family: "Constantia";
+    src: url("/Source/Fonts/constan.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Baskerville";
+    src: url("/Source/Fonts/BASKVILL.TTF") format("truetype");
+}
+@font-face {
+    font-family: "Bookman";
+    src: url("/Source/Fonts/BOOKOS.TTF") format("truetype");
+}
+@font-face {
+    font-family:"PalatinoI";
+    src: url("/Source/Fonts/palabi.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
 }

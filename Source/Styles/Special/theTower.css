@@ -1,5 +1,14 @@
 html {
     background-color:wheat;
-    
+
+    font-family:"Constantia", serif;
     font-variant-numeric:oldstyle-nums;
+}
+
+abbr {
+    font-variant-caps: small-caps;
+}
+
+.ampersand {
+    font-family:"PalatinoI", serif;
 }
