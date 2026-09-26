@@ -13,12 +13,15 @@ html {
 }
 
 body {
-    font-family:"Comic", sans-serif;
+    font-family:"Comic Relief", system-ui;
 }
 
 h1 {
-    font-family:"Lucida";
+    font-family:"Lora", Georgia, serif;
+    font-weight:700;
+    font-style: italic;
     font-size:3em;
+    letter-spacing: .02em;
     
     text-align:center;
 

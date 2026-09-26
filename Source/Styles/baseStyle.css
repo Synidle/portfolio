@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Comic+Relief:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Special+Elite&display=swap');
+
 :root {
     --nav-txt-clr: black; 
     --nav-btn-hvr-clr: lightgrey; 
@@ -11,43 +13,7 @@
 }
 
 /* Serif */
-@font-face {
-    font-family: "Constantia";
-    src: url("/Source/Fonts/constan.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Baskerville";
-    src: url("/Source/Fonts/BASKVILL.TTF") format("truetype");
-}
-@font-face {
-    font-family: "Bookman";
-    src: url("/Source/Fonts/BOOKOS.TTF") format("truetype");
-}
-@font-face {
-    font-family:"Palatino";
-    src: url("/Source/Fonts/pala.ttf") format("truetype");
-}
-@font-face {
-    font-family:"PalatinoI";
-    src: url("/Source/Fonts/palabi.ttf") format("truetype");
-}
-@font-face {
-    font-family:"Georgia";
-    src:url("/Source/Fonts/georgia.ttf") format("truetype");
-}
-@font-face {
-    font-family:"Lucida";
-    src:url("/Source/Fonts/LBRITEDI.TTF") format("truetype");
-}
 /* Sans */
-@font-face {
-        font-family:"Liberation";
-        src:url("/Source/Fonts/LiberationSans.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Comic";
-    src: url("/Source/Fonts/comic.ttf");
-}
 /* Monospace */
 /* Decorative */
 

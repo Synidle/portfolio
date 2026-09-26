@@ -1,13 +1,14 @@
 html {
     background-color:wheat;
 
-    font-family:"Constantia", serif;
+    font-family:"Cormorant", serif;
+    font-weight:700;
     font-variant-numeric:oldstyle-nums;
     font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
 }
 
 #project-information, #project-inspiration {
-    font-family: "Palatino", serif;
+    font-family: "Gentium Book Plus", serif;
     font-size:small;
 
 }
@@ -22,12 +23,12 @@ html {
 }
 
 #project-description, footer{
-    font-family: "Palatino";
+    font-family: "Gentium Book Plus";
     font-style:italic;
     font-size:.9em;
 }
 #project-role {
-    font-family: "PalatinoI", serif;
+    font-family: "Gentium Book Plus", serif;
 }
 
 #project-contents-list {
@@ -36,14 +37,14 @@ html {
     border-bottom:solid white;
 
     a {
-        font-family:"Baskerville", serif;
+        font-family:"Libre Baskerville", serif;
         color:white;
         text-decoration: none;
     }
 }
 
 h1 {
-    font-family: "Bookman", serif;
+    font-family: "Gentium Book Plus", serif;
     font-size:2.8em;
     /* text-decoration: overline underline; */
     text-align:center;
@@ -54,12 +55,12 @@ h1 {
 }
 h3 {
     margin-top: 3em;
-    font-family:"Baskerville", serif;
+    font-family:"Libre Baskerville", serif;
     text-align: center;
 }
 
 figure {
-    font-family: "PalatinoI", fantasy;   
+    font-family: "Lora", fantasy;   
 }
 
 abbr {
@@ -67,16 +68,18 @@ abbr {
     letter-spacing:.1em;
 }
 i {
-    font-family: "Baskerville", serif;
+    font-family: "Libre Baskerville", serif;
     margin-right:.2em;
+    font-size:.8em;
 }
 .ampersand {
-    font-family:"PalatinoI", serif;
-    letter-spacing: -.15em;
-    margin-right:.15em;
+    font-family:"Lora", serif;
+    font-style: italic;
+    /* letter-spacing: -.15em;
+    margin-right:.15em; */
 }
 #project-body a {
-    font-family:"Bookman", serif;
+    font-family:"Gentium Book Plus", serif;
     font-weight:bold;
     font-size:.9em;
 }
