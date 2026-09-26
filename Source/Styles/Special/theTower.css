@@ -108,7 +108,7 @@ code {
 }
 dieg {
     display:inline-block;
-    transform:scaleY(1.1);
+    transform:translateY(.05em) scaleY(1.1);
     transform-origin: center bottom;
     letter-spacing: .04em;
 }
