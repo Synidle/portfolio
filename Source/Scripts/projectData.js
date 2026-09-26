@@ -114,6 +114,12 @@ let projectFecklessFox = new Project(
             "Progression"
         ),
         new Inspiration(
+            "Sonic Jam",
+            "Sonic Team",
+            1997,
+            "Character design"
+        ),
+        new Inspiration(
             "Ico",
             "Sony Computer Entertainment Japan",
             2001,

@@ -99,5 +99,5 @@ function getListItemsFrom(array, formatter=null) {
  * @param {Inspiration} inspiration 
  */
 function formatInspiration(inspiration) {
-    return `<i>${inspiration.name}</i> (${inspiration.author}, ${inspiration.year}): ${inspiration.description}.`
+    return `<cite>${inspiration.name}</cite> (${inspiration.author}, ${inspiration.year}): ${inspiration.description}.`
 }
