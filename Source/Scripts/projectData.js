@@ -470,7 +470,8 @@ let projectUnboundedFault = new Project(
 let pageUnboundedFault = new ProjectPage(
     ID_UNBOUNDED_FAULT,
     projectUnboundedFault,
-    "Source/ProjectPages/UnboundedFault.html"
+    "Source/ProjectPages/UnboundedFault.html",
+    "Source/Styles/Special/unboundedFault.css"
 );
 //#endregion
 
