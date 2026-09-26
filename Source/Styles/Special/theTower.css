@@ -78,11 +78,12 @@ abbr {
     font-variant-caps: small-caps;
     letter-spacing:.1em;
 }
-#project-body i {
+#project-body i, cite, q {
     font-family: "Libre Baskerville", serif;
     margin-right:.2em;
     font-size:.8em;
 }
+q {font-style: italic;}
 .ampersand {
     font-family:"Lora", serif;
     font-size:.8em;
