@@ -70,8 +70,12 @@ h3 {
 
 figure {
     font-family:"Lora", fantasy;   
-    font-size:.9em;
+    font-size:.84em;
     font-style: italic;
+    font-weight:600;
+    text-align:center;
+    :before { content:"— " }
+    :after { content:" —" }
 }
 
 abbr {
@@ -101,6 +105,12 @@ code {
     font-family:"Fira Code", monospace;
     font-weight: 400;
     font-size:.8em;
+}
+dieg {
+    display:inline-block;
+    transform:scaleY(1.1);
+    transform-origin: center bottom;
+    letter-spacing: .04em;
 }
 
 .opening::first-letter, #project-description::first-letter {
