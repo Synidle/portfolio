@@ -67,6 +67,7 @@ abbr {
 }
 i {
     font-family: "Baskerville", serif;
+    margin-right:.2em;
 }
 .ampersand {
     font-family:"PalatinoI", serif;
