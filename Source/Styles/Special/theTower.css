@@ -5,14 +5,58 @@ html {
     font-variant-numeric:oldstyle-nums;
 }
 
+#project-information, #project-inspiration {
+    font-family: "Palatino", serif;
+    font-size:small;
+}
+#project-description, footer{
+    font-family: "Palatino";
+    font-style:italic;
+    font-size:.9em;
+}
+#project-role {
+    font-family: "PalatinoI";
+}
+
+#project-contents-list {
+    background-color: blue;
+    border:solid black;
+    border-bottom:solid white;
+
+    a {
+        font-family:"Baskerville", serif;
+        color:white;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-family: "Bookman";
+    font-size:2.8em;
+    text-decoration: overline underline;
+    text-align:center;
+}
+h3 {
+    margin-top: 3em;
+    font-family:"Baskerville", serif;
+    text-align: center;
+}
+
 figure {
-    font-family: "PalatinoI", fantasy;   
+    font-family: "PalatinoI", cursive;   
 }
 
 abbr {
     font-variant-caps: small-caps;
 }
-
+i {
+    font-family: "Baskerville", serif;
+}
 .ampersand {
     font-family:"PalatinoI", serif;
+}
+a {
+    font-family:"Bookman", serif;
+    font-weight:bold;
+    font-size:.9em;
 }
