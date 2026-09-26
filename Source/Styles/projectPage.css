@@ -43,10 +43,11 @@ main {
 #project-contents-list {
     display: flex;
     flex-wrap: wrap;
-    gap: .5em 2em;
+    gap: .5em 1.4em;
     list-style: none;
     padding: 1rem;
     margin: 0;
+    justify-content: center;
 
     background-color: white;
     border-bottom: solid black;
@@ -82,7 +83,7 @@ main {
     }
     #project-contents-list {
         padding: .2em .4em;
-        gap:.5em;
         line-height:.8em;
+        list-style:disc;
     }
 }
