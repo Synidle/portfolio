@@ -82,14 +82,14 @@ abbr {
     font-variant-caps: small-caps;
     letter-spacing:.1em;
 }
-#project-body i, cite, q {
+#project-body cite, q {
     font-family: "Libre Baskerville", serif;
     margin-right:.2em;
     font-size:.8em;
 }
 q {font-style: italic;}
 .ampersand {
-    font-family:"Lora", serif;
+    font-family:"Libre Baskerville", serif;
     font-size:.8em;
     font-style: italic;
     font-weight:normal;
@@ -108,7 +108,8 @@ code {
 }
 dieg {
     display:inline-block;
-    transform:translateY(.05em) scaleY(1.1);
+    transform:scaleY(1.1);
+    vertical-align: -.04em;
     transform-origin: center bottom;
     letter-spacing: .04em;
 }
