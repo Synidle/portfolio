@@ -23,6 +23,10 @@
     src: url("/Source/Fonts/BOOKOS.TTF") format("truetype");
 }
 @font-face {
+    font-family:"Palatino";
+    src: url("/Source/Fonts/pala.ttf") format("truetype");
+}
+@font-face {
     font-family:"PalatinoI";
     src: url("/Source/Fonts/palabi.ttf") format("truetype");
 }

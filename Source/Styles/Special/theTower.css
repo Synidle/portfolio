@@ -5,6 +5,10 @@ html {
     font-variant-numeric:oldstyle-nums;
 }
 
+figure {
+    font-family: "PalatinoI", fantasy;   
+}
+
 abbr {
     font-variant-caps: small-caps;
 }

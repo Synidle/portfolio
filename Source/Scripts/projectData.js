@@ -24,7 +24,7 @@ const ID_ESSAY_LATIN = "essay-latin";
 const ID_ESSAY_FAN_CREATIONS = "essay-fan-creations";
 const ID_ESSAY_AUTHENTICITY = "essay-authenticity";
 
-const spanSmallCaps = "<span class=\"small-caps\">"
+const ampersand = "<span class=\"ampersand\">&</span>"
 
 //#region Feckless Fox
 
@@ -163,7 +163,7 @@ let projectTheTower = new Project(
         Skill.UX,
         Skill.WRITING
     ],
-    `An open-world action-${spanSmallCaps}rpg</span> attempting to realise a sensation of the sublime. The project demonstrates a consideration for all aspects of design for thematic congruity towards the realisation of a single aim, as well as a careful balance of mystery and transparency to make the game feel vast. The design was revised consistently throughout development through reflection upon a variety of user tests that targeted the effectiveness of every aspect of the game towards realising its underlying philosophy. Moreover, it demonstrates a congregation of my skills from narrative design and programming to dialogue-writing and music-production — all of which are informed by the game's underlying themes.`,
+    "An open-world action-<abbr>rpg</abbr> attempting to realise a sensation of the sublime. The project demonstrates a consideration for all aspects of design for thematic congruity towards the realisation of a single aim, as well as a careful balance of mystery and transparency to make the game feel vast. The design was revised consistently throughout development through reflection upon a variety of user tests that targeted the effectiveness of every aspect of the game towards realising its underlying philosophy. Moreover, it demonstrates a congregation of my skills from narrative design and programming to dialogue-writing and music-production — all of which are informed by the game's underlying themes.",
     [
         new ImageReference(
             "TheTower/marksman.png",
@@ -284,7 +284,7 @@ let projectTheTower = new Project(
             "Mechanics"
         ),
     ],
-    "Sole designer & developer"
+    `Sole designer ${ampersand} developer`
 );
 
 let pageTheTower = new ProjectPage(
