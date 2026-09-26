@@ -26,7 +26,7 @@ html {
     font-size:.9em;
 }
 #project-role {
-    font-family: "PalatinoI";
+    font-family: "PalatinoI", serif;
 }
 
 #project-contents-list {
@@ -42,10 +42,14 @@ html {
 }
 
 h1 {
-    font-family: "Bookman";
+    font-family: "Bookman", serif;
     font-size:2.8em;
-    text-decoration: overline underline;
+    /* text-decoration: overline underline; */
     text-align:center;
+    letter-spacing:.3em;
+    font-variant-caps:small-caps;
+    margin-top:4rem;
+    margin-bottom:6rem;
 }
 h3 {
     margin-top: 3em;
@@ -54,17 +58,20 @@ h3 {
 }
 
 figure {
-    font-family: "PalatinoI", cursive;   
+    font-family: "PalatinoI", fantasy;   
 }
 
 abbr {
     font-variant-caps: small-caps;
+    letter-spacing:.1em;
 }
 i {
     font-family: "Baskerville", serif;
 }
 .ampersand {
     font-family:"PalatinoI", serif;
+    letter-spacing: -.15em;
+    margin-right:.15em;
 }
 #project-body a {
     font-family:"Bookman", serif;
