@@ -1,22 +1,24 @@
 html {
     background-color:wheat;
 
-    font-family:"Cormorant", serif;
-    font-weight:700;
     font-variant-numeric:oldstyle-nums;
     font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
 }
 
+#project-header {
+    font-family:"Libre Baskerville";
+}
+
 #project-information, #project-inspiration {
     font-family: "Gentium Book Plus", serif;
-    font-size:small;
-
 }
 
 #project-information ul {
     padding-left:0;
     list-style: none;
     ul {
+        font-size:.85rem;
+        letter-spacing: .1em;
         padding-left:3em;
         list-style:disc;
     }
@@ -25,7 +27,8 @@ html {
 #project-description, footer{
     font-family: "Gentium Book Plus";
     font-style:italic;
-    font-size:.9em;
+    font-size:1.1em;
+    font-weight: normal;
 }
 #project-role {
     font-family: "Gentium Book Plus", serif;
@@ -45,7 +48,7 @@ html {
 
 h1 {
     font-family: "Gentium Book Plus", serif;
-    font-size:2.8em;
+    font-size:4em;
     /* text-decoration: overline underline; */
     text-align:center;
     letter-spacing:.3em;
@@ -59,22 +62,32 @@ h3 {
     text-align: center;
 }
 
+#project-body {
+    font-family:"Cormorant", serif;
+    font-weight:700;
+    font-size:1.2em;
+}
+
 figure {
-    font-family: "Lora", fantasy;   
+    font-family:"Lora", fantasy;   
+    font-size:.9em;
+    font-style: italic;
 }
 
 abbr {
     font-variant-caps: small-caps;
     letter-spacing:.1em;
 }
-i {
+#project-body i {
     font-family: "Libre Baskerville", serif;
     margin-right:.2em;
     font-size:.8em;
 }
 .ampersand {
     font-family:"Lora", serif;
+    font-size:.8em;
     font-style: italic;
+    font-weight:normal;
     /* letter-spacing: -.15em;
     margin-right:.15em; */
 }
