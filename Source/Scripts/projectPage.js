@@ -8,14 +8,16 @@ if (project == null) {
     open("index.html", "_self");
 }
 
-if (projectPage.styleSheet != null) {
-    const style = document.createElement("link");
+if (projectPage != null) {
+    if (projectPage.styleSheet != null) {
+        const style = document.createElement("link");
+        
+        style.href = projectPage.styleSheet;
+        style.type = "text/css";
+        style.rel = "stylesheet";
     
-    style.href = projectPage.styleSheet;
-    style.type = "text/css";
-    style.rel = "stylesheet";
-
-    document.head.appendChild(style); 
+        document.head.appendChild(style); 
+    }
 }
 
 // Fill document
@@ -33,6 +35,8 @@ document.getElementById("project-inspirations").innerHTML = getListItemsFrom(pro
 
 // Handle essay
 if (project.format == Format.ESSAY) {
+    document.getElementById("project-inspiration").hidden = true;
+    document.getElementById("project-contents").hidden = true;
     document.getElementById("project-body").innerHTML = 
         `<embed
             src="Source/ProjectData/Essays/${project.id}.pdf"
