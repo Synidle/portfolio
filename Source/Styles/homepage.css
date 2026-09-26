@@ -19,25 +19,37 @@ main {
     justify-content: center;
     margin: 0 auto;
     
-    background-color: transparent;
+    /* background-color: transparent; */
     border: none;
+    outline:solid thin;
 }
 
 #hp-project-highlights {
-    margin-bottom: 4em;
-    border: dashed black thin;
+    margin: 0 6em 4em 6em;
+    /* border: dashed black thin; */
     padding: 2em;
+    h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 1200px) {
     main {
         width: 80%
     }
+
+    #hp-project-highlights {
+        margin: 0 4em 4em 4em
+    }
 }
 
 @media (max-width: 800px) {
     main {
         width: 95%;
+    }
+
+    #hp-project-highlights {
+        margin: 0 0 4em 0
     }
 }
 

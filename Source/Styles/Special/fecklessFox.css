@@ -19,9 +19,14 @@ body {
 h1 {
     font-family:"Lucida";
     font-size:3em;
+    
+    text-align:center;
+
+    padding-top:1em;
+    padding-bottom: 2em;
 }
 
-header, h2, h3, i, figcaption {
+header, h2, h3, i, a, figcaption {
     font-family:Arial, Helvetica, sans-serif;
     letter-spacing:.01em;
 }
@@ -29,8 +34,24 @@ h3 {
     font-size:x-large;
 }
 
+a {
+    color:gold;
+    letter-spacing:.03em;
+}
+a:hover {
+    color:white;
+    background-color:goldenrod;
+}
+
 #project-contents-list {
     background-color: goldenrod;
+    a {
+        color:white;
+        text-decoration:none;
+    }
+    a:hover {
+        text-decoration:underline overline;
+    }
 }
 
 p {
