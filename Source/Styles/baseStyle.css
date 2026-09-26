@@ -10,6 +10,7 @@
     --project-btn-hvr-clr: lightgrey; 
 }
 
+/* Serif */
 @font-face {
     font-family: "Constantia";
     src: url("/Source/Fonts/constan.ttf") format("truetype");
@@ -29,6 +30,23 @@
 @font-face {
     font-family:"PalatinoI";
     src: url("/Source/Fonts/palabi.ttf") format("truetype");
+}
+@font-face {
+    font-family:"Georgia";
+    src:url("/Source/Fonts/georgia.ttf") format("truetype");
+}
+@font-face {
+    font-family:"Lucida";
+    src:url("/Source/Fonts/LBRITEDI.TTF") format("truetype");
+}
+/* Sans */
+@font-face {
+        font-family:"Liberation";
+        src:url("/Source/Fonts/LiberationSans.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Comic";
+    src: url("/Source/Fonts/comic.ttf");
 }
 
 * {

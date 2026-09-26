@@ -1,0 +1,39 @@
+html {
+    background-color:#030118;
+    color:rgb(255, 255, 255);
+}
+
+#header nav a {
+    color:white;
+    outline:solid white thin;
+}
+#header nav a:hover {
+    background-color: goldenrod;
+    outline:solid goldenrod;
+}
+
+body {
+    font-family:"Comic", sans-serif;
+}
+
+h1 {
+    font-family:"Lucida";
+    font-size:3em;
+}
+
+header, h2, h3, i, figcaption {
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing:.01em;
+}
+h3 {
+    font-size:x-large;
+}
+
+#project-contents-list {
+    background-color: goldenrod;
+}
+
+p {
+    color:azure;
+    line-height:1.6em;
+}

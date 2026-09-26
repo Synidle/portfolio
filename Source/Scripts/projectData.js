@@ -127,7 +127,8 @@ let projectFecklessFox = new Project(
 let pageFecklessFox = new ProjectPage(
     ID_FECKLESS_FOX,
     projectFecklessFox,
-    "Source/ProjectPages/FecklessFox.html"
+    "Source/ProjectPages/FecklessFox.html",
+    "Source/Styles/Special/fecklessFox.css"
 );
 
 //#endregion 
