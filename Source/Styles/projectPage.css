@@ -76,5 +76,13 @@ main {
             "information"
             "body"
             "inspiration";
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    #project-contents-list {
+        padding: .2em .4em;
+        gap:.5em;
+        line-height:.8em;
     }
 }
