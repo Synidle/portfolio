@@ -8,7 +8,18 @@ html {
 #project-information, #project-inspiration {
     font-family: "Palatino", serif;
     font-size:small;
+
 }
+
+#project-information ul {
+    padding-left:0;
+    list-style: none;
+    ul {
+        padding-left:3em;
+        list-style:disc;
+    }
+}
+
 #project-description, footer{
     font-family: "Palatino";
     font-style:italic;
@@ -55,7 +66,7 @@ i {
 .ampersand {
     font-family:"PalatinoI", serif;
 }
-a {
+#project-body a {
     font-family:"Bookman", serif;
     font-weight:bold;
     font-size:.9em;
