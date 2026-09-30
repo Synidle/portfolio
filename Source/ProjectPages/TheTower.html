@@ -63,17 +63,23 @@ EMBED THE prison > dragon VIDEO<br/><br/>
 <!-- D E V E L O P M E N T -->
 <h3 id="development">Development</h3>
 
-<p class="opening">The game was developed in the Godot Engine using the <abbr>c#</abbr> programming language. While Godot encourages the use of its bespoke <abbr>gd</abbr>Script, I chose <abbr>c#</abbr> as my scripting language as it is strongly typed, faster, and more universal; it also, through its Node system, stimulates compositional practices that I have leveraged through my scripting, contriving a flexibility fit for a sublime game that resists formulae or simple, intuitable structures.</p>
+<p class="opening">The game was developed in the Godot Engine using the <abbr>c#</abbr> programming language.</p> 
+
+<p>To ensure congruency of elements, to advance flexibility and iteration, and with the final in-game quality in mind, I intended that as far as possible, development should occur in-engine. For example, atomic level components are created in Blender, then the levels put together in the engine.</p>
+
+<figure><img src="/Source/ProjectData/TheTower/dragon-blender.jpg">
+<figcaption>The <dieg>Dragon</dieg> open in Blender.</figcaption></figure>
+<figure><img src="/Source/ProjectData/TheTower/arch-entrance.jpg" />
+<figcaption>A level piece in-engine, where I have applied materials.</figcaption></figure>
+<p>I used Blender to model, texture, and animate characters, level-pieces, and items for the game; although I often created materials within Godot and assigned them to level pieces in-engine to ensure control, consistency across objects, and direct feedback of how the visuals look in-game.</p>
+
+<p>While Godot encourages the use of its bespoke <abbr>gd</abbr>Script, I chose <abbr>c#</abbr> as my scripting language as it is strongly typed, faster, and more universal; it also, through its Node system, stimulates compositional practices that I have leveraged through my scripting, contriving a flexibility fit for a sublime game that resists formulae or simple, intuitable structures.</p>
 
 <p>Specifically, an entity within the game can comprise as many of the implemented mechanics as I wish, rather than those mechanics being restricted by its class. This reflects that same quality of the game's lack of a build system.</p>
 
 <figure><img src="/Source/ProjectData/TheTower/claw-door-heirarchy.jpg" />
-<figcaption>Heirarchy for the door to the Dragon Gaol.</figcaption></figure>
-<p>For example, having <code>Door</code> and <code>Lock</code> as separate classes, both of which reference but do not inherit the <code>Interactable</code> class, enables more possibilities regarding what can be locked and how they can be unlocked. This facilitates the disconnect between the door leading to the <dieg>Dragon Gaol</dieg> and its activator that requires a key, with the activator subtly hinting the requirement of the <dieg>Covenant Claw</dieg>: the door itself gives no suggestion of requiring a special key and so would leave the player confused, especially considering how many keys are in the game. That the claw is not a conventional key means it will not unlock a conventional door, so the astute player will think of this activator.</p>
-
-<p>I benefitted from this system again when deliberating how to allow the player to save their progress at the start of the <dieg>Prison</dieg> segment while not having transportation offered from the <dieg>Fountain</dieg> till later: the <dieg>Fountain</dieg> is "locked" until manually activated on escaping the <dieg>Prison</dieg>.</p>
-
-NEED TO SHOW EXAMPLES AS PROOF
+<figcaption>Heirarchy for the door to the <dieg>Dragon Gaol</dieg>.</figcaption></figure>
+<p>For example, having <code>Door</code>, <code>Lock</code>, <code>Interactable</code>, and <code>Activator</code> as separate classes, some of which reference each other, enables more possibilities regarding what can be locked and how they can be unlocked and what can be interacted with and how; while most reusable objects (e.g. doors) include their own <code>Interactable</code>, it can be overriden with a reference to an external <code>Activator</code>. This facilitates the disconnect between the door leading to the <dieg>Dragon Gaol</dieg> and its activator that requires a key, with the activator subtly hinting the requirement of the <dieg>Covenant Claw</dieg>: the door itself gives no suggestion of requiring a special key and so would leave the player confused, especially considering how many keys are in the game. That the claw is not a conventional key means it will not unlock a conventional door, so the astute player will think of this activator.</p>
 
 <figure><img src="Source/ProjectData/TheTower/dialogue-word.png" />
 <figcaption>Sample of dialogue script written in a word processor.</figcaption></figure>
@@ -92,8 +98,6 @@ NEED TO SHOW EXAMPLES AS PROOF
 <figure><img src="Source/ProjectData/TheTower/dictionary-methods.png" />
 <figcaption>Custom dictionary generation methods.</figcaption></figure>
 <p>One issue I needed to resolve was the efficient assignment of values to naturally-pairing data, as a means of streamlining development — crucial for a project of this scale. Within code, this is simply facilitated by dictionaries, as they allow pairing and efficient access. However, Godot has issues with exporting dictionaries to the inspector; Godot's own dictionary structure <i>can</i> be exported, but I found it unreliable due to it not being properly serialisable, causing it to often lose references; moreover Godot's own dictionaries are slower than System dictionaries as they translate their data to variant types, making them essentially untyped. My solution was to write serialisable Resource classes for pairing data, and then export arrays of these to the inspector rather than dictionaries. This enabled me to fill complex data in the inspector without risk of references being lost. I then wrote a generic utility method capable of converting any Resource array into a typed System dictionary that would allow fast access at runtime, with the only caveat being the initial writing of this dictionary would introduce an upfront time cost. That dictionaries can be accessed in O(1) time made it worth the conversion as their frequent need to be accessed ultimately makes them faster than O(n) access of an array for which the key types would not translate to indices, so requiring the array to be <i>searched</i> rather than directly accessed. Consequently, the introduction of further complex data relationships will not adversely affect the game's efficiency. Because it was most efficient for me to use enum values in many cases, I created another method, utilising the first, tailored specifically to associate enum data with another type.</p>
-
-<p>EXPLAIN THE REST OF THE SOFTWARE TOO & SHOW EVIDENCE OF USE.</p>
 
 <h3 id="level-design">Level Design</h3>
 
