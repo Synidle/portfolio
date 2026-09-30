@@ -5,6 +5,7 @@ EMBED THE prison > dragon VIDEO<br/><br/>
 
 <p class="opening"><cite>The Tower</cite> is a videogame demo developed independently as a final project in university, with conception, planning, and development taking around eight months in total. The demo is approximately 2 hours in playtime, with rudimentary assets, mechanics, and content, focussing on realising the core idea behind the ambitious project within the short timeframe. My project (design <span class="ampersand">&</span> implementation) was awarded a grade of 85 (an <q>outstandingly well-designed ... fully-playable game</q> that <q>realises [my] conceptual goals while exhibiting technical ambition and strong production quality</q>).</p>
 
+<!-- D E S I G N -->
 <h3 id="pp-design">Design</h3>
 
 <p class="opening">The aim of the project was to realise and sustain a sensation of sublime in a <abbr>3d</abbr> action roleplaying game. That is to say, the sense of awe and wonder felt by players of excellent roleplaying games. The efficacy of both <cite>The Elder Scrolls <abbr>iv</abbr> Oblivion</cite> (Bethesda Game Studios, 2006) and <cite>Dark Souls</cite> (FromSoftware, 2011) in this realm has been analysed by <a href="https://gamestudies.org/1103/articles/martin">Martin (2011)</a> and <a href="https://www.gamestudies.org/1501/articles/vella">Vella (2015)</a> respectively; and the foundation for this project draws upon that literature whilst critiquing and developing upon it. To achieve this aim, I was prepared to question and forego design conventions as was sensible according to hypotheses, and then rigorously test the effect of design decisions with real users.</p>
@@ -44,6 +45,7 @@ EMBED THE prison > dragon VIDEO<br/><br/>
 
 <p>Moreover, situations that inconvenience the player are deliberately formed, as they invoke the player to consider there being a more efficient solution. For example, the <dieg>Moonstone Scythe</dieg> is required to break the <dieg>Dragon</dieg>'s chains —this weapon requires two hands to wield and so the player must forgo their torch in this area of pitch-darkness; also within the <dieg>Prison</dieg> however, a hood granting illuminated vision can be acquired from a mage, and this can be known to the player as the mage's line of vision is clearly illuminated. This mindset of their being more advantageous strategies will then persist outside of these inconveniences to all gameplay moments: so the player becomes sublimely aware that their current experience is not summative of the game's possibilities.</p>
 
+<!-- P L A N N I N G -->
 <h3 id="pp-planning">Planning</h3>
 
 <p class="opening">The game's world, story, unique mechanics, <span class="ampersand">&c</span>. were all carefully considered with the purpose of achieving the sublime. These were implemented in rudimentary form, tested independently, then tested again in carefully designed user tests, to evaluate efficacy and inform the next development sprint within an agile methodology.</p>
@@ -58,12 +60,15 @@ EMBED THE prison > dragon VIDEO<br/><br/>
 <figcaption>Sample from the task tracker.</figcaption></figure>
 <p>In conjunction with development, a Task Tracker was used to formalise individual tasks, permitting also notes on bugs and opportunities for improvement and extension.</p>
 
+<!-- D E V E L O P M E N T -->
 <h3 id="development">Development</h3>
 
-<p class="opening">The game was developed in the Godot Engine using the <abbr>c#</abbr> programming language. While Godot encourages the use of its bespoke <abbr>gd</abbr>Script, I chose <abbr>c#</abbr> as my scripting language as it is strongly typed, faster, and more universal.</p>
+<p class="opening">The game was developed in the Godot Engine using the <abbr>c#</abbr> programming language. While Godot encourages the use of its bespoke <abbr>gd</abbr>Script, I chose <abbr>c#</abbr> as my scripting language as it is strongly typed, faster, and more universal; it also, through its Node system, stimulates compositional practices that I have leveraged through my scripting, contriving a flexibility fit for a sublime game that resists formulae or simple, intuitable structures.</p>
 
-<p>A notable reason for choosing Godot is that its Node system stimulates compositional practices. Furthermore, my scripting approach favoured composition over inheritance, which affords a greater flexibility perfect for a sublime game that resists formulae or simple, intuitable structures. Specifically, an entity within the game can comprise as many of the implemented mechanics as I wish, rather than those mechanics being restricted by its class. This reflects that same quality of the game's lack of a build system.</p>
+<p>Specifically, an entity within the game can comprise as many of the implemented mechanics as I wish, rather than those mechanics being restricted by its class. This reflects that same quality of the game's lack of a build system.</p>
 
+<figure><img src="/Source/ProjectData/TheTower/claw-door-heirarchy.jpg" />
+<figcaption>Heirarchy for the door to the Dragon Gaol.</figcaption></figure>
 <p>For example, having <code>Door</code> and <code>Lock</code> as separate classes, both of which reference but do not inherit the <code>Interactable</code> class, enables more possibilities regarding what can be locked and how they can be unlocked. This facilitates the disconnect between the door leading to the <dieg>Dragon Gaol</dieg> and its activator that requires a key, with the activator subtly hinting the requirement of the <dieg>Covenant Claw</dieg>: the door itself gives no suggestion of requiring a special key and so would leave the player confused, especially considering how many keys are in the game. That the claw is not a conventional key means it will not unlock a conventional door, so the astute player will think of this activator.</p>
 
 <p>I benefitted from this system again when deliberating how to allow the player to save their progress at the start of the <dieg>Prison</dieg> segment while not having transportation offered from the <dieg>Fountain</dieg> till later: the <dieg>Fountain</dieg> is "locked" until manually activated on escaping the <dieg>Prison</dieg>.</p>
