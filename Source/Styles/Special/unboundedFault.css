@@ -1,3 +1,15 @@
+nav#main-nav{
+    a {
+        color:white;
+        &:hover {
+            background-color: transparent;
+            text-decoration:underline;
+            text-decoration-thickness: .1em;
+            text-underline-offset: .2em;
+        }
+    }
+}
+
 body {
     background-color: black;
     color:white;
@@ -6,6 +18,11 @@ body {
 
 h1, h2, h3 {
     font-family:"Jersey 10", sans-serif;
+}
+h1 {
+    font-size:4em;
+    letter-spacing: .1em;
+    word-spacing: .16em;
 }
 
 #project-body {
