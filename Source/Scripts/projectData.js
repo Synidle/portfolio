@@ -438,15 +438,15 @@ let projectUnboundedFault = new Project(
     "A retro dungeon-crawler rogue-like with arcade-oriented design and minor elements of randomisation. As the project leader I had to plan the agile development cycle and manage a small team, assigning tasks and roles. I also contributed significantly to the central design concepts, narrative background, mechanics programming, and quality assurance.",
     [
         new ImageReference(
-            "UnboundedFault/image-05.png",
+            "UnboundedFault/maze.png",
             "Screenshot of the player in a maze, with items and enemies."
         ),
         new ImageReference(
-            "UnboundedFault/image-09.png",
+            "UnboundedFault/scythe.png",
             "Screenshot of a powerful enemy and a powerful weapon."
         ),
         new ImageReference(
-            "UnboundedFault/image-10.png",
+            "UnboundedFault/spider.png",
             "Screenshot of a bossfight against a spider."
         ),
     ],

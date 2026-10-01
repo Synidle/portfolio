@@ -12,6 +12,7 @@ nav#main-nav{
 
 #project-contents-list {
     background-color: black;
+    outline: solid thick black;
     a {
         text-decoration: none;
         color:white;
@@ -49,5 +50,15 @@ h3 {
 #project-body {
     background-color: blanchedalmond;
     color:black;
-    outline:solid blanchedalmond thick
+    outline:solid blanchedalmond thick;
+
+    p {
+        word-spacing:.28em;
+        line-height: 1.4em;
+    }
+}
+
+figcaption {
+    font-variant-caps: small-caps;
+    letter-spacing: .06em;
 }
