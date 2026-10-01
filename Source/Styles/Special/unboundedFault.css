@@ -10,6 +10,23 @@ nav#main-nav{
     }
 }
 
+#project-contents-list {
+    background-color: black;
+    a {
+        text-decoration: none;
+        color:white;
+
+        font-family:"Jersey 10", monospace;
+        font-size:1.6em;
+        letter-spacing:.08em;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness:.1em;
+        }
+    }
+}
+
 body {
     background-color: black;
     color:white;
@@ -17,12 +34,16 @@ body {
 }
 
 h1, h2, h3 {
-    font-family:"Jersey 10", sans-serif;
+    font-family:"Jersey 10", monospace;
 }
 h1 {
     font-size:4em;
     letter-spacing: .1em;
     word-spacing: .16em;
+}
+h3 {
+    font-size:2em;
+    letter-spacing:.02em;
 }
 
 #project-body {
