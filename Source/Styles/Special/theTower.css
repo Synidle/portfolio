@@ -91,8 +91,8 @@ q {font-style: italic;}
 .ampersand {
     font-family:"Libre Baskerville", serif;
     font-size:.8em;
-    font-style: italic;
     font-weight:normal;
+    font-style:italic;
     /* letter-spacing: -.15em;
     margin-right:.15em; */
 }
