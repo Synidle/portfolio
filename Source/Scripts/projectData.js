@@ -467,7 +467,13 @@ let projectUnboundedFault = new Project(
             "The Legend of Zelda",
             "Nintendo",
             1986,
-            "Level design"
+            "Mechanics & level design"
+        ),
+        new Inspiration(
+            "Fatal Labyrinth",
+            "Sega",
+            1990,
+            "Mechanics"
         )
     ],
     "Project leader, design assistant, mechanics programmer",

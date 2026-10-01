@@ -51,11 +51,11 @@ h3 {
     background-color: blanchedalmond;
     color:black;
     outline:solid blanchedalmond thick;
+}
 
-    p {
-        word-spacing:.28em;
-        line-height: 1.4em;
-    }
+#project-body>p, #project-description {
+    word-spacing:.28em;
+    line-height: 1.4em;
 }
 
 figcaption {
