@@ -62,3 +62,12 @@ figcaption {
     font-variant-caps: small-caps;
     letter-spacing: .06em;
 }
+
+dieg{
+    font-weight: bold;
+}
+
+code, var {
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
