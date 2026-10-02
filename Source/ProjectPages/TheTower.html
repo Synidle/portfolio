@@ -50,7 +50,7 @@
 
 <p class="opening">The game's world, story, unique mechanics, <span class="ampersand">&c</span>. were all carefully considered with the purpose of achieving the sublime. These were implemented in rudimentary form, tested independently, then tested again in carefully designed user tests, to evaluate efficacy and inform the next development sprint within an agile methodology.</p>
 
-<figure><img src="/Source/ProjectData/TheTower/gantt-chart-sample.png"/>
+<figure><img src="Source/ProjectData/TheTower/gantt-chart-sample.png"/>
 <figcaption>Sample from the Gantt chart taken at an early stage, during ideation.</figcaption></figure>
 <figure><img src="Source/ProjectData/TheTower/intermediate-version.png" />
 <figcaption>Sample from an intermediate version description.</figcaption></figure>
@@ -67,15 +67,15 @@
 
 <p>To ensure congruency of elements, to advance flexibility and iteration, and with the final in-game quality in mind, I intended that as far as possible, development should occur in-engine. For example, atomic level components are created in Blender, then the levels put together in the engine.</p>
 
-<figure><img src="/Source/ProjectData/TheTower/dragon-blender.jpg">
+<figure><img src="Source/ProjectData/TheTower/dragon-blender.jpg">
 <figcaption>The <dieg>Dragon</dieg> open in Blender.</figcaption></figure>
-<figure><img src="/Source/ProjectData/TheTower/arch-entrance.jpg" />
+<figure><img src="Source/ProjectData/TheTower/arch-entrance.jpg" />
 <figcaption>A level piece in-engine, where I have applied materials.</figcaption></figure>
 <p>I used Blender to model, texture, and animate characters, level-pieces, and items for the game; although I often created materials within Godot and assigned them to level pieces in-engine to ensure control, consistency across objects, and direct feedback of how the visuals look in-game.</p>
 
 <p>Textures were made by shrinking photos in Paint.NET and using the clone tool so that they tile; colour alteration was used to create tile variants.</p>
 
-<figure><img src="/Source/ProjectData/TheTower/crossbow-icon.jpg">
+<figure><img src="Source/ProjectData/TheTower/crossbow-icon.jpg">
 <figcaption>Crossbow icon in Aseprite.</figcaption></figure>
 <p>I used Aseprite for anything drawn, and also for shrinking and editing screenshots of models to create 3D item icons.</p>
 
@@ -83,7 +83,7 @@
 
 <p>Specifically, an entity within the game can comprise as many of the implemented mechanics as I wish, rather than those mechanics being restricted by its class. This reflects that same quality of the game's lack of a build system.</p>
 
-<figure><img src="/Source/ProjectData/TheTower/claw-door-heirarchy.jpg" />
+<figure><img src="Source/ProjectData/TheTower/claw-door-heirarchy.jpg" />
 <figcaption>Heirarchy for the door to the <dieg>Dragon Gaol</dieg>.</figcaption></figure>
 <p>For example, having <code>Door</code>, <code>Lock</code>, <code>Interactable</code>, and <code>Activator</code> as separate classes, some of which reference each other, enables more possibilities regarding what can be locked and how they can be unlocked and what can be interacted with and how; while most reusable objects (e.g. doors) include their own <code>Interactable</code>, it can be overriden with a reference to an external <code>Activator</code>. This facilitates the disconnect between the door leading to the <dieg>Dragon Gaol</dieg> and its activator that requires a key, with the activator subtly hinting the requirement of the <dieg>Covenant Claw</dieg>: the door itself gives no suggestion of requiring a special key and so would leave the player confused, especially considering how many keys are in the game. That the claw is not a conventional key means it will not unlock a conventional door, so the astute player will think of this activator.</p>
 
@@ -124,9 +124,9 @@
 <figcaption>An area within the <dieg>Prison</dieg> level.</figcaption></figure>
 
 <p>Levels were then sketched, then roughly blocked-out using primitive 3D shapes for a sense of scale, space, and design, while being easy to reconfigure to achieve the perfect layout. When content with the layout following thorough testing, I would gradually increase the fidelity with more textures and 3D models. This fast, in-engine approach was useful for scaling objects, ensuring views were aesthetic and environments traversable, and quickly testing various ideas.</p>
-<figure><img src="/Source/ProjectData/TheTower/prison-editor.jpg"/>
+<figure><img src="Source/ProjectData/TheTower/prison-editor.jpg"/>
 <figcaption>Part of the <dieg>Prison</dieg>, inside the editor.</figcaption></figure>
-<figure><img src="/Source/ProjectData/TheTower/player-ref.jpg">
+<figure><img src="Source/ProjectData/TheTower/player-ref.jpg">
 <figcaption>I used references of the player's height to best aesthetically size level components in-editor.</figcaption></figure>
 
 <p>The Prison was the focus of the level design for the demo. It was inspired by the Prison of Hope in <cite>Demon's Souls</cite> (FromSoftware, 2009), with a similar atmosphere and tension, but with the addition of offering the player multiple routes according to their strengths. It also contains side-areas embellishing the world and narrative. The area is designed to simultaneously fit into and enhance the rest of the game.</p>
