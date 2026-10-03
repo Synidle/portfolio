@@ -66,3 +66,7 @@ figcaption {
     font-size:1.2em;
     border:solid thick black;
 }
+
+code, var {
+    font-family:'Courier New', Courier, monospace;
+}

@@ -3,6 +3,7 @@
 
 <p><i>Digital Ghost Gate</i> was made as my assessment submission for a JavaScript module in university, in which I had to create a 2D RPG-style game using the P5.js library. My game achieved a grade of 92, being recognised for its <i>"highly complex item trading quest and battle system, in addition to a variety of maps and dialogue".</i> Development took about two months, and I made every part of the game myself.</p>
 
+<!-- D E S I G N -->
 <h3 id="pp-design">Design</h3>
 
 <p>My aim was to create a game that encouraged exploration and engagement through its features and mechanics, despite only encapsulating a small world.</p>
@@ -15,37 +16,43 @@
 <figcaption>The flow of combat.</figcaption></figure>
 <p>Ghosts offer complexity to combat, having different spells that can inflict different beneficial or harmful effects upon targets. Moreover, ghosts can have affinities or weaknesses to different elements or damage types. The ghost system was heavily inspired by the persona system in, e.g., <i>Persona 3</i> (Atlus, 2006), but with the difference of the ghosts being real characters in the world who can be friend or foe and conversed with — so making the world more interesting for exploration.</p>
 
+<figure><img src="Source/ProjectData/DigitalGhostGate/andras.png">
+<figcaption>The Ghost selection screen.</figcaption></figure>
+
 <p>The most interesting feature is the negotiation mechanic in combat, which allows for multiple solutions to encounters, and encourages exploration and interaction.</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/dialogue-diagram.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/dialogue-diagram.png" />
+<figcaption>Flowchart of one dialogue instance.</figcaption></figure>
 <p>A complex conditional dialogue system was also designed to facilitate quests and enrich interactions with characters within the world.</p>
 
 <p>A challenge was to facilitate exploration, interaction, and complex systems using the restrictions of the aesthetic, namely the low resolution.</p>
 <p>One solution I implemented was using the top row of tiles on the screen to display information about where the player is, or what the player will interact with if pressing the interaction button now.</p>
 
+<img src="Source/ProjectData/DigitalGhostGate/east-path.png">
+
+<!-- I M P L E M E N T A T I O N -->
 <h3 id="pp-implementation">Implementation</h3>
 
 <p>That the game was developed entirely in JavaScript, without use of a game engine, offered particular challenges.</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/tilemap.png" />
-<p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even. Then functionally, tiles are represented as 0 for floor, 1 for walls.</p>
+<figure><img src="Source/ProjectData/DigitalGhostGate/tilemap.png" />
+<figcaption>My solution to creating tile-based maps.</figcaption></figure>
+<p>My solution to game maps was to have each map a text file, with an integer value corresponding to different tiles. My solution is efficient as I did not need to store tile data, only needing an array of texture references with indices corresponding to those in the map file. Whether a tile had collision was implied according to whether the index was odd or even. Then functionally, tiles are represented as <var>0</var> for floor, <var>1</var> for walls.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/scene.png" />
-<p>Maps are lodaed via a Scene, which also holds GameObjects and connexions between scenes. Battles are types of Scene, containing arrays for player and opponent ghosts in the battle.</p>
-
-<p>Despite the simple aesthetic I made sparse use of animation to draw the player's eye, and so too contrasts of light and dark.</p>
+<p>Maps are loaded via a <code>Scene</code>, which also holds <code>GameObjects</code> and connections between scenes. <code>Battles</code> are types of <code>Scene</code>, containing arrays for player and opponent ghosts in the battle.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/dialogue-class.png" />
-<p>The implementation of the conditional dialogue system was a challenge. My Dialogue class contains an array of text that displays under a condition (a function returning a Boolean value) and can execute a function on completion and can link to another Dialogue object.</p>
+<p>The implementation of the conditional dialogue system was a challenge. My <code>Dialogue</code> class contains an array of text that displays under a condition (a function returning a Boolean value) and can execute a function on completion and can link to another <code>Dialogue</code> object.</p>
 <img src="Source/ProjectData/DigitalGhostGate/dialogue-choice.png" />
-<p>The DialogueChoice class inherits from Dialogue, and as such can be used in place of standard Dialogue lines, but facilitates a binary option within dialogue. It could be rewritten to use array parameters in order to offer an indeterminate number of choices, but the retro aesthetic of the game imposes limitations upon the AI and as such I limit dialogue choices to usually just "yes" and "no", with additional decisions made through the player's actions in the game.</p>
+<p>The <code>DialogueChoice</code> class inherits from <code>Dialogue</code>, and as such can be used in place of standard <code>Dialogue</code> lines, but facilitates a binary option within dialogue. It could be rewritten to use array parameters in order to offer an indeterminate number of choices, but the retro aesthetic of the game imposes limitations upon the AI and as such I limit dialogue choices to usually just "yes" and "no", with additional decisions made through the player's actions in the game.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/battle-cancel.png" />
 <p>Battles utilise a state machine, with the state determining the outcome whenever the player inputs.</p>
 <img src="Source/ProjectData/DigitalGhostGate/battle-display-list.png" />
-<p>Selecting options is facilitated by the callback of my custmo UI classes.</p>
+<p>Selecting options is facilitated by the callback of my custom UI classes.</p>
 <img src="Source/ProjectData/DigitalGhostGate/select-action.png" />
-<p>The Battle scene delivers the functions of all actions.</p>
+<p>The <code>Battle</code> scene delivers the functions of all actions.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/send-spell.png" />
 <p>The effect and impact of spells is determined by both the caster and recipients of the spell. First, the damage to be dealt is determined by the caster's stats.</p>
@@ -55,14 +62,19 @@
 <p>Whether a consequential status effect of a spell is received depends upon stats and randomness.</p>
 <img src="Source/ProjectData/DigitalGhostGate/evade.png" />
 <p>Whether an attack is evaded altogether is determined by attack's accuracy and a degree of randomness.</p>
-<p>But it is ensured spells cast to allies will always be received, and so their effects; a spell that must land can be given an accuracy of 101.</p>
+<p>But it is ensured spells cast to allies will always be received, and so their effects; a spell that must land can be given an accuracy of <var>101</var>.</p>
 <p>Status effects simply use the existing spell system, but are applied as unavoidable spells once effective.</p>
 
 <p>Stats are receptive to temporary modification by spells; having a separate map for a stat's value to return to allows modifying a value in the stats map.</p>
 
 <img src="Source/ProjectData/DigitalGhostGate/apply-status-effects-ghost.png" />
-<p>All of a ghost's status effects are applied recursively using i as the index of the ghost and j as the index of the effect. Recursion was used rather than a for loop because dialogue appears as indication of every effect applied, and dialogue awaits input before progressing.</p>
+<p>All of a ghost's status effects are applied recursively using <var>i</var> as the index of the ghost and <var>j</var> as the index of the effect. Recursion was used rather than a for loop because dialogue appears as indication of every effect applied, and dialogue awaits input before progressing.</p>
 
+<em>
+    <p>Despite the simple aesthetic I made sparse use of animation to draw the player's eye, and so too contrasts of light and dark.</p>
+</em>
+
+<!-- R E F L E C T I O N -->
 <h3 id="pp-reflection">Reflection</h3>
 
 <p>Most features of the game were implemented, although not perfectly. Nevertheless, the desired aesthetic and experience have been achieved. The quest featured is completable. The code is largely efficient and modulear, allowing me to quite easily create new characters, maps, etc. — but improvements can be made.</p>
@@ -71,17 +83,21 @@
 
 <p>I was also challenged to implement systems that are usually within an engine from scratch, such as tilemaps and animations. This strengthened my ability to write optimised and useable code, and gave me the experience to work with these same systems in game engines more efficiently in future.</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/overlapping-wall.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/overlapping-wall.png" />
+<figcaption>Sprite overlapping wall.</figcaption></figure>
 <p>There are some small bugs in the game. So that the player can navigate through 1-tile-wide spaces, I made his hitbox smaller than his sprite; but since the sprite is drawn from the corner of the hitbox, the player can appear to overlap walls. By separating the player's sprite and hitbox I can fix this error.</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/incorrect-draw-order.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/incorrect-draw-order.png" />
+<figcaption>A sprite overlapping the player.</figcaption></figure>
 <p>The order in which sprites are drawn is constant, so sometimes sprites are drawn over others when they should not. This can be amended by drawing sprites in order of y position.</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/resisted-attack.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/resisted-attack.png" />
+<figcaption>Evading or resisting an attack in combat.</figcaption></figure>
 <p>Currently there is no dialogue difference between evading and resisting attack, leaving the player confused.</p>
 
 <p>There are some limitations of the game. The UI is not convenient, partly because of the intentional low-resolution, and partly because of my reliance on the single List class i created. Vertical scrolling lists would be worth implementing in contexts I would prefer to have multiple items visible simultaneously.</p>
-<img src="Source/ProjectData/DigitalGhostGate/stats-screen.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/stats-screen.png" />
+<figcaption>The ghost description screen.</figcaption></figure>
 <p>The ghost description dispayed in battle could more clearly display important attributes. For example, by only showing those elements the ghost has a particular affinity towards, displayed like: </p>
 <ul>
 <li>Resist FLM</li>
@@ -91,9 +107,11 @@
 
 <p>If the UI Lists stored objects of the items rather than simply their names, the objects could be accessed directly; then the inventory could display additional information, such as the quantity of an item, or its value (which could be relevant in the bribe system).</p>
 
-<img src="Source/ProjectData/DigitalGhostGate/scene-connexions.png" />
+<figure><img src="Source/ProjectData/DigitalGhostGate/scene-connexions.png" />
+<figcaption>My programmed scene connections.</figcaption></figure>
 <p>Were this not a small project for an assessment, I would seek to create a bespoke map editor, enabling not just map creation but the connection of maps. The current method of writing maps out as numbers in a text file, and manually making each connection for each map in code, is laborious and prone for error.</p>
 
+<!-- F U T U R E    P L A N -->
 <h3 id="pp-future-plan">Future Plan</h3>
 
 <p>There are improvements to be made to the battles:</p>
