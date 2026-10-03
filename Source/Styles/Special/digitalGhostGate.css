@@ -16,6 +16,8 @@ nav#main-nav{
 
     a {
         color:white;
+        font-family:monospace;
+        font-size:2.4em;
 
         &:hover {
             background-color: black;
@@ -34,3 +36,25 @@ nav#main-nav{
     }
 }
 
+h1 {
+    font-family:monospace;
+    font-size:3em;
+}
+
+#project-contents-list {
+    background-color:black;
+    
+    a {
+        color:white;
+        text-decoration: none;
+        
+        font-family: monospace;
+        font-size:1.6em;
+        font-weight: bold;
+
+        &:hover {
+            background-color: white;
+            color:black;
+        }
+    }
+}
