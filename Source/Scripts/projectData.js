@@ -359,7 +359,8 @@ let projectDigitalGhostGate = new Project(
 let pageDigitalGhostGate = new ProjectPage(
     ID_DIGITAL_GHOST_GATE,
     projectDigitalGhostGate,
-    "Source/ProjectPages/DigitalGhostGate.html"
+    "Source/ProjectPages/DigitalGhostGate.html",
+    "Source/Styles/Special/digitalGhostGate.css"
 );
 //#endregion
 

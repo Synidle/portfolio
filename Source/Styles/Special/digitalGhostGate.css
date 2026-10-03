@@ -1,0 +1,36 @@
+html {
+    font-family:Arial, Helvetica, sans-serif;
+
+    background-color:black;
+}
+main {
+    background-color:lightgrey;
+}
+
+header {
+    background-color: black;
+}
+nav#main-nav{
+    background-color:black;
+    border:solid thick black;
+
+    a {
+        color:white;
+
+        &:hover {
+            background-color: black;
+            text-decoration-thickness: .1em;
+            text-underline-offset: .2em;
+
+            &::before {
+                content:"<";
+                margin-right: .4em;
+            }
+            &::after {
+                content:">";
+                margin-left:.4em;
+            }
+        }
+    }
+}
+
