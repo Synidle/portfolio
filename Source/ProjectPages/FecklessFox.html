@@ -7,6 +7,7 @@
 
 <p><i>Feckless Fox</i> is inspired by 3D platformers of the '90s and early '00s, such as <i>Mario 64</i> (Nintendo, 1996), <i>Sonic Adventure</i> (Sonic Team, 1998), and <i>Rayman 2</i> (Ubi Pictures, 1999), aspiring to achieve the same timelessness achieved by an aesthetic appealing to children and adults alike, and accommodation of all skill levels.</p>
 
+<!-- D E S I G N -->
 <h3 id="pp-design-overview">Design Overview</h3>
 
 <p>My initial idea was a classic 3D platformer level with a fox who spins with his tail as an action, which offers multiple abilities. I wanted to introduce a new ability linked with this action, and thought of an extended jump that offers more traversal possibilities. I thought of having the spin action also offer interaction with buttons and levers, and destroy objects and enemies; I also considered allowing the new "spin-jump" ability to home-in on enemies.</p>
@@ -21,6 +22,7 @@
 
 <p>To facilitate the construction of a fun level, I first implemented the character controller in almost its entirety.</p>
 
+<!-- L E V E L    D E S I G N -->
 <h3 id="pp-level-design">Level Design</h3>
 
 <p>My level's design had the following objectives:</p>
@@ -41,6 +43,9 @@
 <p>Additionally, I wanted to convey a kind of narrative through level design alone, without dialogue; and moreover have the player have particular feelings during different parts of the level, and depending on how the level is approached.</p>
 
 <p>The setting is a town overtaken by rats, falling into disrepair. The environment reflects this.</p>
+
+<figure><img src="Source/ProjectData/FecklessFox/level-start-sketch.jpg">
+<figcaption>An early sketch of the starting portion of the level.</figcaption></figure>
 
 <p>I first sketched a basic level design, with a main path and key set-pieces, but room to add detail. Then I blocked out a level with primitive shapes, ensuring it looked good and was fun to play through.</p>
 
@@ -101,13 +106,15 @@
 
 <h3 id="pp-challenges">Challenges Overcome</h3>
 
-<p>When having a friend test the level, he climbed up the fallen lamppost at the start � which I had not foreseen � so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
+<p>When having a friend test the level, he climbed up the fallen lamppost at the start — which I had not foreseen — so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
 <img src="Source/ProjectData/FecklessFox/start.png" />
 
 <p>The dark atmosphere created a challenge of how to illustrate the path. I had to make best use of everything at my disposal. In the screenshot below, the next platform is illuminated, and the shadow aligns with the succeeding platform. Contrasting materials also highlighted platforms.</p>
 <img src="Source/ProjectData/FecklessFox/highlight-platform.png" />
 
-<p>There were some challenges faced in programming. For example, how to handle enemy behaviour within my state machine system, given enemies are motivate by AI rather than player input. I considered moving action code � such as executing movement � into State classes so that state and behaviour become entwined, but doing such would mean my classes were no longer limited to exact purposes. Instead, I used my existing code but with two state machines for enemies: the action state machine is the same as that of the player � what the enemy is <i>doing</i>; the behaviour state machine is for AI specifically � what the enemy is <i>intending</i>. Enemies simultaneously have an action state and a behaviour state.</p>
+<figure><img src="Source/ProjectData/FecklessFox/rat-enemy-behaviour.jpg">
+<figcaption>My illustration of the enemy behaviour.</figcaption></figure>
+<p>There were some challenges faced in programming. For example, how to handle enemy behaviour within my state machine system, given enemies are motivate by AI rather than player input. I considered moving action code — such as executing movement — into State classes so that state and behaviour become entwined, but doing such would mean my classes were no longer limited to exact purposes. Instead, I used my existing code but with two state machines for enemies: the action state machine is the same as that of the player — what the enemy is <i>doing</i>; the behaviour state machine is for AI specifically — what the enemy is <i>intending</i>. Enemies simultaneously have an action state and a behaviour state.</p>
 <img src="Source/ProjectData/FecklessFox/rat-heirarchy.png" />
 <img src="Source/ProjectData/FecklessFox/chase-behaviour-state.png" />
 
