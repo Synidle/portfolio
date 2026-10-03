@@ -5,6 +5,10 @@ html {
     font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
 }
 
+nav#main-nav a:hover {
+    background-color:goldenrod;
+}
+
 #project-header {
     font-family:"Libre Baskerville";
 }

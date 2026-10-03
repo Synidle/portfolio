@@ -325,15 +325,15 @@ let projectDigitalGhostGate = new Project(
     "A small demonstration of a turn-based RPG with a Gameboy aesthetic and a unique and complex combat system.",
     [
         new ImageReference(
-            "DigitalGhostGate/image-00.png",
+            "DigitalGhostGate/start-screen.png",
             "Screenshot of the game start screen, with two characters visible, a door, and basic instructions."
         ),
         new ImageReference(
-            "DigitalGhostGate/image-01.png",
+            "DigitalGhostGate/east-path.png",
             "Screenshot of a game location, with a path east into the forest, and a path north of lilipads across the lake."
         ),
         new ImageReference(
-            "DigitalGhostGate/image-02.png",
+            "DigitalGhostGate/andras.png",
             "Screenshot of the 'ghost' selection screen, displaying 'Andras', his sprite, and his basic attributes."
         ),
     ],
