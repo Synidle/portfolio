@@ -12,6 +12,9 @@
 
 <p>The approach taken adopts Vella's observation of obfuscation of a game's precise working supporting sublime's longevity, while recognising that if such is done too liberally it has the opposite effect.</p>
 
+<figure><img src="Source/ProjectData/TheTower/church.png">
+<figcaption>A ruined church that can be optionally explored at the start of the demo.</figcaption></figure>
+
 <p>My design process began with this idea, and desk research. I then began to consider how the individual features of the game — world, narrative, mechanics, <span class="ampersand">&c</span>. — can be designed to fulfil the idea. I first established I should have a world with large features, and all gameplay-mechanics should expand and enrich interaction in the world. I wrote three cornerstones for my gameplay design:</p>
 <ul>
     <li>Mechanics design aims towards the player being able to interact with the world in interesting ways, without enforcing limitations.</li>
@@ -44,6 +47,9 @@
 <p>Another invaluable element to sublime quest design is invisible choices, those being consequential actions that are not explicitly presented to the player as such, which are explained by <a href="https://www.youtube.com/watch?v=6HZuSzlN2eI&t=2s&pp=ygUkZ2FtZSBtYWtlciB0b29sa2l0IGludmlzaWJsZSBjaG9pY2Vz">Game Maker's Toolkit (2022)</a>. The clearest invisible choice is freeing the <dieg>Dragon</dieg>. This is not an option explicitly presented to the player, but one that requires a particular activity and prior preparation to be completed, with many individual "invisible" factors<!--: first finding the Dragon, of whom little is mentioned in-game, and acquiring the key to activate the door; then finding a weapon capable of cutting the chain; and finally the outcome is determined by the player's dialogue with the Dragon and certain attribute values, and whether the player possesses the Dragon Covenant Claw that enables allyship with the Dragon-->. But beyond this, there are even more invisible choices in the game, which have consequences far more difficult to place.</p>
 
 <p>Moreover, situations that inconvenience the player are deliberately formed, as they invoke the player to consider there being a more efficient solution. For example, the <dieg>Moonstone Scythe</dieg> is required to break the <dieg>Dragon</dieg>'s chains —this weapon requires two hands to wield and so the player must forgo their torch in this area of pitch-darkness; also within the <dieg>Prison</dieg> however, a hood granting illuminated vision can be acquired from a mage, and this can be known to the player as the mage's line of vision is clearly illuminated. This mindset of their being more advantageous strategies will then persist outside of these inconveniences to all gameplay moments: so the player becomes sublimely aware that their current experience is not summative of the game's possibilities.</p>
+
+<figure><img src="Source/ProjectData/TheTower/feckless-inn.png">
+<figcaption>Inside an inn that can be found in the open world.</figcaption></figure>
 
 <!-- P L A N N I N G -->
 <h3 id="pp-planning">Planning</h3>
@@ -110,25 +116,32 @@
 
 <!-- DO VISUAL BREAKDOWN OF PRISON, FEELINGS, DIFFERENT PATHS, LIKE I DID FOR FECKLESS FOX, *SHOWING* THAT THE LEVEL IS GREAT -->
 
+<figure><img src="Source/ProjectData/TheTower/prison-dining.png" />
+<figcaption>An area within the <dieg>Prison</dieg> level.</figcaption></figure>
+
+<figure><img src="Source/ProjectData/TheTower/gatetown-layout.jpg">
+<figcaption>A sketch showing both the layout of <dieg>Gatetown</dieg> and the <dieg>Tower Atrium</dieg>, and how the <dieg>Tower</dieg> should look when approaching.</figcaption></figure>
+
 <p class="opening">The forefront consideration of world and level design was Vella's concept of "indistinct boundaries" extracted from <cite>Dark Souls</cite>' own world design, contrasted against the transparent and liberal openness of <cite>The Elder Scrolls <abbr>iv</abbr>: Oblivion</cite>'s open world.</p>
 
 <p>It would seem obvious for a sublime game to have a huge world, and a lengthy, epic story. However, I intuited from the literature and my own experiences of games that a world seemingly linear that branches out, with difficulty, and only at close inspection, is more sublime, and more able to surprise and inspire wonder, than a world that is transparently open. Furthermore, a truncated linear main path embellished by branching content befits a highly replayable game that allows the player to discover more content each playthrough. While long main-questlines usually have only one route through or very minor variations thereupon, <cite>The Tower</cite> aims to have completely different paths through the main story depending on player actions. A game is most sublime if a player can continue returning, discovering new content, and so making the concept of the game in their mind seemingly infinite.</p>
-
-<p>To ensure the designing of areas consistent with the overarching aim, prior to sketching level layouts I listed level aims for the particular level in its own text document. This would also outline how the level fits into the rest of the game, and how it should impact the player emotionally. Therefore all areas contribute in their way to the gestalt sublime experience. Moreover, moodboards were uesd for each area in order to capture a particular aesthetic.</p>
 
 <figure><img src="Source/ProjectData/TheTower/prison-design-doc.png" />
 <figcaption>A sample of my design outline for the <dieg>Prison</dieg>.</figcaption></figure>
 <figure><img src="Source/ProjectData/TheTower/moodboards.png" />
 <figcaption>A sample from my environment moodboards.</figcaption></figure>
-<figure><img src="Source/ProjectData/TheTower/prison-dining.png" />
-<figcaption>An area within the <dieg>Prison</dieg> level.</figcaption></figure>
+<p>To ensure the designing of areas consistent with the overarching aim, prior to sketching level layouts I listed level aims for the particular level in its own text document. This would also outline how the level fits into the rest of the game, and how it should impact the player emotionally. Therefore all areas contribute in their way to the gestalt sublime experience. Moreover, moodboards were uesd for each area in order to capture a particular aesthetic.</p>
 
-<p>Levels were then sketched, then roughly blocked-out using primitive 3D shapes for a sense of scale, space, and design, while being easy to reconfigure to achieve the perfect layout. When content with the layout following thorough testing, I would gradually increase the fidelity with more textures and 3D models. This fast, in-engine approach was useful for scaling objects, ensuring views were aesthetic and environments traversable, and quickly testing various ideas.</p>
-<figure><img src="Source/ProjectData/TheTower/prison-editor.jpg"/>
-<figcaption>Part of the <dieg>Prison</dieg>, inside the editor.</figcaption></figure>
 <figure><img src="Source/ProjectData/TheTower/player-ref.jpg">
 <figcaption>I used references of the player's height to best aesthetically size level components in-editor.</figcaption></figure>
+<p>Levels were then sketched, then roughly blocked-out using primitive 3D shapes for a sense of scale, space, and design, while being easy to reconfigure to achieve the perfect layout. When content with the layout following thorough testing, I would gradually increase the fidelity with more textures and 3D models. This fast, in-engine approach was useful for scaling objects, ensuring views were aesthetic and environments traversable, and quickly testing various ideas.</p>
 
+<figure><img src="Source/ProjectData/TheTower/panopticon.png">
+<figcaption>Part of the prison, in-game.</figcaption></figure>
+<figure><img src="Source/ProjectData/TheTower/prison-editor.jpg"/>
+<figcaption>Part of the <dieg>Prison</dieg>, inside the editor.</figcaption></figure>
+<figure><img src="Source/ProjectData/TheTower/panopticon-sketch.jpg">
+<figcaption>A rough sketch for the same part of the <dieg>Prison</dieg>.</figcaption></figure>
 <p>The Prison was the focus of the level design for the demo. It was inspired by the Prison of Hope in <cite>Demon's Souls</cite> (FromSoftware, 2009), with a similar atmosphere and tension, but with the addition of offering the player multiple routes according to their strengths. It also contains side-areas embellishing the world and narrative. The area is designed to simultaneously fit into and enhance the rest of the game.</p>
 
 <!-- U S E R    T E S T S -->
