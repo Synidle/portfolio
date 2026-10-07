@@ -382,7 +382,7 @@ let projectPhraseDex = new Project(
         Skill.PROTOTYPING,
         Skill.UX
     ],
-    "Mobile application for travel, that contextually generates useful phrases using APIs.",
+    "Mobile application for travel, that contextually generates useful phrases using APIs. It demonstrates an ability to design a novel technological solution for an existing problem, supported by strong UX design.",
     [
         new ImageReference(
             "PhraseDex/image-00.jpg",
@@ -856,13 +856,13 @@ projects = [
     projectPhraseDex,
     projectSkyCityVR,
     projectBarleyHall,
-    projectFPSRPG,
+    // projectFPSRPG,
     projectWorkingTitle,
     projectSpriteShop,
-    projectMetamorphosis,
+    // projectMetamorphosis,
     essayRemakes,
     essayEastWest,
-    essayLatin,
+    // essayLatin,
     essayFanCreations,
     // essayAuthenticity
 ];
