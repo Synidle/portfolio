@@ -7,6 +7,21 @@ main {
 }
 #hp-links {
     margin-bottom: 4em;
+
+    ul {
+        padding-left:1em;
+        list-style: none;
+        line-height:2em;
+    }
+
+    li, a {
+        display:block;
+        width:100%;   
+        
+        &:hover {
+            background-color: var(--nav-btn-hvr-clr);
+        }
+    }
 }
 
 #hp-project-highlights > ul{
