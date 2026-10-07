@@ -10,7 +10,8 @@ navElement.id = "main-nav";
 /** id, text, page */
 const pages = [
     ["nav-home", "Home", "homepage.html"],
-    ["nav-projects", "Projects", "project-list.html"]
+    ["nav-projects", "Projects", "project-list.html"],
+    ["nav-cv", "CV", "cv.html"]
 ];
 
 for (const [id, text, page] of pages) {
