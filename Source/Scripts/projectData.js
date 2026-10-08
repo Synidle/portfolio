@@ -404,6 +404,11 @@ let projectPhraseDex = new Project(
     [],
     "Sole designer & developer"
 );
+let pagePhraseDex = new ProjectPage(
+    ID_PHRASE_DEX,
+    projectPhraseDex,
+    "Source/ProjectPages/PhraseDex.html"
+);
 //#endregion
 
 //#region Unbounded Fault
@@ -875,12 +880,12 @@ projects = [
     projectTheTower,
     projectUnboundedFault,
     projectDigitalGhostGate,
-    projectPhraseDex,
     projectSkyCityVR,
+    projectWorkingTitle,
     projectBarleyHall,
     // projectFPSRPG,
-    projectWorkingTitle,
     projectSpriteShop,
+    projectPhraseDex,
     // projectMetamorphosis,
     essayRemakes,
     essayEastWest,
@@ -894,7 +899,8 @@ projectPages = [
     pageFecklessFox,
     pageUnboundedFault,
     pageDigitalGhostGate,
-    pageSpriteShop
+    pageSpriteShop,
+    pagePhraseDex,
 ]
 
 for (let p of projects)
