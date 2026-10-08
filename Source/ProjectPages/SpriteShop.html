@@ -4,6 +4,21 @@
 <figure><img src="Source/ProjectData/SpriteShop/application-overview.png">
 <figcaption>(Left) Sprite customisation and (Right) the <cite>Court Jester</cite> card game.</figcaption></figure>
 
+<!-- S Y S T E M S -->
+<h3 id="pp-systems-design">Systems Design</h3>
+
+<p>This application takes the formula of typical "cookie-clicker" sites intended as basic distractions, and introduces engagement beyond the arbitrary increasing of numbers:
+    <ul>
+        <li>Profit can be augmented through a fun minigame</li>
+        <li>Profit can be creatively spent towards customising a character</li>
+    </ul>
+</p>
+<p>That rewards fund customisation tangibly rewards the player, in a manner often missing from minigames.</p>
+
+<figure><img src="source/ProjectData/SpriteShop/hierarchy.jpg">
+<figcaption>Flowchart of application hierarchy.</figcaption></figure>
+<p>The application utilises a poly-hierarchy to facilitate a multifaceted system involving a loop of investment, feedback, and reward that can be interrupted by a minigame.</p>
+
 <!-- G A M E    D E S I G N -->
 <h3 id="pp-game-design">Game Design</h3>
 
@@ -17,3 +32,37 @@
 </ul>
 <p>I wished this to be a card game, to suit the "casino" context, inspired by the minigames from <cite>Super Mario 64 DS</cite> (Nintendo EAD, 2004). However, no existing card games comfortably fit my requirements, so I created my own: <cite>Court Jester</cite>.</p>
 <p>I was inspired by the fun and straightforward gameplay of <cite>Uno</cite> (Merle Robbins, 1971) and the unpredictability of <cite>Exploding Kittens</cite> (Lee, E. & Small, S., 2015) — both of which work best with sizeable groups of people, so requiring adaptation towards my primary requirement.</p>
+
+<!-- U X D -->
+<h3 id="pp-uxd">User Experience Design</h3>
+
+<p>The project exhibits strong UX design, with focus on:<ul>
+    <li>Accessibility</li>
+    <li>Ease of use</li>
+    <li>Enjoyment</li>
+</ul></p>
+
+<p>This was achieved through:<ul>
+    <li>Thorough use of affordances</li>
+    <li>Clarity of current state</li>
+    <li>Clear objectives</li>
+    <li>Multiple paths to objective</li>
+    <li>Helpful organisation of information</li>
+</ul></p>
+
+<p>Pages are kept minimalist while directing the user where to click for further information or content.</p>
+<p>Soft, "friendly" colours are used throughout to fit the relaxed, leisurely theme of the project.</p>
+<p>Bolder colours and animations are used sparingly and for the benefit of making the card game more engaging and moreover directing the player where to click, reducing their mental load.</p>
+
+<p><cite>Court Jester</cite> was intentionally implemented using HTML-elements only, for the benefit of accessibility: it can even be played with a screen-reader.</p>
+
+<figure><img src="Source/ProjectData/SpriteShop/narrow-display.jpg">
+<figcaption>The homepage on a narrow display.</figcaption></figure>
+<p>The application adapts to screen-width, enabling play on multiple devices, or to be open on the side while simultaneously doing something else. On extremely narrow displays, superfluous content is removed, or content is abbreviated, or put into the background.</p>
+
+<!-- F U T U R E -->
+<h3 id="pp-future">Future Opportunity</h3>
+
+<p>I would develop the sprite feature towards more a virtual-pet system, with mechanics beyond customisation.</p>
+<p>Customisation can also be enhanced by introducing additional animals that can be chosen beyond the default cat.</p>
+<p>A fully-realised product would also involve inter-player features to encourage customisation and expression, with minigames also playable between players. This might work over LAN, to create a fun digital passtime for people within the same environment, such as a school computer suite.</p>
