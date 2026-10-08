@@ -686,7 +686,7 @@ let projectWorkingTitle = new Project(
 //#region Sprite Shop
 let projectSpriteShop = new Project(
     ID_SPRITE_SHOP,
-    "Sprite Shop",
+    "Sprite Shop & Court Jester",
     2025,
     Status.COMPLETE,
     Format.WEBSITE,
@@ -705,18 +705,40 @@ let projectSpriteShop = new Project(
         Skill.TESTING,
         Skill.UX,
     ],
-    "A website in which you make money through purchasing businesses and playing cards, with which you can purchase clothes to customise a sprite.",
+    "A website in which you make money through purchasing businesses and playing a custom card-game \"Court Jester\", with which you can purchase clothes to customise a sprite. It demonstrates a careful design and marriage of different systems towards an overall fun experience, bolstered through strong UX design.",
     [
         new ImageReference(
-            "",
+            "SpriteShop/sprite-close-up.jpg",
             ""
         ),
     ],
     [
-
+        new Inspiration(
+            "Super Mario 64 DS",
+            "Nintendo EAD",
+            2004,
+            "Casino minigames"
+        ),
+        new Inspiration(
+            "Uno",
+            "Merele Robbins",
+            1971,
+            "Card game mechanics"
+        ),
+        new Inspiration(
+            "Exploding Kittens",
+            "Lee, E. & Small, S.",
+            2015,
+            "Card game mechanics"
+        ),
     ],
     "Sole designer & developer",
     "https://synidle.github.io/sprite-shop/"
+);
+let pageSpriteShop = new ProjectPage(
+    ID_SPRITE_SHOP,
+    projectSpriteShop,
+    "Source/ProjectPages/SpriteShop.html"
 );
 //#endregion
 
@@ -871,7 +893,8 @@ projectPages = [
     pageTheTower,
     pageFecklessFox,
     pageUnboundedFault,
-    pageDigitalGhostGate
+    pageDigitalGhostGate,
+    pageSpriteShop
 ]
 
 for (let p of projects)
