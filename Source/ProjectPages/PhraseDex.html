@@ -30,11 +30,47 @@
     <li>Time of day</li>
 </ul></p>
 
+<p>The target language is automatically selected instantaneously based on the device's network.</p>
+<p>I decided it best to approximate temperature based on the device battery temperature as this is instant and requires little use of resources; moreover most devices lack ambient temperature sensors.</p>
+
+<figure><img src="Source/ProjectData/PhraseDex/activity-flowchart.jpg">
+<figcaption>A flowchart of the application's constituant activities.</figcaption></figure>
+
+<p>A recursive algorithm enables phrases to be loaded on a separate thread, and each phrase available as soon as it is loaded, so the user can keep scrolling through phrases seamlessly.</p>
+
 <!-- U X D -->
 <h3 id="pp-ux">UX Design</h3>
 
+<figure><img src="Source/ProjectData/PhraseDex/main-activity-analysis.jpg">
+<figcaption>Analysis of the Main Activity, which opens on starting the application.</figcaption></figure>
+
+<p>The motivation behind my UX Design was ease of use, particularly on a small device, and within any setting. For example, I wanted the application to be navigable with one hand, and without much need to search, or press small buttons.</p>
+
+<figure><img src="Source/ProjectData/PhraseDex/save-phrase-analysis.jpg">
+<figcaption>Demonstration of saving phrases.</figcaption></figure>
+
+<p>For comfortability of use, I also decided some features should be accessible by multiple means, fitting the particular intuition of the user.</p>
+
+<figure><img src="Source/ProjectData/PhraseDex/dark-theme-analysis.jpg">
+<figcaption>The dark theme and the how-to-use box.</figcaption></figure>
+
+<p>Given the application should be suitable for as varied contexts as possible, the implementation of a dark theme for low-lit environments was a priority.</p>
+
 <!-- P R O B L E M S -->
-<h3 id="pp-problems">Problems Encountered</h3>
+<h3 id="pp-problems">Challenges Overcome</h3>
+
+<p>Many challenges came from using imperfect, free APIs.</p>
+
+<p>First, the inaccuracy of location data was remedied by asking the user to verify their location.</p>
+<p>Second, the translation API would return Chinese and Japanese-language text in their native scripts; while a library existed for romanising Chinese script, none did for Japanese, requiring me to develop my own algorithm that worked in conjunction with a Japanese dictionary API.</p>
+<p>Third, the translations themselves can be inaccurate; this is resolved as far as possible heuristically.</p>
+
+<p>A major UX challenge was having the same content on screen whilst it being compact enough for small devices. I ended up omitting the feature of saving phrases directly from the sidebar as it was too difficult to interact with on a phone.</p>
 
 <!-- E V A L U A T I O N -->
 <h3 id="pp-evaluation">Evaluation & Opportunities</h3>
+
+<figure><img src="Source/ProjectData/PhraseDex/requirements-review.jpg">
+<figcaption>A review of my requirements.</figcaption></figure>
+
+<p>Because of the APIs used, the translations are inaccurate; were this application released commercially, I would make use of an AI language model instead for a greater range of more accurate translations.</p>
