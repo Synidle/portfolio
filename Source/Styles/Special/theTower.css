@@ -70,6 +70,10 @@ h4 {
     font-size:.84em;
 }
 
+#project-header, #project-body {
+    border-right: solid;
+}
+
 #project-body {
     font-family:"Cormorant", serif;
     font-weight:700;
