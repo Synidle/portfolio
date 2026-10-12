@@ -11,6 +11,9 @@ nav#main-nav a:hover {
 
 #project-header {
     font-family:"Libre Baskerville";
+
+    outline: solid thin;
+    padding-left: 1em; padding-right: 1em;
 }
 
 #project-information, #project-inspiration {
