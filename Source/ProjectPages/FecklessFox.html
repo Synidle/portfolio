@@ -3,7 +3,8 @@
 <p><i>Feckless Fox</i> was created for a university assessment requiring the creation of an interactive 3D environment in the Unity game engine. My solution was to create a 3D platforming level with a custom character controller, with a complex level design of multiple paths and areas, multiple collectables, and an upgrade item enabling further exploration on replaying the level. I received a grade of 91 for this project: <i>"an exceptional experience through and through... like a demo of a professional game akin to the inspiration example mentioned in the report"</i>, with <i>"complexity and fun coming from the rich level design"</i> and being <i>"easy pick up and play for all audience types"</i>.</p>
 <p>The project took a period of around three months to complete.</p>
 
-<figure><img src="Source/ProjectData/FecklessFox/building-top.png" /></figure>
+<figure><img src="Source/ProjectData/FecklessFox/tower-view.jpg" />
+<figcaption>Great view of the level from the tower climb.</figcaption></figure>
 
 <p><i>Feckless Fox</i> is inspired by 3D platformers of the '90s and early '00s, such as <i>Mario 64</i> (Nintendo, 1996), <i>Sonic Adventure</i> (Sonic Team, 1998), and <i>Rayman 2</i> (Ubi Pictures, 1999), aspiring to achieve the same timelessness achieved by an aesthetic appealing to children and adults alike, and accommodation of all skill levels.</p>
 
@@ -21,6 +22,9 @@
 <p>I was sure that I wanted an initial playthrough to take the player deep into the sewer, which I wanted to contrast with an optional later objective upon the rooftops, possible only with the unlocked spin-jump ability.</p>
 
 <p>To facilitate the construction of a fun level, I first implemented the character controller in almost its entirety.</p>
+
+<figure><img src="Source/ProjectData/FecklessFox/wall-top.jpg" />
+<figcaption>Wall section, occupied by enemies further down.</figcaption></figure>
 
 <!-- L E V E L    D E S I G N -->
 <h3 id="pp-level-design">Level Design</h3>
@@ -55,13 +59,16 @@
 
 <p>The setting of the level is inspired by the authentic town environments of <i>Sonic Unleashed</i> (Sonic Team, 2008), which are fun to explore and make the world feel real and immersive.</p>
 
-<img src="Source/ProjectData/FecklessFox/building-climb.png" />
+<figure><img src="Source/ProjectData/FecklessFox/beams.jpg" />
+<figcaption>Beams leading across rooftops.</figcaption></figure>
 
 <p>The goal was to make organic use of environmental elements. For example, platforming inside and outside houses and around towers.</p>
-<img src="Source/ProjectData/FecklessFox/street-birdseye.png" />
+<figure><img src="Source/ProjectData/FecklessFox/street-birdseye.png" />
+<figcaption>A platforming section inside the editor.</figcaption></figure>
 
 <p>Positioning of items, points of interest, and objects to allow for directional light and shadow, indicate where to go. I considered what the player's view should be during all sections of the level, particularly the light from the moon and the height variation of buildings.</p>
-<img src="Source/ProjectData/FecklessFox/buildings-moon.png" />
+<figure><img src="Source/ProjectData/FecklessFox/buildings-moon.png" />
+<figcaption>The light of the moon highlights the path forwards.</figcaption></figure>
 
 <h3 id="pp-walkthrough">Walkthrough</h3>
 
@@ -85,29 +92,37 @@
 <h3 id="pp-implementation">Implementation</h3>
 
 <p>Spot-lights are positioned to produce shadows for visual effect. Lighting colour, position, direction, intensity, all contribute to an aesthetic.</p>
-<img src="Source/ProjectData/FecklessFox/spotlight.png" />
-<img src="Source/ProjectData/FecklessFox/walkthrough-timbers.png" />
+<figure><img src="Source/ProjectData/FecklessFox/spotlight.png" />
+<figcaption>A spot-light in-editor.</figcaption></figure>
+<figure><img src="Source/ProjectData/FecklessFox/walkthrough-timbers.png" />
+<figcaption>Example of the application of lighting; here to mimic steps, giving a sense of descent.</figcaption></figure>
 
 <p>A flickering fire was made by having the light-source and fire image vary in intensity according to Perlin noise. The sound was that of a shower, reduced in pitch, through a low-pass filter.</p>
 
 <p>3D sound effects are used to invoke feelings, such as trepidation through the wind sound when upon the walls, and increased proximituy to the source escalates the feeling. I made all sound effects by recording household items and editing the recording, or by producing a sound using a MIDI editor and filters.</p>
-<img src="Source/ProjectData/FecklessFox/three-d-sound.png" />
+<figure><img src="Source/ProjectData/FecklessFox/three-d-sound.png" />
+<figcaption>3D sound zones in-editor.</figcaption></figure>
 
 <p>I enhanced performance by using simplified meshes for the collision part of level geometry.</p>
-<img src="Source/ProjectData/FecklessFox/pipe-blender.png" />
+<figure><img src="Source/ProjectData/FecklessFox/pipe-blender.png" />
+<figcaption>For the sewer pipe segment, both its visible model and simplified collision mesh, in Blender.</figcaption></figure>
 
 <p>Particles emphasise effect and dynamics, particularly where there is a hazard. Here large particules rise and change from white to green and fade to transparent, imitating the effect of a waterfall.</p>
-<img src="Source/ProjectData/FecklessFox/waterfall-particles.png" />
+<figure><img src="Source/ProjectData/FecklessFox/waterfall-particles.png" />
+<figcaption>"Waterfall" particule effect, in-editor.</figcaption></figure>
 
 <h3 id="pp-gameplay">Gameplay</h3>
 
 <p>While the game is best played with a controller, I ensured that it can also be played with a keyboard, to increase its accessibility.</p>
-<img src="Source/ProjectData/FecklessFox/controls.png" />
+<figure><img src="Source/ProjectData/FecklessFox/controls.png" />
+<figcaption>Control bindings for both PlayStation controller and keyboard.</figcaption></figure>
 
 <h3 id="pp-challenges">Challenges Overcome</h3>
 
 <p>When having a friend test the level, he climbed up the fallen lamppost at the start — which I had not foreseen — so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
-<img src="Source/ProjectData/FecklessFox/start.png" />
+<figure><img src="Source/ProjectData/FecklessFox/level-start.jpg" /></figure>
+<figure><img src="Source/ProjectData/FecklessFox/secret-life.jpg" />
+<figcaption>Secret area offering an extra life at the start of the level.</figcaption></figure>
 
 <p>The dark atmosphere created a challenge of how to illustrate the path. I had to make best use of everything at my disposal. In the screenshot below, the next platform is illuminated, and the shadow aligns with the succeeding platform. Contrasting materials also highlighted platforms.</p>
 <img src="Source/ProjectData/FecklessFox/highlight-platform.png" />
