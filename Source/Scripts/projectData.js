@@ -185,24 +185,40 @@ let projectTheTower = new Project(
     `An open-world action-<abbr>rpg</abbr> with all design aiming towards realisation of the sublime, with a careful balance of mystery and transparency. It demonstrates a congregation of all my skills from narrative design and programming to dialogue-writing and music-production.`,
     [
         new ImageReference(
-            "TheTower/marksman.png",
-            "A screenshot from the top of a tower, facing an enemy guard holding a crossbow, overlooking planes, a huge tower, and distant mountains."
+            "TheTower/gatetown-bridge.png",
+            ""
         ),
-        // new ImageReference(
-        //     "TheTower/image-00.jpg",
-        //     "A screenshot of a town and an immense tower at sunset, visible across planes and a long bridge."
-        // ),
         new ImageReference(
             "TheTower/dragon.jpg",
             "A screenshot from within a dungeon, of a dragon breathing fire."
         ),
         new ImageReference(
-            "TheTower/church.png",
-            "A screenshot of a ruined church upon a hill."
+            "TheTower/amelia.png",
+            ""
         ),
+        new ImageReference(
+            "TheTower/marksman.png",
+            "A screenshot from the top of a tower, facing an enemy guard holding a crossbow, overlooking planes, a huge tower, and distant mountains."
+        ),
+        new ImageReference(
+            "TheTower/prison-dining.png",
+            ""
+        ),
+        // new ImageReference(
+        //     "TheTower/image-00.jpg",
+        //     "A screenshot of a town and an immense tower at sunset, visible across planes and a long bridge."
+        // ),
+        // new ImageReference(
+        //     "TheTower/church.png",
+        //     "A screenshot of a ruined church upon a hill."
+        // ),
         new ImageReference(
             "TheTower/feckless-inn.png",
             "A screenshot inside a comfortable inn, with drinks on tables and a blazing fireplace."
+        ),
+        new ImageReference(
+            "TheTower/intro.png",
+            ""
         ),
     ],
     [
