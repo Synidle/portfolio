@@ -1,0 +1,16 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .01em;
+}
+
+main {
+    background-color:beige;
+}
+
+h1, h2, h3 {
+    font-family:"Comic Relief", sans-serif;
+}
+
+figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

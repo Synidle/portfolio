@@ -435,7 +435,8 @@ let projectPhraseDex = new Project(
 let pagePhraseDex = new ProjectPage(
     ID_PHRASE_DEX,
     projectPhraseDex,
-    "Source/ProjectPages/PhraseDex.html"
+    "Source/ProjectPages/PhraseDex.html",
+    "Source/Styles/Special/phraseDex.css"
 );
 //#endregion
 
