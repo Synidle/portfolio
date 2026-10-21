@@ -34,6 +34,7 @@ header, h2, h3, i, a, figcaption, cite {
     letter-spacing:.01em;
 }
 h3 {font-size:x-large;}
+figcaption {background-color: goldenrod; font-weight:bold; padding:.15em;}
 cite {letter-spacing:.08em;}
 
 a {

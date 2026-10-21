@@ -15,6 +15,9 @@
 
 <p>A particular moment I always had in mind was tempting the player to make a leap beyond their reach, only to then fall into a new area to be awarded the ability and have them try the jump again. I wanted to teach the use of the mechanic through level design alone.</p>
 
+<figure><img src="Source/ProjectData/FecklessFox/sewer-pipes.jpg" />
+<figcaption>The sewer section, which teaches the spin jump mechanic through escalating challenges.</figcaption></figure>
+
 <p>I could not implement all considered features, wanting to focus on level design rather than complex mechanics and dynamic elements (e.g. multiple enemy types) for the demo. My early design notes also describe specific camera angles for different moments, which would be time-consuming to implement, so the demo has exclusively a free camera. </p>
 
 <p>In the mood of classic platformers and fitting the fox character, I envisioned a scavenging "collectathon" style objective; the sprawling level design accomodates this though beyond coins and utility items there is nothing yet to seek out. The goal is not to collect items but to reach the end of the level; more linearity better supports having a narrative within which the level takes place. However, that I have multiple exits to the level will accomodate a complex world map.</p>
@@ -43,6 +46,9 @@
 </ol>
 
 <p>The level shown is early in the game, introducing the spin-jump mechanic. The level design teaches this mechanic. It is designed with replayability in mind, with multiple routes of varying challenge, secrets to find, and routes accessible only on replaying the level with the spin-jump unlocked.</p>
+
+<figure><img src="Source/ProjectData/FecklessFox/building-leap.jpg" />
+<figcaption>An optional path that can be taken on replay, with the new ability.</figcaption></figure>
 
 <p>Additionally, I wanted to convey a kind of narrative through level design alone, without dialogue; and moreover have the player have particular feelings during different parts of the level, and depending on how the level is approached.</p>
 
@@ -120,21 +126,26 @@
 <h3 id="pp-challenges">Challenges Overcome</h3>
 
 <p>When having a friend test the level, he climbed up the fallen lamppost at the start — which I had not foreseen — so breaking out of bounds. I appreciated this creative use of organic decorative pieces as traversable level pieces, so rather than preventing walking up the lamppost, or completely sealing off the area it led to, I incorporated that area into the level as a secret, and hid an item there to reward attentive players.</p>
-<figure><img src="Source/ProjectData/FecklessFox/level-start.jpg" /></figure>
+<figure><img src="Source/ProjectData/FecklessFox/level-start.jpg" />
+<figcaption>The start of the level.</figcaption></figure>
 <figure><img src="Source/ProjectData/FecklessFox/secret-life.jpg" />
 <figcaption>Secret area offering an extra life at the start of the level.</figcaption></figure>
 
 <p>The dark atmosphere created a challenge of how to illustrate the path. I had to make best use of everything at my disposal. In the screenshot below, the next platform is illuminated, and the shadow aligns with the succeeding platform. Contrasting materials also highlighted platforms.</p>
-<img src="Source/ProjectData/FecklessFox/highlight-platform.png" />
+<figure><img src="Source/ProjectData/FecklessFox/highlight-platform.png" />
+<figcaption>Lighting has been used to give a greater sense of depth and subtly highlight platforms that are part of the environment.</figcaption></figure>
 
 <figure><img src="Source/ProjectData/FecklessFox/rat-enemy-behaviour.jpg">
 <figcaption>My illustration of the enemy behaviour.</figcaption></figure>
 <p>There were some challenges faced in programming. For example, how to handle enemy behaviour within my state machine system, given enemies are motivate by AI rather than player input. I considered moving action code — such as executing movement — into State classes so that state and behaviour become entwined, but doing such would mean my classes were no longer limited to exact purposes. Instead, I used my existing code but with two state machines for enemies: the action state machine is the same as that of the player — what the enemy is <i>doing</i>; the behaviour state machine is for AI specifically — what the enemy is <i>intending</i>. Enemies simultaneously have an action state and a behaviour state.</p>
-<img src="Source/ProjectData/FecklessFox/rat-heirarchy.png" />
-<img src="Source/ProjectData/FecklessFox/chase-behaviour-state.png" />
+<figure><img src="Source/ProjectData/FecklessFox/rat-heirarchy.png" />
+<figcaption>The heirarchy of the Rat entity in the editor.</figcaption></figure>
+<figure><img src="Source/ProjectData/FecklessFox/chase-behaviour-state.png" />
+<figcaption>The code for a behaviour state class.</figcaption></figure>
 
 <p>Another programming issue was how to handle interaction with moving platforms, given the simple and traditional method of reparenting the player to the platform on contact worked inconsistently, and changing the player object's position in the scene heirarchy is undesirable and has the potential to cause future problems. I therefore implemented a system whereby I can assign the player a "virtual parent", namely a variable used in position calculations to achieve the effect of reparenting the player without needing to do so.</p>
-<img src="Source/ProjectData/FecklessFox/virtual-parent.png" />
+<figure><img src="Source/ProjectData/FecklessFox/virtual-parent.png" />
+<figcaption>"Virtual parent" implementation code.</figcaption></figure>
 
 <h3 id="pp-reflection">Reflection</h3>
 
@@ -145,3 +156,6 @@
 <p>I would like to enhance the game with a flying enemy with a projectile attack, adding variety to platforming via a mobile obstacle.</p>
 <p>Moreover, shaders might be used to add texture to the liquids.</p>
 <p>Finally, I would consider adding music, becaues I do not like the moments of silence; but the music must be appropriate and not detract from the ambience. It must therefore be tailor-made, not added for the sake of having music.</p>
+
+<figure><img src="Source/ProjectData/FecklessFox/building-top.jpg" />
+<figcaption>Top of a building as part of an optional path, offering an extra life.</figcaption></figure>
