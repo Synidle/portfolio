@@ -23,8 +23,7 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
 
     if (project.images.length >= 1) {
         image = document.createElement("img");
-        image.src = `Source/ProjectData/${project.images[0].source}`;
-        image.alt = project.images[0].alt;
+        setImageByIndex(image, 0);
     }
     else {image = null;}
 
@@ -89,7 +88,7 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
         if (displayingImageIndex >= project.images.length)
             displayingImageIndex = 0;
         if (image != null)
-            image.src = `Source/ProjectData/${project.images[displayingImageIndex].source}`;
+            setImageByIndex(image, displayingImageIndex);
     });
 
     this.button.addEventListener("click", () => {
@@ -97,4 +96,14 @@ function ProjectButton(project, showFormat=true, showTags=true, showRole=true, s
     });
 
     this.button.href = `project.html?project=${this.project.id}`;
+
+    /**
+     * 
+     * @param {HTMLImageElement} image
+     * @param {number} index 
+     */
+    function setImageByIndex(image, index) {
+        image.src = project.images[index].weblink ? project.images[index].source : `Source/ProjectData/${project.images[index].source}`;
+        image.alt = project.images[index].alt;
+    }
 }

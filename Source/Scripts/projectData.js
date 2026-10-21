@@ -744,6 +744,14 @@ let projectSpriteShop = new Project(
             "SpriteShop/sprite-close-up.jpg",
             ""
         ),
+        new ImageReference(
+            "SpriteShop/shop.jpg",
+            ""
+        ),
+        new ImageReference(
+            "SpriteShop/application-overview.png",
+            ""
+        ),
     ],
     [
         new Inspiration(
@@ -828,7 +836,13 @@ let essayRemakes = new Project(
         Skill.WRITING
     ],
     "A critical and nuanced analysis of the value of remakes through a critique of Bluepoint's 2020 Demon's Souls, arguing that remakes are a product of the ideology of contemporary digital society.",
-    [],
+    [
+        new ImageReference(
+            "https://upload.wikimedia.org/wikipedia/en/f/fe/Demon_Souls_Remake_screenshot.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+            "",
+            weblink=true
+        )
+    ],
     [],
     "Author"
 );
@@ -846,7 +860,13 @@ let essayEastWest = new Project(
         Skill.WRITING
     ],
     "A rebuke of existing literature suggesting Eastern and Western games vary for socioeconomic happenstance, rather arguing that the differences are deeply ideological, exposing a need for the preservation of differences rather than the erasure of cultural artefacts.",
-    [],
+    [
+        new ImageReference(
+            "https://upload.wikimedia.org/wikipedia/en/a/ae/Ico_gameplay.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+            "",
+            weblink=true
+        )
+    ],
     [],
     "Author"
 );
@@ -881,7 +901,13 @@ let essayFanCreations = new Project(
         Skill.WRITING
     ],
     "An analysis of the dialectic between professionally-made videogames and derivative fan creations, and the extent to which this has both transferred power from game companies to audiences and simultaneously enabled the companies to benefit.",
-    [],
+    [
+        new ImageReference(
+            "https://upload.wikimedia.org/wikipedia/en/d/de/Doom_ingame_1.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+            "",
+            weblink=true
+        )
+    ],
     [],
     "Author"
 );

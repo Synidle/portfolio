@@ -59,10 +59,12 @@ const Skill = Object.freeze({
  */
 function ImageReference(
     source,
-    alt
+    alt,
+    weblink = false
 ) {
     this.source = source;
     this.alt = alt;
+    this.weblink = weblink;
 }
 
 /**
