@@ -88,6 +88,7 @@ else {
 function getListItemsFrom(array, formatter=null) {
     let val = "";
     for (let i of array) {
+        if (i == undefined || i == null) continue;
         if (formatter != null) i = formatter(i); 
         val += `<li>${i}</li>`;
     }
