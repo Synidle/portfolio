@@ -836,7 +836,7 @@ let essayRemakes = new Project(
         Skill.GAME_DESIGN,
         Skill.WRITING
     ],
-    "A critical and nuanced analysis of the value of remakes through a critique of Bluepoint's 2020 Demon's Souls, arguing that remakes are a product of the ideology of contemporary digital society.",
+    "A critical and nuanced analysis of the value of remakes through a critique of Bluepoint's 2020 Demon's Souls, arguing that remakes are a product of the ideology of contemporary digital society. Makes use of real theories of adaptation and history.",
     [
         new ImageReference(
             "https://upload.wikimedia.org/wikipedia/en/f/fe/Demon_Souls_Remake_screenshot.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
