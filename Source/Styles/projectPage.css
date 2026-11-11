@@ -8,7 +8,8 @@ main {
     grid-template-areas:
         "header     information"
         "contents   inspiration"
-        "body      inspiration";
+        "body       inspiration"
+        "appendix   inspiration";
 
     gap: 3rem;
 }
@@ -31,6 +32,10 @@ main {
 
 #project-inspiration {
     grid-area: inspiration;
+}
+
+#project-appendix {
+    grid-area: appendix;
 }
 
 #project-contents {
@@ -76,7 +81,8 @@ main {
             "contents"
             "information"
             "body"
-            "inspiration";
+            "inspiration"
+            "appendix";
         margin:0;
         padding:0;
         width:100%;

@@ -847,6 +847,11 @@ let essayRemakes = new Project(
     [],
     "Author"
 );
+let pageRemakes = new ProjectPage(
+    ID_ESSAY_REMAKES,
+    essayRemakes,
+    "Source/ProjectPages/RemakesAnalysis.html"
+);
 
 let essayEastWest = new Project(
     ID_ESSAY_EAST_WEST,
@@ -956,6 +961,7 @@ projectPages = [
     pageDigitalGhostGate,
     pageSpriteShop,
     pagePhraseDex,
+    pageRemakes
 ]
 
 for (let p of projects)

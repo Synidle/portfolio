@@ -37,47 +37,45 @@ document.getElementById("project-inspirations").innerHTML = getListItemsFrom(pro
 if (project.format == Format.ESSAY) {
     document.getElementById("project-inspiration").hidden = true;
     document.getElementById("project-contents").hidden = true;
-    document.getElementById("project-body").innerHTML = 
-        `<embed
-            src="Source/ProjectData/Essays/${project.id}.pdf"
-            type="application/pdf"
-            width="100%"
-            height="800px">`;
+    document.getElementById("project-appendix").innerHTML = 
+    `<embed
+        src="Source/ProjectData/Essays/${project.id}.pdf"
+        type="application/pdf"
+        width="100%"
+        height="800px">`;    
 }
-// Handle project
+
+document.getElementById("project-link").innerHTML = project.link;
+
+if (projectPage == undefined) {
+    console.log(projectPagesLookup);
+    throw new Error(`No project page found for ID ${projectID}`); 
+}
 else {
-    document.getElementById("project-link").innerHTML = project.link;
-    
-    if (projectPage == undefined) {
-        console.log(projectPagesLookup);
-        throw new Error(`No project page found for ID ${projectID}`); 
-    }
-    else {
-        fetch(projectPage.content)
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser(); 
-                const projectPageDocument = parser.parseFromString(html, "text/html");
-                const projectHeadings = projectPageDocument.getElementsByTagName("h3");
+    fetch(projectPage.content)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser(); 
+            const projectPageDocument = parser.parseFromString(html, "text/html");
+            const projectHeadings = projectPageDocument.getElementsByTagName("h3");
 
-                document.getElementById("project-body").innerHTML = html; 
+            document.getElementById("project-body").innerHTML = html; 
 
-                // Populate contents
-                const contentsList = document.getElementById("project-contents-list");
-                for (let heading of projectHeadings) {
-                    if (heading.hasAttribute("id")) {
-                        const listItem = document.createElement("li");
-                        const anchor = document.createElement("a");
+            // Populate contents
+            const contentsList = document.getElementById("project-contents-list");
+            for (let heading of projectHeadings) {
+                if (heading.hasAttribute("id")) {
+                    const listItem = document.createElement("li");
+                    const anchor = document.createElement("a");
 
-                        anchor.textContent = heading.textContent;
-                        anchor.href = `#${heading.id}`;
+                    anchor.textContent = heading.textContent;
+                    anchor.href = `#${heading.id}`;
 
-                        listItem.appendChild(anchor);
-                        contentsList.appendChild(listItem);
-                    }
+                    listItem.appendChild(anchor);
+                    contentsList.appendChild(listItem);
                 }
-            });
-    }
+            }
+        });
 }
 
 /**
