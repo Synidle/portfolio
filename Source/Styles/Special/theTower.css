@@ -1,10 +1,13 @@
-html {
+html, main {
     background-color:wheat;
 
     font-variant-numeric:oldstyle-nums;
     font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
 }
 
+nav#main-nav a {
+    color:black;
+}
 nav#main-nav a:hover {
     background-color:goldenrod;
 }

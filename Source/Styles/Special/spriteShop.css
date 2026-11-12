@@ -1,4 +1,4 @@
-body {
+main, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(178, 219, 255);
 }
@@ -9,6 +9,9 @@ body {
 
 #main-nav a, #project-contents-list {
     background-color:rgb(235, 235, 98);
+}
+nav#main-nav a {
+    color:black;
 }
 nav#main-nav a:hover {
     background-color:rgb(163, 163, 16);

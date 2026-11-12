@@ -2,6 +2,7 @@ nav#main-nav{
     a {
         color:white;
         &:hover {
+            color:white;
             background-color: transparent;
             text-decoration:underline;
             text-decoration-thickness: .1em;
@@ -28,7 +29,7 @@ nav#main-nav{
     }
 }
 
-body {
+body, main {
     background-color: black;
     color:white;
     font-family:"Special Elite", system-ui;
