@@ -9,7 +9,7 @@ const Format = Object.freeze({
     VIDEOGAME: "Videogame",
     WEBSITE: "Website",
     APPLICATION: "Application",
-    FILM: "Film",
+    // FILM: "Film",
     ESSAY: "Essay",
 });
 
@@ -32,9 +32,9 @@ const Skill = Object.freeze({
     NARRATIVE_DESIGN: "Narrative Design",
     LEVEL_DESIGN: "Level Design",
     MISSION_DESIGN: "Mission Design",
-    ECONOMY_DESIGN: "Economy Design",
-    PROGRESSION_DESIGN: "Progression Design",
-    AI_DESIGN: "AI Design",
+    // ECONOMY_DESIGN: "Economy Design",
+    // PROGRESSION_DESIGN: "Progression Design",
+    // AI_DESIGN: "AI Design",
     PLANNING: "Project Planning",
     LEADERSHIP: "Leadership",
     GROUPWORK: "Groupwork",
