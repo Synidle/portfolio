@@ -894,6 +894,11 @@ let essayEastWest = new Project(
     [],
     "Author"
 );
+let pageEastWest = new ProjectPage(
+    ID_ESSAY_EAST_WEST,
+    essayEastWest,
+    "Source/ProjectPages/EastWest.html"
+);
 
 let essayLatin = new Project(
     ID_ESSAY_LATIN,
@@ -979,7 +984,8 @@ projectPages = [
     pageDigitalGhostGate,
     pageSpriteShop,
     pagePhraseDex,
-    pageRemakes
+    pageRemakes,
+    pageEastWest
 ]
 
 for (let p of projects)
