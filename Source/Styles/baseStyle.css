@@ -21,6 +21,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: "Libre Baskerville";
+    background-color: rgb(19, 19, 95);
+}
+
+main {
+    background-color: #eee;
+}
+
 main {
     margin: 0 auto; 
     padding: 2rem; 
@@ -45,20 +54,22 @@ main > * {
     align-items: center;
 
     text-decoration: none; 
-    color: var(--nav-txt-clr);
+    color: var(--nav-btn-hvr-clr);
     width: 100%;
-    outline: solid thin var(--nav-txt-clr);
+    outline: solid thin black;
 
     font-size:xx-large;
     font-weight: bolder;
 }
 
 #header nav a.selected {
+    color: black;
     background-color: var(--nav-btn-hvr-clr);
     outline-color: var(--nav-btn-hvr-clr); 
 }
 
 #header nav a:hover {
+    color:black; 
     background-color: var(--nav-btn-hvr-clr);
 }
 
