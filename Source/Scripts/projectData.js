@@ -797,7 +797,8 @@ let projectSpriteShop = new Project(
 let pageSpriteShop = new ProjectPage(
     ID_SPRITE_SHOP,
     projectSpriteShop,
-    "Source/ProjectPages/SpriteShop.html"
+    "Source/ProjectPages/SpriteShop.html",
+    "Source/Styles/Special/spriteShop.css"
 );
 //#endregion
 

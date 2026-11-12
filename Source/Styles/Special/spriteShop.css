@@ -1,0 +1,20 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(178, 219, 255);
+}
+
+#project-body {
+    background-color: rgb(243, 252, 255);
+}
+
+#main-nav a, #project-contents-list {
+    background-color:rgb(235, 235, 98);
+}
+nav#main-nav a:hover {
+    background-color:rgb(163, 163, 16);
+}
+#project-contents-list a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
