@@ -1,5 +1,15 @@
+html {
+    font-family: "Libre Baskerville";
+}
+
 main {
     width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color:blue;
+    font-weight: bold;
 }
 
 #hp-intro-p {
@@ -11,16 +21,20 @@ main {
     ul {
         padding-left:1em;
         list-style: none;
-        line-height:2em;
     }
+}
 
-    li, a {
-        display:block;
-        width:100%;   
-        
-        &:hover {
-            background-color: var(--nav-btn-hvr-clr);
-        }
+#hp-links li, #hp-more-link {
+    display: block;
+    width: 100%;
+    font-size:1.2em;
+    line-height:2em;
+
+    &:hover {
+        background-color: var(--nav-btn-hvr-clr);
+    }
+    &::before {
+        content:"►    ";
     }
 }
 
@@ -47,6 +61,7 @@ main {
         text-align: center;
     }
 }
+
 
 @media (max-width: 1200px) {
     main {

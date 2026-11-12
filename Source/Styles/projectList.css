@@ -6,6 +6,9 @@
     align-items: center;
     gap: 0.5rem;
 
+    border-top: solid thin;
+    border-bottom: solid thin;
+
     width: 100%;
 }
 
