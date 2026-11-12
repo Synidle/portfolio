@@ -58,6 +58,11 @@ main {
     border-bottom: solid black;
 }
 
+blockquote {
+    border-left: solid;
+    padding-left: 1em;
+}
+
 /* Wide screens */
 @media (min-width: 1201px) {
     main {
