@@ -7,36 +7,73 @@
 <figure><img src="Source/ProjectData/SkyCityVR/left-side-from-start.jpg" />
 <figcaption>The path to one objective.</figcaption></figure>
 
+<p>My solution was to make the principal mechanic movement by ranged-attacks upon enemies. This requires the ability to identify enemies in sight and shoot them whilst defending from attacks by ducking behind environment-pieces and positioning the shield; and also the ability to discern the navigable level as a tree of attackable nodes.</p>
+
 <figure><img src="Source/ProjectData/SkyCityVR/SkyCityVR.png" />
 <figcaption>The perspective in-game, through the VR headset, holding the crossbow.</figcaption></figure>
 
-<figure><img src="Source/ProjectData/SkyCityVR/scaling-church.jpg" />
-<figcaption>A route goes up the back of the church, to one of the objectives.</figcaption></figure>
-
-<figure><img src="Source/ProjectData/SkyCityVR/behind-house.jpg" />
-<figcaption>A house with barrels and enemies that must be navigated.</figcaption></figure>
+<p>Attacks consume crossbow-bolts, so exposing skilled players who can navigate the level before exhausing them, while for players who waste bolts introducing the challenge of identifying a route through the level containing item repositories. If players get stuck, they can use the wand to expand movement possibilities at the cost of magic-points, or await enemies to respawn, so increasing their time and exposing their inefficiency. Magic and health are additional depleting resources that can affect navigation.</p>
 
 <figure><img src="Source/ProjectData/SkyCityVR/level-from-front.jpg" />
 <figcaption>The entire level, from the front.</figcaption></figure>
 
-<figure><img src="Source/ProjectData/SkyCityVR/right-bell.jpg" />
-<figcaption>The bell that is one of the objectives, with a challenging path to it.</figcaption></figure>
+<p>VR is especially appropriate for this project because the game's main mechanics and difficulty involve obsrvations and dexterity with both hands, which are best achieved with a VR headset and motion controllers. Positioning the player as essentially stationary also befits this reality of VR games, whereas with a conventional game setup it would feel unusual.</p>
+
+<figure><img src="Source/ProjectData/SkyCityVR/behind-house.jpg" />
+<figcaption>A house with barrels and enemies that must be navigated.</figcaption></figure>
+
+<p>As far as possible, controller input is limited to the tactile grip-buttons and triggers, educing immersion by implying interaction with in-game hands and held objects.</p>
+<ul>
+    <li>Motion controls are utilised in drawing back the crossbow, aiming, and tipping potions.</li>
+    <li>Grip buttons are used for grabbing items.</li>
+    <li>Triggers are used for loosing the crossbow and ejecting the cork from the potion.</li>
+    <li>Vibration feedback intensifies as the crossbow string is drawn back. Vibration also occurs in many other situations.</li>
+</ul>
+<p>These all intensify the sense of immersive interaction.</p>
+<p>Game state is conveyed as far as possible through immersive feedback such as diegetic visuals and sound, and controller vibration.</p>
+
+<figure><img src="Source/ProjectData/SkyCityVR/main-menu.jpg" />
+<figcaption>Player, HUD, main menu.</figcaption></figure>
 
 <!-- A C C E S S I B I L I T Y -->
 
 <h3 id="pp-accessibility">Accessibility</h3>
 
-<p>The VR medium introduces new accessibility challenges.</p>
+<figure><img src="Source/ProjectData/SkyCityVR/settings.jpg" />
+<figcaption>The settings menu. Some options change depending on selections.</figcaption></figure>
+
+<p>The VR medium introduces new accessibility challenges. Comfort must be balanced with immersion, while recognising different players' tolerances, so I created accessibility options based on VR conventions with presets available for quick selection given the unwieldy nature of interacting with UI in VR.</p>
+<ul>
+    <li>DEFAULT is what I believe to be a suitable configuration for the average VR player in short sessions.</li>
+    <li>COMFORTABLE uses the highest comfort options.</li>
+    <li>CRISP uses no comfort options for the most "pure" experience.</li>
+</ul>
 
 <!-- C H A L L E N G E S -->
 
 <h3 id="pp-challenges">Challenges overcome</h3>
 
-<p>A particular challenge was how to comfortably display information to the player without breaking immersion.</p>
+<p>A particular challenge was how to comfortably display information to the player without breaking immersion. I realised that information needs only be contextual.</p>
+<p>For example, the player only needs to <i>if</i> they have any potions remaining, not how many, so I did away with any potions UI and instead rely simply on that physical potions can only be seen on the player's body when there are any remaining.</p>
 
 <figure><img src="Source/ProjectData/SkyCityVR/drawing-crossbow.png" />
 <figcaption>Drawing back on the crossbow, with the remaining bolts displayed.</figcaption></figure>
 
+<p>The player does, however, need to know how many bolts they have remaining, because this should inform their route through the level. I knew I wanted the number only to be displayed when the player draws back the crossbow, so as not to be obtrusive. I experimented with displaying bolt sprites equal to the number of remaining bolts. This works for low numbers, and I ended up adding an additional number when the quantity is high.</p>
+
+<p>Striking a balance between practicality and immersion was a great challenge. For example, I acknowledged that it would be immersive for the player to equip items by withdrawing them from their person. I did this for the potions because I could position them at the waist where they could be easily accessed; but to do this for <i>all</i> items would not be reliably executable and break the flow of combat.</p>
+<p>I compromised by having some items automatically equip or unequip under certain conditions, and having some items grabbable from the space in front of the player once revealed by pressing a button on the controller. This was ultimately <i>more</i> immersive as it is practical and doesn't break the player's flow.</p>
+
+<figure><img src="Source/ProjectData/SkyCityVR/right-bell.jpg" />
+<figcaption>The bell that is one of the objectives, with a challenging path to it.</figcaption></figure>
+
 <!-- C O N C L U S I O N -->
 
 <h3 id="pp-conclusion">Conclusion</h3>
+
+<p>The flow of combat is very fun and immersive, bolstered in particular by the satisfying crossbow interaction.</p>
+
+<p>I would like to further leverage the potential offered by motion controls by having melee encounters in the game, perhaps when teleporting to an enemy without sufficient damage having been dealt by the shot.</p>
+
+<figure><img src="Source/ProjectData/SkyCityVR/scaling-church.jpg" />
+<figcaption>A route goes up the back of the church, to one of the objectives.</figcaption></figure>
