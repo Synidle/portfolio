@@ -561,7 +561,27 @@ projectSkyCityVR = new Project(
     "VR action game aiming at satisfying VR-oriented movement through combat.",
     [
         new ImageReference(
-            "",
+            "SkyCityVR/SkyCityVR.png",
+            ""
+        ),
+        new ImageReference(
+            "SkyCityVR/left-side-from-start.jpg",
+            ""
+        ),
+        new ImageReference(
+            "SkyCityVR/scaling-church.jpg",
+            ""
+        ),
+        new ImageReference(
+            "SkyCityVR/behind-house.jpg",
+            ""
+        ),
+        new ImageReference(
+            "SkyCityVR/level-from-front.jpg",
+            ""
+        ),
+        new ImageReference(
+            "SkyCityVR/right-bell.jpg",
             ""
         ),
     ],
@@ -580,6 +600,11 @@ projectSkyCityVR = new Project(
         )
     ],
     "Sole designer & developer",
+);
+let pageSkyCityVR = new ProjectPage(
+    ID_SKY_CITY_VR,
+    projectSkyCityVR,
+    "Source/ProjectPages/SkyCityVR.html"
 );
 //#endregion
 
@@ -983,6 +1008,7 @@ projectPages = [
     pageUnboundedFault,
     pageDigitalGhostGate,
     pageSpriteShop,
+    pageSkyCityVR,
     pagePhraseDex,
     pageRemakes,
     pageEastWest
