@@ -731,7 +731,7 @@ let projectWorkingTitle = new Project(
         Skill.UNITY,
         Skill.UX,
     ],
-    "A horror game with dungeon-crawler elements, made as A-level coursework.",
+    "A horror game with dungeon-crawler elements, made as A-level Computer Science coursework.",
     [
         new ImageReference(
             "WorkingTitle/img-00.png",
@@ -751,10 +751,92 @@ let projectWorkingTitle = new Project(
         ),
     ],
     [
-
+        new Inspiration(
+            "Bloodborne",
+            "FromSoftware",
+            2015,
+            "Map, story, atmosphere, gameplay"
+        ),
+        new Inspiration(
+            "Persona 3 FES",
+            "Atlus",
+            2007,
+            "Aesthetic & story"
+        ),
+        new Inspiration(
+            "Okage: Shadow King",
+            "Zener Works",
+            2001,
+            "Characters, aesthetic & story"
+        ),
+        new Inspiration(
+            "Project Kat",
+            "Leef 6010",
+            2021,
+            "Story, atmosphere, puzzles"
+        ),
+        new Inspiration(
+            "Persona 5 Royal",
+            "Atlus",
+            2019,
+            "Map & pacing"
+        ),
+        new Inspiration(
+            "Anodyne",
+            "Analgesic Productions",
+            2013,
+            "Atmosphere & interaction"
+        ),
+        new Inspiration(
+            "Silent Hill 2",
+            "Team Silent",
+            2001,
+            "Map & atmosphere"
+        ),
+        // new Inspiration(
+        //     "Spooky's Jump Scare Mansion",
+        //     "Lag Studios",
+        //     2014,
+        //     "Pacing"
+        // ),
+        // new Inspiration(
+        //     "Yume Nikki",
+        //     "Kikiyama",
+        //     2004,
+        //     "Aesthetic & world"
+        // ),
+        // new Inspiration(
+        //     "The Elder Scrolls V: Skyrim",
+        //     "Bethesda Game Studios",
+        //     2011,
+        //     "Map"
+        // ),
+        // new Inspiration(
+        //     "The Binding of Isaac",
+        //     "McMillen, E. & Himsl, F.",
+        //     2011,
+        //     "Aesthetic & gameplay"
+        // ),
+        // new Inspiration(
+        //     "Phantasy Star IV",
+        //     "Sega",
+        //     1993,
+        //     "Story & aesthetic"
+        // ),
+        // new Inspiration(
+        //     "Fatal Labyrinth",
+        //     "Sega",
+        //     1990,
+        //     "Map & mechanics"
+        // ),
     ],
     "Sole designer & developer",
     "https://synidle.itch.io/working-title",
+);
+let pageWorkingTitle = new ProjectPage(
+    ID_WORKING_TITLE,
+    projectWorkingTitle,
+    "Source/ProjectPages/WorkingTitle.html"
 );
 //#endregion
 
@@ -990,7 +1072,7 @@ projects = [
     projectDigitalGhostGate,
     projectSkyCityVR,
     projectWorkingTitle,
-    projectBarleyHall,
+    // projectBarleyHall,
     // projectFPSRPG,
     projectSpriteShop,
     projectPhraseDex,
@@ -1009,6 +1091,7 @@ projectPages = [
     pageDigitalGhostGate,
     pageSpriteShop,
     pageSkyCityVR,
+    pageWorkingTitle,
     pagePhraseDex,
     pageRemakes,
     pageEastWest
