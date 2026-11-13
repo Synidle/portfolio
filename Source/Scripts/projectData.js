@@ -734,19 +734,19 @@ let projectWorkingTitle = new Project(
     "A horror game with dungeon-crawler elements, made as A-level Computer Science coursework.",
     [
         new ImageReference(
-            "WorkingTitle/img-00.png",
+            "WorkingTitle/enemy-combat.png",
             "Screenshot of the player fighting an enemy."
         ),
         new ImageReference(
-            "WorkingTitle/img-01.png",
+            "WorkingTitle/projector-slide.png",
             "Screenshot of the player in a dark hallway, with their inventory open, displaying the description for a projector slide item."
         ),
         new ImageReference(
-            "WorkingTitle/img-02.png",
+            "WorkingTitle/mimic.png",
             "Screenshot of the player defending against an enemy emerging from a chest."
         ),
         new ImageReference(
-            "WorkingTitle/img-03.png",
+            "WorkingTitle/television.png",
             "Screenshot of an old television on a table in the middle of an otherwise empty, dark room."
         ),
     ],
@@ -836,7 +836,8 @@ let projectWorkingTitle = new Project(
 let pageWorkingTitle = new ProjectPage(
     ID_WORKING_TITLE,
     projectWorkingTitle,
-    "Source/ProjectPages/WorkingTitle.html"
+    "Source/ProjectPages/WorkingTitle.html",
+    "Source/Styles/Special/workingTitle.css"
 );
 //#endregion
 
