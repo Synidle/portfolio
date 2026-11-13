@@ -20,7 +20,7 @@ a {
     }
 }
 
-#hp-links li, #hp-more-link {
+#hp-links li, #hp-more-link, #hp-link-cv {
     display: block;
     width: 100%;
     font-size:1.2em;

@@ -5,14 +5,18 @@ html {
 
 h3 {
     font-size:1.4em;
-    letter-spacing: .06em;
-    font-variant-caps: all-small-caps;
+    letter-spacing: .08em;
+    font-variant-caps: small-caps;
     font-weight: 900;
 }
 
 figcaption {
     font-family: 'Courier New', Courier, monospace;
     font-weight:bold;
+}
+
+figure, #project-contents, nav#main-nav a, main {
+    outline: solid rgb(93, 137, 219);
 }
 
 #project-inspiration li {
