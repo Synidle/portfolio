@@ -76,6 +76,14 @@ blockquote {
         column-gap: 3rem; 
     }
 }
+@media (max-width:1000px) {
+    main {
+        grid-template-columns: minmax(0, 1fr) 180px;
+        column-gap: 1em;
+        margin:0;
+        padding:0;
+    }
+}
 
 /* Narrow screens */
 @media (max-width: 900px) {
