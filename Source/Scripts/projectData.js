@@ -831,7 +831,7 @@ let projectWorkingTitle = new Project(
         // ),
     ],
     "Sole designer & developer",
-    "https://synidle.itch.io/working-title",
+    // "https://synidle.itch.io/working-title",
 );
 let pageWorkingTitle = new ProjectPage(
     ID_WORKING_TITLE,
